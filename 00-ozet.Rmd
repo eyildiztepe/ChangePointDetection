@@ -1,0 +1,10 @@
+Özet, çalışmanın önemini ve faydasını anlatan bir bölüm degildir. Çalısmayı ana
+hatlarıyla anlatacak ve 300 kelimeyi aşmayacak şekilde hazırlanmalıdır. En az üç en
+çok beş anahtar kelime ilgili yere yazılmalıdır.  \par
+
+ikinci paragraf buradan başlar\
+\
+**Anahtar Kelimeler:** anahtar kelime 1, anahtar kelime 2, anahtar kelime 3
+ <!-- 
+ Türkçe anahtar kelimeler küçük harfler ile(özel isimler hariç). virgülle ayır, en az üç tane. 
+ -->
