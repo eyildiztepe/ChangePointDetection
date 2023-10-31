@@ -1,2 +1,2 @@
-# KTS_ML
-Karpal Tunnel Sendrom Machine Learning Project
+# CPD
+Change Point Detection Project
