@@ -6,7 +6,7 @@ authors:
 date:  '`r format(Sys.Date(), "%B %Y")`'
 institution: 'FEN FAKÜLTESİ'
 division: 'İSTATİSTİK BÖLÜMÜ'
-advisor: 'Dr. Ad Soyad' #Danışman Ünvan Adı Soyadı
+advisor: 'Dr. Engin YILDIZTEPE' #Danışman Ünvan Adı Soyadı
 #altadvisor: 'Your Other Advisor' # Delete line if you only have one advisor
 department: 'İstatistik Bölümü'
 degree: 'Bitirme Projesi Raporu'  

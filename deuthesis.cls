@@ -192,6 +192,7 @@
 \setlength{\textwidth}{6.0in}
 \setlength{\textheight}{9.0in}
 \setlength\topmargin{0in}
+\setlength{\headheight}{14.49998pt} %added by EY. Su uyari nedeniyle ekledim:Warning: Package fancyhdr Warning: \headheight is too small (12.0pt): Warning: (fancyhdr)                Make it at least 14.49998pt, for example: Warning: (fancyhdr)                \setlength{\headheight}{14.49998pt}
 \addtolength\topmargin{-\headheight}
 \addtolength\topmargin{-\headsep}
 
@@ -348,7 +349,7 @@
     \bigskip
     {\fontsize{12}{14}\selectfont \lineskip .75em
     \begin{tabular}[t]{c}%
-      \@author\\ %burada birden fazla yazar durumu düzeltilecek ama nasıl?? template.tex de duzeltildi.
+      \@author\\ %biz de birden fazla yazar durumu var, template.tex de duzeltildi.
     \end{tabular}\par}
     \vskip 1.5em
     {\fontsize{12}{14}\selectfont \@date \par}
