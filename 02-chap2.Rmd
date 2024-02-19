@@ -69,7 +69,7 @@ $$
 $$
 -->
 
-## Chemistry 101: Symbols
+## ÇOKLU DEĞİŞİM NOKTASI
 
 Chemical formulas will look best if they are not italicized. Get around math mode's automatic italicizing in LaTeX by using the argument `$\mathrm{formula here}$`, with your formula inside the curly brackets.  (Notice the use of the backticks here which enclose text that acts as code.)
 
@@ -96,7 +96,98 @@ To stack numbers or letters as in $\mathrm{Fe_2^{2+}}$, the subscript is defined
 
 \noindent Reversible Reaction Arrows: $\rightleftharpoons$
 
-### Typesetting reactions
+### İkili Segmentasyon Algoritması
+
+İkili segmentasyon algoritması (BinSeg), değişim noktası literatüründe kullanılan en köklü arama yöntemidir. İkili segmentasyon arama algoritmasının erken uygulamaları arasında Scott ve Knott (1974) ile Sen ve Srivastava (1975) bulunmaktadır.
+
+İkili segmentasyon, herhangi bir tek değişim noktası yöntemini ardışık olarak farklı veri setlerinde tekrarlayarak çoklu değişim noktalarına genişletmek için kullanılabilir. İlk olarak, tek bir değişim noktası test istatistiğini tüm veri setine uygular. $y_{1},y_{2},...,y_{n}$ şeklindeki veri seti üzerinde bir başlangıç noktası belirlenir. Bu başlangıç noktası, veri setinin ortalaması, medyanı veya başka bir özelliği olabilir. Belirlenen başlangıç noktasında bir değişim noktası testi yapılır. Bu test, veri setini iki alt küme olarak böldüğünde, oluşan alt kümelerin toplam maliyetinin belirli bir kritere göre düşük olup olmadığını kontrol eder, yani bir $\tau$'nin aşağıdaki koşulu sağlayıp sağlamadığını test eder:
+
+$$C(y_{1:\tau}) + C(y_{(\tau+1):n}) + \beta < C(y_{1:n})$$
+
+Burada:
+\begin{itemize}
+\item\textbf{C}:Bir segment için maliyet fonksiyonu
+\item\textbf{$y_{1:\tau}$}:Başlangıçtan değişim noktasına kadar olan veri seti
+\item\textbf{$y_{(\tau+1):n}$}:Değişim noktasından sona kadar olan veri seti
+\item\textbf{$\beta$}:Aşırı uyum karşısında koruma sağlayan ceza terimi
+\end{itemize}
+
+Eğer bu koşul sağlanmıyorsa, o zaman herhangi bir değişim noktası tespit edilememiştir ve algoritma durur. Aksi takdirde veri, belirlenen değişim noktasından önce ve sonra olmak üzere iki segmente bölünür. Tek değişim noktası tespit yöntemi, değişiklikten önce ve sonra iki yeni segmente de tekrarlanır. Her iki segmentte de değişim noktaları belirlenirse, bunları yeni belirlenen değişim noktasında daha fazla segmentlere böler ve her yeni segmente değişim noktası tespit yöntemini uygular. Bu süreç, verinin herhangi bir bölümünde değişim noktası bulunamayana kadar devam eder.
+
+Çoklu değişim noktalarını belirlemek için yaygın olarak kullanılan bir yaklaşım, aşağıdaki ifadeyi minimize etmektir:
+
+$$\sum_{i=1}^{m+1} C(y(\tau_{i-1}+1):\tau_i) + \beta f(m)$$
+
+Burada, $C$ bir segment için bir maliyet fonksiyonu ve $\beta f(m)$ aşırı uyum karşısında koruma sağlayan bir ceza terimidir.
+
+İkili segmentasyon, herhangi bir değişim noktasının konumu önceden belirlenmiş değişim noktalarına bağlı olduğu için ($f(m) = m$ olarak) yukarıdaki denklemin yaklaşık bir minimize edilmesidir. Algoritmanın her adımı, bu denklemi azaltıyorsa ek bir değişim noktası eklemeye çalışır. İkili segmentasyon algoritmasının avantajı, $n$'nin veri uzunluğu olduğu durumda $O(n)$ hesaplama maliyeti ile uygulanabilen hızlı bir algoritma olmasıdır. Ancak, $C$'yi uygun bir şekilde seçmek zor olabilir ve farklı $C$ seçimleri, değişim noktalarının sayısının tahmininde önemli farklara neden olabilir.
+
+### PELT
+
+### Parçalı Regresyon
+
+Parçalı veya kesik çizgili modeller, yanıt ile bir veya daha fazla açıklayıcı değişken arasındaki ilişkilerin parçalı doğrusal olduğu, yani iki veya daha fazla değişkenle temsil edildiği regresyon modelleridir.Bu ilişkiler, genellikle bilinmeyen değerlerde birleştirilen iki veya daha fazla düz çizgi tarafından temsil edilir, bu değerlere genellikle kırılma noktaları, değişim noktaları veya birleşim noktaları denir. Bu yöntemde bağımsız değişken, aralıklara bölünür ve her bir aralığa ayrı bir çizgi segmenti uyarlanır.Parçalı regresyon analizi ayrıca çeşitli bağımsız değişkenlerle yapılan çok değişkenli veriler üzerinde de gerçekleştirilebilir. Parçalı regresyon analizi, bağımsız değişkenlerin belirli gruplara ayrıldığı durumlarda, bu gruplardaki değişkenler arasındaki ilişkilerin farklı olduğuna inanıldığında kullanışlıdır.  Bu parçalar arasındaki sınırlar, değişim noktaları olarak adlandırılır.
+
+Matematiksel olarak, model şu şekilde ifade edilebilir:
+
+$y = \beta_{0i} + \beta_{1i} x + \epsilon$
+
+Bu denklemde, $\beta_{0i}$ ve $\beta_{1i}$ sırasıyla i-inci segmentin kesişim noktası ve eğimini temsil eder. 
+
+Parçalı regresyon, ekonomi, biyoloji, çevre bilimleri, epidemiyoloji gibi çeşitli alanlarda kullanılır.Kalite iyileştirme müdahaleleriyle ilgili çalışmalarda parçalı regresyon analizlerinin kullanımına dair birçok örnek yayınlanmıştır.
+
+Temel bir parçalı regresyon analizinde zaman periyodu müdahale öncesi ve sonrası parçalara bölünür ve her parçada ayrı ayrı kesişme noktaları ve eğimler tahmin edilir. Müdahaleden önce ve sonra kesişmelerde ve eğimlerdeki değişiklikleri test etmek için istatistiksel testler gerçekleştirilir. Veriler ve model spesifikasyonunda bazı basit değişikliklerle parçalı regresyon analizi, genellikle standart istatistiksel yazılım paketlerinde kolayca uygulanabilir. Genellikle, zaman içinde alınan gözlemler ilişkilidir, bu nedenle otokorelasyonu hesaba katmak için genellikle ek bir düzeltme yapılması gerekir. 
+
+Parçalı doğrusal regresyon, parçalı regresyonun doğrusal regresyon kullanılarak elde edilen bir alt türüdür.İki parçalı doğrusal regresyon, bir değişim noktası ile ayrılmış iki parçayla, değişken bir etkenin (x) yanıt fonksiyonunun ($Y_{r}$) ani bir değişikliğini nicelendirmek için kullanışlı olabilir. Değişim noktası, yanıt fonksiyonunun kritik, güvenli veya eşik değeri olarak yorumlanabilir; bu değerin ötesinde veya altında (istenmeyen) etkiler meydana gelebilir. Değişim noktası, karar verme süreçlerinde önemlidir.
+
+Her bir parça için ayrı ayrı uygulanan en küçük kareler yöntemi, iki regresyon çizgisini veriye mümkün olduğunca iyi uyacak şekilde oluştururken, gözlemlenen (y) ve hesaplanan (Yr) bağımlı değişken değerleri arasındaki farkın karesini en aza indirir. Bu yöntemle şu iki denklem elde edilir:
+
+$Yr = A1.x+K1 <BP$ (değişim noktası için)
+
+$Yr = A2.x+K2 >BP$ (değişim noktası için)
+
+Burada:
+\begin{itemize}
+\item $Y_{r}$, x'in belirli bir değeri için beklenen (tahmin edilen) y değeridir;
+\item A1 ve A2 regresyon katsayılarıdır (çizgi segmentinin eğimini gösterir);
+\item K1 ve K2 regresyon sabitleridir (y-ekseninde kesişimi gösterir).
+\end{itemize}
+Bu yöntem aynı zamanda iki korelasyon katsayısı (R) da üretir:
+
+$R_{1}^{2}=1-{\frac {\sum (y-Y_{r})^{2}}{\sum (y-Y_{a1})^{2}}}$  x<BP (değişim noktası için)
+
+ve
+
+$R_{2}^{2}=1-{\frac {\sum (y-Y_{r})^{2}}{\sum (y-Y_{a2})^{2}}}$  x>BP (değişim noktası için)
+
+Burada:
+\begin{itemize}
+\item $\sum (y-Y_{r})^{2}$  her bir parça için minimize edilmiş SSD'yi temsil eder
+\item $Y_{a1}$ ve $Y_{a2}$ ilgili parçalarda y'nin ortalamasıdır.
+\end{itemize}
+
+En uygun eğilimi belirlemede, bu eğilimin güvenilir (anlamlı) olduğundan emin olmak için istatistiksel testler gerçekleştirilmelidir.
+
+Eğer anlamlı bir değişim noktası tespit edilemezse, değişim noktası olmadan bir regresyona geçilmelidir.
+Aşağıdaki istatistiksel testler, eğilim türünü belirlemek için kullanılır:
+\begin{enumerate}
+\item\textbf{A1 ve A2'nin Anlamlılığı:} A1 ve A2'nin anlamlılığı, A1 ve A2'nin standart hata SE'si ve Student'ün t-distribution'ı kullanılarak belirlenir.
+\item\textbf{A1 ve A2'nin Farkının Anlamlılığı:} A1 ve A2'nin farkının anlamlılığı, farklarının standart hatası SE ve Student'ün t-distribution'ı kullanılarak belirlenir.
+\item\textbf{Y1 ve Y2'nin Farkının Anlamlılığı:} Y1 ve Y2'nin farkının anlamlılığı, farklarının standart hatası SE ve Student'ün t-distribution'ı kullanılarak belirlenir.
+\item\textbf{Değişim Noktasının Varlığını Test Etme:} Sözde skor testi, parçalı çizginin tahminini gerektirmez ve kırılma noktasının varlığını test etmek için daha formal bir istatistiksel yaklaşımdır.
+\end{enumerate}
+
+Ayrıca, tüm verilerin korelasyon katsayısı ($R_{a}$), belirleme katsayısı veya açıklama katsayısı, regresyon fonksiyonlarının güven aralıkları ve ANOVA analizi kullanılmaktadır.
+
+$C_{d}$ katsayısı, tüm veri seti için belirlenen şartlar altında maksimize edilmesi gereken bir belirleme katsayısıdır ve şu formülle hesaplanır:
+
+$C_{d}=1-{\sum (y-Y_{r})^{2} \over \sum (y-Y_{a})^{2}}$ 
+
+Burada $Y_{r}$, önceki regresyon denklemlerine göre beklenen (tahmin edilen) y değeridir ve $Y_{a}$, tüm y değerlerinin ortalamasıdır.
+
+$C_{d}$ katsayısı, 0 ile 1 arasında değer alır. Saf, parçalanmamış doğrusal regresyonda, $C_{d}$ ve $R_{a}^2$ değerleri eşittir. Parçalı regresyonda, $C_{d}$'nin $R_{a}^2$'den anlamlı derecede büyük olması, parçalanmanın haklı olduğunu gösterir.
+
+Değişim noktasının en uygun değeri, $C_{d}$ katsayısının maksimum olduğu noktada bulunabilir.
 
 You may wish to put your reaction in an equation environment, which means that LaTeX will place the reaction where it fits and will number the equations for you. 
 

@@ -1,8 +1,9 @@
 ---
 authors: 
-  - 'Yazar1 Adı Soyadı'
-  - 'Yazar2 Adı Soyadı'
-  - 'Yazar3 Adı Soyadı'
+  - 'Pelin PEKER'
+  - 'Merve AK'
+  - 'Edanur Binnaz DURSUN'
+  - 'Ahmet ÇALI'
 date:  '`r format(Sys.Date(), "%B %Y")`'
 institution: 'FEN FAKÜLTESİ'
 division: 'İSTATİSTİK BÖLÜMÜ'
