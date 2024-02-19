@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.12)  19 FEB 2024 18:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.12)  19 FEB 2024 19:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -481,8 +481,8 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 Package caption Info: rotating package is loaded.
 )
 Package color Info: Redefining color shadecolor on input line 79.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 20
-8.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 21
+0.
 (C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -492,37 +492,37 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 ) (BP_Rapor.aux)
 \openout1 = `BP_Rapor.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 208.
-LaTeX Font Info:    ... okay on input line 208.
-LaTeX Info: Redefining \microtypecontext on input line 208.
-Package microtype Info: Applying patch `item' on input line 208.
-Package microtype Info: Applying patch `toc' on input line 208.
-Package microtype Info: Applying patch `eqnum' on input line 208.
-Package microtype Info: Applying patch `footnote' on input line 208.
-Package microtype Info: Applying patch `verbatim' on input line 208.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Info: Redefining \microtypecontext on input line 210.
+Package microtype Info: Applying patch `item' on input line 210.
+Package microtype Info: Applying patch `toc' on input line 210.
+Package microtype Info: Applying patch `eqnum' on input line 210.
+Package microtype Info: Applying patch `footnote' on input line 210.
+Package microtype Info: Applying patch `verbatim' on input line 210.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 208.
+LaTeX Info: Redefining \showhyphens on input line 210.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -549,7 +549,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 208.
+Package hyperref Info: Link coloring OFF on input line 210.
 (BP_Rapor.out) (BP_Rapor.out)
 \@outlinefile=\write4
 \openout4 = `BP_Rapor.out'.
@@ -557,44 +557,44 @@ Package hyperref Info: Link coloring OFF on input line 208.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-12.
+14.
 (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-12.
+14.
 (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-212.
+214.
 (C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-212.
+214.
 (C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 212.
+(Font)              <12> on input line 214.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 212.
+(Font)              <8> on input line 214.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 212.
+(Font)              <6> on input line 214.
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 21
-2.
+4.
 (C:\Program Files\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 212
+LaTeX Font Info:    Trying to load font information for U+msa on input line 214
 .
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\PC\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 212
+LaTeX Font Info:    Trying to load font information for U+msb on input line 214
 .
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -616,7 +616,7 @@ Non-PDF special ignored!
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 222--227
+Underfull \hbox (badness 10000) in paragraph at lines 224--231
 
  []
 
@@ -653,7 +653,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.288 ...ter{R Markdown Basics}\label{rmd-basics}}
+l.292 ...ter{R Markdown Basics}\label{rmd-basics}}
                                                    [1
 
 ]
@@ -661,39 +661,39 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.288 ...ter{R Markdown Basics}\label{rmd-basics}}
+l.292 ...ter{R Markdown Basics}\label{rmd-basics}}
                                                    [2
 
 ]
 Chapter 1.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-90.
+94.
 (C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-01.
+05.
 (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [3{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 354.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 358.
 [4{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTe
 X/fonts/enc/dvips/lm/lm-mathit.enc}]
 <BP_Rapor_files/figure-latex/pressure-1.pdf, id=284, 469.755pt x 325.215pt>
 File: BP_Rapor_files/figure-latex/pressure-1.pdf Graphic file (type pdf)
 <use BP_Rapor_files/figure-latex/pressure-1.pdf>
 Package pdftex.def Info: BP_Rapor_files/figure-latex/pressure-1.pdf  used on in
-put line 390.
+put line 394.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (53.75868pt too wide) in paragraph at lines 390--391
+Overfull \hbox (53.75868pt too wide) in paragraph at lines 394--395
 [][] 
  []
 
 [5 <./BP_Rapor_files/figure-latex/pressure-1.pdf>]
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-444.
+448.
 (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [6] [7] [8
@@ -703,10 +703,10 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: BP_Rapor_files/figure-latex/march3plot-1.pdf Graphic file (type pdf)
 <use BP_Rapor_files/figure-latex/march3plot-1.pdf>
 Package pdftex.def Info: BP_Rapor_files/figure-latex/march3plot-1.pdf  used on 
-input line 528.
+input line 532.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
-Overfull \hbox (17.62376pt too wide) in paragraph at lines 528--529
+Overfull \hbox (17.62376pt too wide) in paragraph at lines 532--533
 [][] 
  []
 
@@ -728,10 +728,10 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 660.
+(amsmath)                 on input line 664.
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 685--686
+Underfull \hbox (badness 10000) in paragraph at lines 689--690
 \T1/lmr/m/n/12 (+20) ([]$\T1/lmtt/m/n/12 http : / / mirror . utexas . edu / cta
 n / info / symbols / comprehensive / symbols -[]
  []
@@ -741,13 +741,13 @@ n / info / symbols / comprehensive / symbols -[]
 ]
 Chapter 3.
 
-LaTeX Warning: Reference `tab:inher' on page 17 undefined on input line 700.
+LaTeX Warning: Reference `tab:inher' on page 17 undefined on input line 704.
 
 [17]
 <figure/ist.png, id=401, 321.2pt x 321.2pt>
 File: figure/ist.png Graphic file (type png)
 <use figure/ist.png>
-Package pdftex.def Info: figure/ist.png  used on input line 716.
+Package pdftex.def Info: figure/ist.png  used on input line 720.
 (pdftex.def)             Requested size: 320.87897pt x 320.89044pt.
 [18
 
@@ -757,7 +757,7 @@ Package pdftex.def Info: figure/ist.png  used on input line 716.
 File: BP_Rapor_files/figure-latex/delaysboxplot-1.pdf Graphic file (type pdf)
 <use BP_Rapor_files/figure-latex/delaysboxplot-1.pdf>
 Package pdftex.def Info: BP_Rapor_files/figure-latex/delaysboxplot-1.pdf  used 
-on input line 733.
+on input line 737.
 (pdftex.def)             Requested size: 433.61894pt x 325.2142pt.
 [20
 
@@ -765,18 +765,18 @@ on input line 733.
 <figure/subdivision.pdf, id=428, 220.825pt x 89.33376pt>
 File: figure/subdivision.pdf Graphic file (type pdf)
 <use figure/subdivision.pdf>
-Package pdftex.def Info: figure/subdivision.pdf  used on input line 744.
+Package pdftex.def Info: figure/subdivision.pdf  used on input line 748.
 (pdftex.def)             Requested size: 165.61833pt x 67.00014pt.
 File: figure/subdivision.pdf Graphic file (type pdf)
 <use figure/subdivision.pdf>
-Package pdftex.def Info: figure/subdivision.pdf  used on input line 752.
+Package pdftex.def Info: figure/subdivision.pdf  used on input line 756.
 (pdftex.def)             Requested size: 220.82445pt x 89.33353pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 759.
+(Font)              <10> on input line 763.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 759.
+(Font)              <7> on input line 763.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 759.
+(Font)              <5> on input line 763.
 [21
 
  <./figure/subdivision.pdf>]
@@ -835,7 +835,7 @@ gram Files/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lm
 tti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.p
 fb>
-Output written on BP_Rapor.pdf (49 pages, 538461 bytes).
+Output written on BP_Rapor.pdf (49 pages, 538509 bytes).
 PDF statistics:
  687 PDF objects out of 1000 (max. 8388607)
  152 named destinations out of 1000 (max. 500000)

@@ -47,6 +47,10 @@ acknowledgements: |
   \
   `r rmarkdown::metadata$authors[[2]]`
   \
+  `r rmarkdown::metadata$authors[[3]]`
+  \
+  `r rmarkdown::metadata$authors[[4]]`
+  \
  
 # ```{r, echo = FALSE,results="asis"}
 # n<-length(rmarkdown::metadata$authors)
