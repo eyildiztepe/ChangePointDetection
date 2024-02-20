@@ -1,5 +1,5 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{DEĞİŞİM NOKTASI (CHANGE POİNT)}{1}{chapter*.8}%
+\contentsline {chapter}{GİRİŞ}{1}{chapter*.8}%
 \contentsline {chapter}{Chapter 1: TEK DEĞİŞİM NOKTASI TESPİTİ (SINGLE CHANGE POINT DETECTION)}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}}{4}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Line breaks}{4}{section.1.2}%
@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {2.2.3}Parçalı Regresyon}{13}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Other examples of reactions}{15}{subsection.2.2.4}%
 \contentsline {section}{\numberline {2.3}Physics}{15}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Biology}{15}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Biology}{16}{section.2.4}%
 \contentsline {chapter}{Chapter 3: Tables, Graphics, References, and Labels}{17}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Tables}{17}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Figures}{18}{section.3.2}%
