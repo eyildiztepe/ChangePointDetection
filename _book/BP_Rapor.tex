@@ -115,7 +115,7 @@
 %\author{Pelin PEKERMerve AKEdanur Binnaz DURSUNAhmet ÇALI} %Tek yazar için
 \author{Pelin PEKER \\ Merve AK \\ Edanur Binnaz DURSUN \\ Ahmet ÇALI} %Çok yazar için
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
-\date{Şubat 2024}
+\date{Nisan 2024}
 \division{İSTATİSTİK BÖLÜMÜ}
 \advisor{Dr.~Engin YILDIZTEPE}
 \institution{FEN FAKÜLTESİ}
@@ -288,8 +288,8 @@ Değişim noktası, veri setinde ani ve beklenmedik bir değişikliği ifade ede
 
 Bu analizler, veri setindeki önemli değişiklikleri objektif bir şekilde belirleyerek, kullanıcılara olayları anlama ve gelecekteki eğilimleri tahmin etme konusunda yardımcı olabilir. Bu sayede, değişim noktalarının belirlenmesi, karar verme süreçlerini destekleyerek daha bilinçli ve stratejik adımlar atılmasına imkan tanır.
 
-\hypertarget{tek-deux11fiux15fim-noktasi-tespiti-single-change-point-detection}{%
-\chapter{TEK DEĞİŞİM NOKTASI TESPİTİ (SINGLE CHANGE POINT DETECTION)}\label{tek-deux11fiux15fim-noktasi-tespiti-single-change-point-detection}}
+\hypertarget{tek-deux11fiux15fim-noktasi-tespiti}{%
+\chapter{TEK DEĞİŞİM NOKTASI TESPİTİ}\label{tek-deux11fiux15fim-noktasi-tespiti}}
 
 Tek değişim noktası tespiti, bir veri setinde yalnızca bir değişim noktasının varlığını tespit etmeye odaklanan istatistiksel bir analiz yöntemidir. Bu tür analizler genellikle zaman serileri, süreç kontrolü, finansal veriler gibi çeşitli alanlarda kullanılır. Temel hedef, veri setindeki bu değişim noktasını tanımlamak ve bu noktada meydana gelen ani değişikliği belirlemektir.
 
@@ -300,7 +300,7 @@ Tek bir değişim noktasının tespiti için hipotez testi bir olasılık oranı
 
 Bu hipotezi test etmek için olasılık oranı test istatistiği, genel bir hipotez tabanlı yaklaşımı kullanır. İlk olarak, Hinkley (1970) tarafından önerilen bu yöntem, asimptotik dağılımı türetilen bir olasılık tabanlı yaklaşımı benimser. Bu yaklaşım, normal olarak dağılmış gözlemler içindeki ortalama değişikliği için olasılık oranı test istatistiğini hesaplar.
 
-Gupta ve Tang (1987) tarafından yapılan genişletme ile bu olasılık tabanlı yaklaşım, normal olarak dağılmış gözlemler içindeki varyans değişiklikleri için de geçerli bir test istatistiği sağlar.
+Jen ve Gupta (1987) tarafından yapılan genişletme ile bu olasılık tabanlı yaklaşım, normal olarak dağılmış gözlemler içindeki varyans değişiklikleri için de geçerli bir test istatistiği sağlar.
 
 Bu yöntemler, belirli bir değişim noktasının varlığını istatistiksel olarak değerlendirmek ve bu değişim noktasının ne zaman gerçekleştiğini belirlemek için kullanılır. Bu analizler, veri setindeki belirli bir noktadaki değişikliklerin anlamlılığını değerlendirerek, değişim noktasının varlığını istatistiksel olarak doğrulamaya yöneliktir.
 
@@ -308,7 +308,7 @@ Null hipotezi için maksimum log-olabilirlik, \(\log p(y_{1:n}|\hat{\theta})\) �
 
 Alternatif hipotez altında, \(\tau_1\) ile bir değişim noktası içeren bir modeli ele alalım, burada \(\tau_1 \in {1, 2, \dots, n - 1}\). Bu durumda, belirli bir \(\tau_1\) için maksimum log-olabilirlik şu şekildedir: \(ML(\tau_1) = \log p(y_{1:\tau_1}|\hat{\theta}_1) + \log p(y_{(\tau_1+1):n}|\hat{\theta}_2)\). Değişim noktasının doğası göz önüne alındığında, alternatif hipotez altındaki maksimum log-olabilirlik değeri basitçe \(\max{\tau_1} ML(\tau_1)\) olarak ifade edilir, burada maksimum tüm olası değişim noktası konumları için alınır. Test istatistiği şu şekildedir: \(\lambda = 2\tau_1 ML(\tau_1) - \log p(y_{1:n}|\hat{\theta})_{\max}\).
 
-Bu test, \(\lambda > c\) ise null hipotezi reddedilir şeklinde bir eşik değeri \(c\) seçerek yapılır. Eğer null hipotezi reddedilirse, yani bir değişim noktası algılanırsa, onun pozisyonunu \(\hat{\tau}_1\) olarak tahmin ederiz, bu değer \(ML(\tau_1)\)'i maksimize eden \(\tau_1\) değeridir. Bu parametre için uygun değer \(c\) henüz açık bir araştırma sorusudur ve farklı değişim tipleri altında \(p\) değerleri ve diğer bilgi kriterleri oluşturan birkaç yazar bulunmaktadır (Guyon ve Yao, 1999; Chen ve Gupta, 2000; Lavielle, 2005; Birge ve Massart, 2007).
+Bu test, \(\lambda > c\) ise null hipotezi reddedilir şeklinde bir eşik değeri \(c\) seçerek yapılır. Eğer null hipotezi reddedilirse, yani bir değişim noktası algılanırsa, onun pozisyonunu \(\hat{\tau}_1\) olarak tahmin ederiz, bu değer \(ML(\tau_1)\)'i maksimize eden \(\tau_1\) değeridir. Bu parametre için uygun değer \(c\) henüz açık bir araştırma sorusudur ve farklı değişim tipleri altında \(p\) değerleri ve diğer bilgi kriterleri oluşturan birkaç yazar bulunmaktadır (Birgé ve Massart, 2007; Chen, Gupta ve Gupta, 2000; Guyon ve Yao, 1999; Lavielle, 2005).
 
 Açıkça görülmektedir ki, olabilirlik test istatistiği basitçe \(m\) segmentlerinin her biri için olasılığı toplamak suretiyle birden fazla değişime genişletilebilir. Sorun, tüm olası \(\tau_{1:m}\) kombinasyonları üzerinde \(ML(\tau_{1:m})\)'in maksimumunu belirlemeye dönüşür.
 
@@ -891,6 +891,12 @@ Angel, E. (2001a). \emph{Batch-file Computer Graphics : A Bottom-Up Approach wit
 \leavevmode\vadjust pre{\hypertarget{ref-angel2001b}{}}%
 Angel, E. (2001b). \emph{test second book by angel}. Boston, MA: Wesley Addison Longman.
 
+\leavevmode\vadjust pre{\hypertarget{ref-birge2007}{}}%
+Birgé, L. ve Massart, P. (2007). Minimal penalties for Gaussian model selection. \emph{Probability theory and related fields}, \emph{138}, 33-73.
+
+\leavevmode\vadjust pre{\hypertarget{ref-chen2000}{}}%
+Chen, J., Gupta, A. K. ve Gupta, A. (2000). \emph{Parametric statistical change point analysis} (C. 192). Springer.
+
 \leavevmode\vadjust pre{\hypertarget{ref-deussen2000}{}}%
 Deussen, O. ve Strothotte, T. (2000). Computer-Generated Pen-and-Ink Illustration of Trees. \emph{{``Proceedings of''} SIGGRAPH 2000}, Computer Graphics Proceedings, Annual Conference Series, 13-18.
 
@@ -903,11 +909,23 @@ Gooch, B. ve Gooch, A. (2001a). \emph{{Non-Photorealistic Rendering}}. Natick, M
 \leavevmode\vadjust pre{\hypertarget{ref-goochandgooch2001a}{}}%
 Gooch, B. ve Gooch, A. (2001b). \emph{Test second book by gooches}. Natick, Massachusetts: A K Peters.
 
+\leavevmode\vadjust pre{\hypertarget{ref-guyon1999}{}}%
+Guyon, X. ve Yao, J. (1999). On the underfitting and overfitting sets of models chosen by order selection criteria. \emph{Journal of Multivariate Analysis}, \emph{70}(2), 221-249.
+
 \leavevmode\vadjust pre{\hypertarget{ref-hertzmann2000}{}}%
 Hertzmann, A. ve Zorin, D. (2000). Illustrating Smooth Surfaces. \emph{Proceedings of SIGGRAPH 2000}, Computer Graphics Proceedings, Annual Conference Series, \emph{5}(17), 517-526.
 
+\leavevmode\vadjust pre{\hypertarget{ref-hinkley1970}{}}%
+Hinkley, D. V. (1970). Inference about the change-point in a sequence of random variables.
+
 \leavevmode\vadjust pre{\hypertarget{ref-jain1989}{}}%
 Jain, A. K. (1989). \emph{Fundamentals of Digital Image Processing}. Englewood Cliffs, New Jersey: Prentice-Hall.
+
+\leavevmode\vadjust pre{\hypertarget{ref-jengupta1987}{}}%
+Jen, T. ve Gupta, A. K. (1987). On testing homogeneity of variances for Gaussian models. \emph{Journal of Statistical Computation and Simulation}, \emph{27}(2), 155-173.
+
+\leavevmode\vadjust pre{\hypertarget{ref-lavielle2005}{}}%
+Lavielle, M. (2005). Using penalized contrasts for the change-point problem. \emph{Signal processing}, \emph{85}(8), 1501-1510.
 
 \leavevmode\vadjust pre{\hypertarget{ref-Molina1994}{}}%
 Molina, S. T. ve Borkovec, T. D. (1994). The {P}enn {S}tate Worry Questionnaire: Psychometric properties and associated characteristics. G. C. L. Davey ve F. Tallis (Ed.), \emph{Worrying: Perspectives on theory, assessment and treatment} içinde (ss. 265-283). New York: Wiley.

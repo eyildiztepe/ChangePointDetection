@@ -1,6 +1,6 @@
 
 
-# TEK DEĞİŞİM NOKTASI TESPİTİ (SINGLE CHANGE POINT DETECTION)
+# TEK DEĞİŞİM NOKTASI TESPİTİ 
 
 Tek değişim noktası tespiti, bir veri setinde yalnızca bir değişim noktasının varlığını tespit etmeye odaklanan istatistiksel bir analiz yöntemidir. Bu tür analizler genellikle zaman serileri, süreç kontrolü, finansal veriler gibi çeşitli alanlarda kullanılır. Temel hedef, veri setindeki bu değişim noktasını tanımlamak ve bu noktada meydana gelen ani değişikliği belirlemektir.
 
@@ -9,9 +9,9 @@ Bu tür analizler, anormal durumları tespit etmek, süreçlerdeki değişiklikl
 
 Tek bir değişim noktasının tespiti için hipotez testi bir olasılık oranı tabanlı yaklaşımla formüle edilebilir. Burada, H0 null hipotezi, değişim noktasının olmadığına (m = 0) karşılık gelirken, alternatif hipotez H1 tek bir değişim noktasına (m = 1) karşılık gelir.
 
-Bu hipotezi test etmek için olasılık oranı test istatistiği, genel bir hipotez tabanlı yaklaşımı kullanır. İlk olarak, Hinkley (1970) tarafından önerilen bu yöntem, asimptotik dağılımı türetilen bir olasılık tabanlı yaklaşımı benimser. Bu yaklaşım, normal olarak dağılmış gözlemler içindeki ortalama değişikliği için olasılık oranı test istatistiğini hesaplar.
+Bu hipotezi test etmek için olasılık oranı test istatistiği, genel bir hipotez tabanlı yaklaşımı kullanır. İlk olarak, @hinkley1970 tarafından önerilen bu yöntem, asimptotik dağılımı türetilen bir olasılık tabanlı yaklaşımı benimser. Bu yaklaşım, normal olarak dağılmış gözlemler içindeki ortalama değişikliği için olasılık oranı test istatistiğini hesaplar.
 
-Gupta ve Tang (1987) tarafından yapılan genişletme ile bu olasılık tabanlı yaklaşım, normal olarak dağılmış gözlemler içindeki varyans değişiklikleri için de geçerli bir test istatistiği sağlar.
+@jengupta1987 tarafından yapılan genişletme ile bu olasılık tabanlı yaklaşım, normal olarak dağılmış gözlemler içindeki varyans değişiklikleri için de geçerli bir test istatistiği sağlar.
 
 Bu yöntemler, belirli bir değişim noktasının varlığını istatistiksel olarak değerlendirmek ve bu değişim noktasının ne zaman gerçekleştiğini belirlemek için kullanılır. Bu analizler, veri setindeki belirli bir noktadaki değişikliklerin anlamlılığını değerlendirerek, değişim noktasının varlığını istatistiksel olarak doğrulamaya yöneliktir.
 
@@ -19,7 +19,7 @@ Null hipotezi için maksimum log-olabilirlik, $\log p(y_{1:n}|\hat{\theta})$ şe
 
 Alternatif hipotez altında, $\tau_1$ ile bir değişim noktası içeren bir modeli ele alalım, burada $\tau_1 \in {1, 2, \dots, n - 1}$. Bu durumda, belirli bir $\tau_1$ için maksimum log-olabilirlik şu şekildedir: $ML(\tau_1) = \log p(y_{1:\tau_1}|\hat{\theta}_1) + \log p(y_{(\tau_1+1):n}|\hat{\theta}_2)$. Değişim noktasının doğası göz önüne alındığında, alternatif hipotez altındaki maksimum log-olabilirlik değeri basitçe $\max{\tau_1} ML(\tau_1)$ olarak ifade edilir, burada maksimum tüm olası değişim noktası konumları için alınır. Test istatistiği şu şekildedir: $\lambda = 2\tau_1 ML(\tau_1) - \log p(y_{1:n}|\hat{\theta})_{\max}$.
 
-Bu test, $\lambda > c$ ise null hipotezi reddedilir şeklinde bir eşik değeri $c$ seçerek yapılır. Eğer null hipotezi reddedilirse, yani bir değişim noktası algılanırsa, onun pozisyonunu $\hat{\tau}_1$ olarak tahmin ederiz, bu değer $ML(\tau_1)$’i maksimize eden $\tau_1$ değeridir. Bu parametre için uygun değer $c$ henüz açık bir araştırma sorusudur ve farklı değişim tipleri altında $p$ değerleri ve diğer bilgi kriterleri oluşturan birkaç yazar bulunmaktadır (Guyon ve Yao, 1999; Chen ve Gupta, 2000; Lavielle, 2005; Birge ve Massart, 2007).
+Bu test, $\lambda > c$ ise null hipotezi reddedilir şeklinde bir eşik değeri $c$ seçerek yapılır. Eğer null hipotezi reddedilirse, yani bir değişim noktası algılanırsa, onun pozisyonunu $\hat{\tau}_1$ olarak tahmin ederiz, bu değer $ML(\tau_1)$’i maksimize eden $\tau_1$ değeridir. Bu parametre için uygun değer $c$ henüz açık bir araştırma sorusudur ve farklı değişim tipleri altında $p$ değerleri ve diğer bilgi kriterleri oluşturan birkaç yazar bulunmaktadır [@guyon1999; @chen2000; @lavielle2005; @birge2007].
 
 Açıkça görülmektedir ki, olabilirlik test istatistiği basitçe $m$ segmentlerinin her biri için olasılığı toplamak suretiyle birden fazla değişime genişletilebilir. Sorun, tüm olası $\tau_{1:m}$ kombinasyonları üzerinde $ML(\tau_{1:m})$’in maksimumunu belirlemeye dönüşür.
 

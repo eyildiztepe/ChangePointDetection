@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.24)  20 FEB 2024 13:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.24)  18 APR 2024 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -678,7 +678,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.292 ...i-tespiti-single-change-point-detection}}
+l.292 ...bel{tek-deux11fiux15fim-noktasi-tespiti}}
                                                    [1
 
 ]
@@ -686,7 +686,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.292 ...i-tespiti-single-change-point-detection}}
+l.292 ...bel{tek-deux11fiux15fim-noktasi-tespiti}}
                                                    [2
 
 ]
@@ -702,11 +702,11 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
-(fancyhdr)                Make it at least 29.85403pt, for example:
-(fancyhdr)                \setlength{\headheight}{29.85403pt}.
+(fancyhdr)                Make it at least 15.35403pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.35403pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-15.35405pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.85405pt}.
 
 [4{C:/Users/ey/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/U
 sers/ey/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/User
@@ -729,11 +729,11 @@ Underfull \vbox (badness 1107) has occurred while \output is active []
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
-(fancyhdr)                Make it at least 29.85403pt, for example:
-(fancyhdr)                \setlength{\headheight}{29.85403pt}.
+(fancyhdr)                Make it at least 15.35403pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.35403pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-15.35405pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.85405pt}.
 
 [6 <./BP_Rapor_files/figure-latex/pressure-1.pdf>]
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
@@ -743,11 +743,11 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [7{C:/Users/ey/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
-(fancyhdr)                Make it at least 29.85403pt, for example:
-(fancyhdr)                \setlength{\headheight}{29.85403pt}.
+(fancyhdr)                Make it at least 15.35403pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.35403pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-15.35405pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.85405pt}.
 
 [8]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
@@ -757,7 +757,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [9
 
 ]
-<BP_Rapor_files/figure-latex/march3plot-1.pdf, id=319, 433.62pt x 216.81pt>
+<BP_Rapor_files/figure-latex/march3plot-1.pdf, id=318, 433.62pt x 216.81pt>
 File: BP_Rapor_files/figure-latex/march3plot-1.pdf Graphic file (type pdf)
 <use BP_Rapor_files/figure-latex/march3plot-1.pdf>
 Package pdftex.def Info: BP_Rapor_files/figure-latex/march3plot-1.pdf  used on 
@@ -770,11 +770,11 @@ Overfull \hbox (17.62376pt too wide) in paragraph at lines 573--574
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
-(fancyhdr)                Make it at least 29.85403pt, for example:
-(fancyhdr)                \setlength{\headheight}{29.85403pt}.
+(fancyhdr)                Make it at least 15.35403pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.35403pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-15.35405pt}.
+(fancyhdr)                \addtolength{\topmargin}{-0.85405pt}.
 
 [10 <./BP_Rapor_files/figure-latex/march3plot-1.pdf>]
 Chapter 2.
@@ -815,7 +815,7 @@ LaTeX Warning: Reference `tab:inher' on page 17 undefined on input line 751.
 [17
 
 ]
-<figure/ist.png, id=397, 321.2pt x 321.2pt>
+<figure/ist.png, id=396, 321.2pt x 321.2pt>
 File: figure/ist.png Graphic file (type png)
 <use figure/ist.png>
 Package pdftex.def Info: figure/ist.png  used on input line 769.
@@ -826,7 +826,7 @@ Package pdftex.def Info: figure/ist.png  used on input line 769.
 
 LaTeX Warning: Reference `rmd-basics' on page 20 undefined on input line 776.
 
-<BP_Rapor_files/figure-latex/delaysboxplot-1.pdf, id=410, 433.62pt x 325.215pt>
+<BP_Rapor_files/figure-latex/delaysboxplot-1.pdf, id=409, 433.62pt x 325.215pt>
 
 File: BP_Rapor_files/figure-latex/delaysboxplot-1.pdf Graphic file (type pdf)
 <use BP_Rapor_files/figure-latex/delaysboxplot-1.pdf>
@@ -836,7 +836,7 @@ on input line 789.
 [20
 
  <./BP_Rapor_files/figure-latex/delaysboxplot-1.pdf>]
-<figure/subdivision.pdf, id=423, 220.825pt x 89.33376pt>
+<figure/subdivision.pdf, id=422, 220.825pt x 89.33376pt>
 File: figure/subdivision.pdf Graphic file (type pdf)
 <use figure/subdivision.pdf>
 Package pdftex.def Info: figure/subdivision.pdf  used on input line 802.
@@ -884,14 +884,14 @@ L3 programming layer <2023-06-30>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `BP_Rapor.out' has not changed.
-(rerunfilecheck)             Checksum: 630B6736666916D19ED4D28B2CBFE46D;5047.
+(rerunfilecheck)             Checksum: 1DA1BB525739D0E6BF367A3503D708C6;4869.
  ) 
 Here is how much of TeX's memory you used:
- 16573 strings out of 475550
- 272039 string characters out of 5763949
+ 16579 strings out of 475550
+ 272064 string characters out of 5763949
  1931238 words of memory out of 5000000
  37132 multiletter control sequences out of 15000+600000
- 640500 words of font info for 197 fonts, out of 8000000 for 9000
+ 640532 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,1087b,620s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ey/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><
@@ -913,9 +913,9 @@ type1/public/lm/lmsy8.pfb><C:/Users/ey/AppData/Local/Programs/MiKTeX/fonts/type
 ublic/lm/lmtt12.pfb><C:/Users/ey/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/lm/lmtti10.pfb><C:/Users/ey/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/symbols/msam10.pfb>
-Output written on BP_Rapor.pdf (49 pages, 547975 bytes).
+Output written on BP_Rapor.pdf (49 pages, 549566 bytes).
 PDF statistics:
- 683 PDF objects out of 1000 (max. 8388607)
- 147 named destinations out of 1000 (max. 500000)
+ 689 PDF objects out of 1000 (max. 8388607)
+ 153 named destinations out of 1000 (max. 500000)
  43282 words of extra memory for PDF output out of 51595 (max. 10000000)
 
