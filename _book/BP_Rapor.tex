@@ -173,7 +173,7 @@ Ahmet ÇALI\\
 }
 
 \Preface{
-``PROJE BAŞLIĞI'' başlıklı bitirme projesi raporu tarafımdan okunmuş, kapsamı ve niteliği açısından bir Bitirme Projesi raporu olarak kabul edilmiştir.\\
+``PROJE BAŞLIĞI'' başlıklı bitirme projesi raporu tarafıgitmdan okunmuş, kapsamı ve niteliği açısından bir Bitirme Projesi raporu olarak kabul edilmiştir.\\
 \strut \\
 \strut \\
 Dr.~Engin YILDIZTEPE
@@ -217,7 +217,7 @@ Second paragraph of abstract starts here.\\
 \pagestyle{empty} % this removes page numbers from the frontmatter
 
 \begin{preface}
-	``PROJE BAŞLIĞI'' başlıklı bitirme projesi raporu tarafımdan okunmuş, kapsamı ve niteliği açısından bir Bitirme Projesi raporu olarak kabul edilmiştir.\\
+	``PROJE BAŞLIĞI'' başlıklı bitirme projesi raporu tarafıgitmdan okunmuş, kapsamı ve niteliği açısından bir Bitirme Projesi raporu olarak kabul edilmiştir.\\
 \strut \\
 \strut \\
 Dr.~Engin YILDIZTEPE
@@ -288,8 +288,11 @@ Değişim noktası, veri setinde ani ve beklenmedik bir değişikliği ifade ede
 
 Bu analizler, veri setindeki önemli değişiklikleri objektif bir şekilde belirleyerek, kullanıcılara olayları anlama ve gelecekteki eğilimleri tahmin etme konusunda yardımcı olabilir. Bu sayede, değişim noktalarının belirlenmesi, karar verme süreçlerini destekleyerek daha bilinçli ve stratejik adımlar atılmasına imkan tanır.
 
+\hypertarget{Bolum2}{%
+\chapter{DEĞİŞİM NOKTASI}\label{Bolum2}}
+
 \hypertarget{tek-deux11fiux15fim-noktasi-tespiti}{%
-\chapter{TEK DEĞİŞİM NOKTASI TESPİTİ}\label{tek-deux11fiux15fim-noktasi-tespiti}}
+\section{TEK DEĞİŞİM NOKTASI TESPİTİ}\label{tek-deux11fiux15fim-noktasi-tespiti}}
 
 Tek değişim noktası tespiti, bir veri setinde yalnızca bir değişim noktasının varlığını tespit etmeye odaklanan istatistiksel bir analiz yöntemidir. Bu tür analizler genellikle zaman serileri, süreç kontrolü, finansal veriler gibi çeşitli alanlarda kullanılır. Temel hedef, veri setindeki bu değişim noktasını tanımlamak ve bu noktada meydana gelen ani değişikliği belirlemektir.
 
@@ -312,9 +315,6 @@ Bu test, \(\lambda > c\) ise null hipotezi reddedilir şeklinde bir eşik değer
 
 Açıkça görülmektedir ki, olabilirlik test istatistiği basitçe \(m\) segmentlerinin her biri için olasılığı toplamak suretiyle birden fazla değişime genişletilebilir. Sorun, tüm olası \(\tau_{1:m}\) kombinasyonları üzerinde \(ML(\tau_{1:m})\)'in maksimumunu belirlemeye dönüşür.
 
-\hypertarget{section}{%
-\section{}\label{section}}
-
 \hypertarget{line-breaks}{%
 \section{Line breaks}\label{line-breaks}}
 
@@ -328,27 +328,6 @@ This should be a new paragraph.
 Here is the first sentence. Here is another sentence. Here is the last sentence to end the paragraph.
 
 This should be a new paragraph.
-
-\hypertarget{r-chunks}{%
-\section{R chunks}\label{r-chunks}}
-
-When you click the \textbf{Knit} button above a document will be generated that includes both content as well as the output of any embedded \textbf{R} code chunks within the document. You can embed an \textbf{R} code chunk like this (\texttt{cars} is a built-in \textbf{R} dataset):
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{summary}\NormalTok{(cars)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  
-\end{verbatim}
 
 \hypertarget{inline-code}{%
 \section{Inline code}\label{inline-code}}
@@ -385,206 +364,6 @@ You can also embed plots. For example, here is a way to use the base \textbf{R} 
 Note that the \texttt{echo=FALSE} parameter was added to the code chunk to prevent printing of the \textbf{R} code that generated the plot. There are plenty of other ways to add chunk options. More information is available at \url{http://yihui.name/knitr/options/}.
 
 Another useful chunk option is the setting of \texttt{cache=TRUE} as you see here. If document rendering becomes time consuming due to long computations or plots that are expensive to generate you can use knitr caching to improve performance. Later in this file, you'll see a way to reference plots created in \textbf{R} or external figures.
-
-\hypertarget{loading-and-exploring-data}{%
-\section{Loading and exploring data}\label{loading-and-exploring-data}}
-
-Included in this template is a file called \texttt{flights.csv}. This file includes a subset of the larger dataset of information about all flights that departed from Seattle and Portland in 2014. More information about this dataset and its \textbf{R} package is available at \url{http://github.com/ismayc/pnwflights14}. This subset includes only Portland flights and only rows that were complete with no missing values. Merges were also done with the \texttt{airports} and \texttt{airlines} data sets in the \texttt{pnwflights14} package to get more descriptive airport and airline names.
-
-We can load in this data set using the following command:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{flights }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"data/flights.csv"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-The data is now stored in the data frame called \texttt{flights} in \textbf{R}. To get a better feel for the variables included in this dataset we can use a variety of functions. Here we can see the dimensions (rows by columns) and also the names of the columns.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{dim}\NormalTok{(flights)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-[1] 52808    16
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{names}\NormalTok{(flights)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
- [1] "month"        "day"          "dep_time"     "dep_delay"    "arr_time"    
- [6] "arr_delay"    "carrier"      "tailnum"      "flight"       "dest"        
-[11] "air_time"     "distance"     "hour"         "minute"       "carrier_name"
-[16] "dest_name"   
-\end{verbatim}
-
-Another good idea is to take a look at the dataset in table form. With this dataset having more than 50,000 rows, we won't explicitly show the results of the command here. I recommend you enter the command into the Console \textbf{\emph{after}} you have run the \textbf{R} chunks above to load the data into \textbf{R}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{View}\NormalTok{(flights)}
-\end{Highlighting}
-\end{Shaded}
-
-While not required, it is highly recommended you use the \texttt{dplyr} package to manipulate and summarize your data set as needed. It uses a syntax that is easy to understand using chaining operations. Below I've created a few examples of using \texttt{dplyr} to get information about the Portland flights in 2014. You will also see the use of the \texttt{ggplot2} package, which produces beautiful, high-quality academic visuals.
-
-We begin by checking to ensure that needed packages are installed and then we load them into our current working environment:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# List of packages required for this analysis}
-\CommentTok{\#pkg \textless{}{-} c("dplyr", "ggplot2", "knitr", "bookdown", "remotes")}
-\NormalTok{pkg }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{, }\StringTok{"knitr"}\NormalTok{, }\StringTok{"bookdown"}\NormalTok{, }\StringTok{"remotes"}\NormalTok{)}
-\CommentTok{\# Check if packages are not installed and assign the}
-\CommentTok{\# names of the packages not installed to the variable new.pkg}
-\NormalTok{new.pkg }\OtherTok{\textless{}{-}}\NormalTok{ pkg[}\SpecialCharTok{!}\NormalTok{(pkg }\SpecialCharTok{\%in\%} \FunctionTok{installed.packages}\NormalTok{())]}
-\CommentTok{\# If there are any packages in the list that aren\textquotesingle{}t installed,}
-\CommentTok{\# install them}
-\ControlFlowTok{if}\NormalTok{ (}\FunctionTok{length}\NormalTok{(new.pkg))}
-  \FunctionTok{install.packages}\NormalTok{(new.pkg)}
-\CommentTok{\# Load packages (thesisdown will load all of the packages as well)}
-\FunctionTok{library}\NormalTok{(thesisdown)}
-\CommentTok{\#library(dplyr)}
-\CommentTok{\#library(ggplot2)}
-\FunctionTok{library}\NormalTok{(tidyverse)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-Warning: package 'ggplot2' was built under R version 4.3.2
-\end{verbatim}
-
-\begin{verbatim}
-Warning: package 'readr' was built under R version 4.3.2
-\end{verbatim}
-
-\begin{verbatim}
-Warning: package 'stringr' was built under R version 4.3.2
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(bookdown)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-Warning: package 'bookdown' was built under R version 4.3.2
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(knitr)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-Warning: package 'knitr' was built under R version 4.3.2
-\end{verbatim}
-
-\clearpage
-
-The example we show here does the following:
-
-\begin{itemize}
-\item
-  Selects only the \texttt{carrier\_name} and \texttt{arr\_delay} from the \texttt{flights} dataset and then assigns this subset to a new variable called \texttt{flights2}.
-\item
-  Using \texttt{flights2}, we determine the largest arrival delay for each of the carriers.
-\end{itemize}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{flights2 }\OtherTok{\textless{}{-}}\NormalTok{ flights }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{select}\NormalTok{(carrier\_name, arr\_delay)}
-\NormalTok{max\_delays }\OtherTok{\textless{}{-}}\NormalTok{ flights2 }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{group\_by}\NormalTok{(carrier\_name) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{max\_arr\_delay =} \FunctionTok{max}\NormalTok{(arr\_delay, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
-A useful function in the \texttt{knitr} package for making nice tables in \emph{R Markdown} is called \texttt{kable}. It is much easier to use than manually entering values into a table by copying and pasting values into Excel or LaTeX. This again goes to show how nice reproducible documents can be! (Note the use of \texttt{results="asis"}, which will produce the table instead of the code to create the table.) The \texttt{caption.short} argument is used to include a shorter title to appear in the List of Tables.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{kable}\NormalTok{(max\_delays, }
-      \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Airline"}\NormalTok{, }\StringTok{"Max Arrival Delay"}\NormalTok{),}
-      \AttributeTok{caption =} \StringTok{"Maximum Delays by Airline"}\NormalTok{,}
-      \AttributeTok{caption.short =} \StringTok{"Max Delays by Airline"}\NormalTok{,}
-      \AttributeTok{longtable =} \ConstantTok{TRUE}\NormalTok{,}
-      \AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{longtable}[t]{lr}
-\caption[Max Delays by Airline]{\label{tab:maxdelays}Maximum Delays by Airline}\\
-\toprule
-Airline & Max Arrival Delay\\
-\midrule
-Alaska Airlines Inc. & 338\\
-American Airlines Inc. & 1539\\
-Delta Air Lines Inc. & 651\\
-Frontier Airlines Inc. & 575\\
-Hawaiian Airlines Inc. & 407\\
-\addlinespace
-JetBlue Airways & 273\\
-SkyWest Airlines Inc. & 421\\
-Southwest Airlines Co. & 694\\
-US Airways Inc. & 347\\
-United Air Lines Inc. & 472\\
-\addlinespace
-Virgin America & 366\\
-\bottomrule
-\end{longtable}
-
-The last two options make the table a little easier-to-read.
-
-We can further look into the properties of the largest value here for American Airlines Inc.~To do so, we can isolate the row corresponding to the arrival delay of 1539 minutes for American in our original \texttt{flights} dataset.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{flights }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(arr\_delay }\SpecialCharTok{==} \DecValTok{1539}\NormalTok{, }
-\NormalTok{                  carrier\_name }\SpecialCharTok{==} \StringTok{"American Airlines Inc."}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\FunctionTok{c}\NormalTok{(month, day, carrier, dest\_name, hour, }
-\NormalTok{            minute, carrier\_name, arr\_delay))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-  dep_time dep_delay arr_time tailnum flight dest air_time distance
-1     1403      1553     1934  N595AA   1568  DFW      182     1616
-\end{verbatim}
-
-We see that the flight occurred on March 3rd and departed a little after 2 PM on its way to Dallas/Fort Worth. Lastly, we show how we can visualize the arrival delay of all departing flights from Portland on March 3rd against time of departure.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{flights }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(month }\SpecialCharTok{==} \DecValTok{3}\NormalTok{, day }\SpecialCharTok{==} \DecValTok{3}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ dep\_time, }\AttributeTok{y =}\NormalTok{ arr\_delay)) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{BP_Rapor_files/figure-latex/march3plot-1.pdf}
-
-\hypertarget{additional-resources}{%
-\section{Additional resources}\label{additional-resources}}
-
-\begin{itemize}
-\item
-  \emph{Markdown} Cheatsheet - \url{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}
-\item
-  \emph{R Markdown} Reference Guide - \url{https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf}
-\item
-  Introduction to \texttt{dplyr} - \url{https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html}
-\item
-  \texttt{ggplot2} Documentation - \url{http://docs.ggplot2.org/current/}
-\end{itemize}
 
 \hypertarget{math-sci}{%
 \chapter{Mathematics and Science}\label{math-sci}}
@@ -730,131 +509,8 @@ We can reference this combustion of glucose reaction via Equation \eqref{eq:reac
 
 \noindent \(\mathrm{MeCH_2Br + Mg}\) \(\xrightarrow[below]{above}\) \(\mathrm{MeCH_2\bullet Mg \bullet Br}\)
 
-\hypertarget{physics}{%
-\section{Physics}\label{physics}}
-
-Many of the symbols you will need can be found on the math page \url{http://web.reed.edu/cis/help/latex/math.html} and the Comprehensive LaTeX Symbol Guide (\url{http://mirror.utexas.edu/ctan/info/symbols/comprehensive/symbols-letter.pdf}).
-
-\hypertarget{biology}{%
-\section{Biology}\label{biology}}
-
-You will probably find the resources at \url{http://www.lecb.ncifcrf.gov/~toms/latex.html} helpful, particularly the links to bsts for various journals. You may also be interested in TeXShade for nucleotide typesetting (\url{http://homepages.uni-tuebingen.de/beitz/txe.html}). Be sure to read the proceeding chapter on graphics and tables.
-
-\hypertarget{ref-labels}{%
-\chapter{Tables, Graphics, References, and Labels}\label{ref-labels}}
-
-\hypertarget{tables}{%
-\section{Tables}\label{tables}}
-
-In addition to the tables that can be automatically generated from a data frame in \textbf{R} that you saw in {[}R Markdown Basics{]} using the \texttt{kable} function, you can also create tables using \emph{pandoc}. (More information is available at \url{http://pandoc.org/README.html\#tables}.) This might be useful if you don't have values specifically stored in \textbf{R}, but you'd like to display them in table form. Below is an example. Pay careful attention to the alignment in the table and hyphens to create the rows and columns.
-
-We can also create a link to the table by doing the following: Table \ref{tab:inher}. If you go back to \protect\hyperlink{loading-and-exploring-data}{Loading and exploring data} and look at the \texttt{kable} table, we can create a reference to this max delays table too: Table \ref{tab:maxdelays}. The addition of the \texttt{(\textbackslash{}\#tab:inher)} option to the end of the table caption allows us to then make a reference to Table \texttt{\textbackslash{}@ref(tab:label)}. Note that this reference could appear anywhere throughout the document after the table has appeared.
-
-\clearpage
-
-\hypertarget{figures}{%
-\section{Figures}\label{figures}}
-
-If your thesis has a lot of figures, \emph{R Markdown} might behave better for you than that other word processor. One perk is that it will automatically number the figures accordingly in each chapter. You'll also be able to create a label for each figure, add a caption, and then reference the figure in a way similar to what we saw with tables earlier. If you label your figures, you can move the figures around and \emph{R Markdown} will automatically adjust the numbering for you. No need for you to remember! So that you don't have to get too far into LaTeX to do this, a couple \textbf{R} functions have been created for you to assist. You'll see their use below.
-
-In the \textbf{R} chunk below, we will load in a picture stored as \texttt{ist.png} in our ``figure'' directory. We then give it the caption of ``IST logo'', the label of ``istlogo'', and specify that this is a figure. Make note of the different \textbf{R} chunk options that are given in the R Markdown file (not shown in the knitted document).
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{include\_graphics}\NormalTok{(}\AttributeTok{path =} \StringTok{"figure/ist.png"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-\includegraphics[width=4.44in]{figure/ist} \caption{IST logo}\label{fig:istlogo}
-\end{figure}
-
-Here is a reference to the IST logo: Figure \ref{fig:istlogo}. Note the use of the \texttt{fig:} code here. By naming the \textbf{R} chunk that contains the figure, we can then reference that figure later as done in the first sentence here. We can also specify the caption for the figure via the R chunk option \texttt{fig.cap}.
-
-\clearpage
-
-Below we will investigate how to save the output of an \textbf{R} plot and label it in a way similar to that done above. Recall the \texttt{flights} dataset from Chapter \ref{rmd-basics}. (Note that we've shown a different way to reference a section or chapter here.) We will next explore a bar graph with the mean flight departure delays by airline from Portland for 2014. Note also the use of the \texttt{scale} parameter which is discussed on the next page.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{flights }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{group\_by}\NormalTok{(carrier) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{mean\_dep\_delay =} \FunctionTok{mean}\NormalTok{(dep\_delay)) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ carrier, }\AttributeTok{y =}\NormalTok{ mean\_dep\_delay)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{position =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{fill =} \StringTok{"red"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-\centering
-\includegraphics{BP_Rapor_files/figure-latex/delaysboxplot-1.pdf}
-\caption{\label{fig:delaysboxplot}Mean Delays by Airline}
-\end{figure}
-
-Here is a reference to this image: Figure \ref{fig:delaysboxplot}.
-
-A table linking these carrier codes to airline names is available at \url{https://github.com/ismayc/pnwflights14/blob/master/data/airlines.csv}.
-
-\clearpage
-
-Next, we will explore the use of the \texttt{out.extra} chunk option, which can be used to shrink or expand an image loaded from a file by specifying \texttt{"scale=\ "}. Here we use the mathematical graph stored in the ``subdivision.pdf'' file.
-
-\begin{figure}
-\includegraphics[scale=0.75]{figure/subdivision} \caption{Subdiv. graph}\label{fig:subd}
-\end{figure}
-
-Here is a reference to this image: Figure \ref{fig:subd}. Note that \texttt{echo=FALSE} is specified so that the \textbf{R} code is hidden in the document.
-
-\textbf{More Figure Stuff}
-
-Lastly, we will explore how to rotate and enlarge figures using the \texttt{out.extra} chunk option. (Currently this only works in the PDF version of the book.)
-
-\begin{figure}
-\includegraphics[angle=180, scale=1.1]{figure/subdivision} \caption{A Larger Figure, Flipped Upside Down}\label{fig:subd2}
-\end{figure}
-
-As another example, here is a reference: Figure \ref{fig:subd2}.
-
-\hypertarget{footnotes-and-endnotes}{%
-\section{Footnotes and Endnotes}\label{footnotes-and-endnotes}}
-
-You might want to footnote something. \footnote{footnote text} The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site.
-
-\hypertarget{bibliographies}{%
-\section{Bibliographies}\label{bibliographies}}
-
-Of course you will need to cite things, and you will probably accumulate an armful of sources. There are a variety of tools available for creating a bibliography database (stored with the .bib extension). In addition to BibTeX suggested below, you may want to consider using the free and easy-to-use tool called Zotero. The librarians have created Zotero documentation at \url{http://libguides.reed.edu/citation/zotero}. In addition, a tutorial is available from Middlebury College at \url{http://sites.middlebury.edu/zoteromiddlebury/}.
-
-\emph{R Markdown} uses \emph{pandoc} (\url{http://pandoc.org/}) to build its bibliographies. One nice caveat of this is that you won't have to do a second compile to load in references as standard LaTeX requires. To cite references in your thesis (after creating your bibliography database), place the reference name inside square brackets and precede it by the ``at'' symbol. For example, here's a reference to a book about worrying: (Molina ve Borkovec, 1994). This \texttt{Molina1994} entry appears in a file called \texttt{thesis.bib} in the \texttt{bib} folder. This bibliography database file was created by a program called BibTeX. You can call this file something else if you like (look at the YAML header in the main .Rmd file) and, by default, is to placed in the \texttt{bib} folder.
-
-For more information about BibTeX and bibliographies, see the CUS site \url{http://web.reed.edu/cis/help/latex/index.html}. There are three pages on this topic: \emph{bibtex} (which talks about using BibTeX, at \url{http://web.reed.edu/cis/help/latex/bibtex.html}), \emph{bibtexstyles} (about how to find and use the bibliography style that best suits your needs, at \url{http://web.reed.edu/cis/help/latex/bibtexstyles.html}) and \emph{bibman} (which covers how to make and maintain a bibliography by hand, without BibTeX, at \url{http://web.reed.edu/cis/help/latex/bibman.html}). The last page will not be useful unless you have only a few sources.
-
-If you look at the YAML header at the top of the main .Rmd file you can see that we can specify the style of the bibliography by referencing the appropriate csl file. You can download a variety of different style files at \url{https://www.zotero.org/styles}. Make sure to download the file into the csl folder.
-
-\textbf{Tips for Bibliographies}
-
-\begin{itemize}
-\tightlist
-\item
-  Like with thesis formatting, the sooner you start compiling your bibliography for something as large as thesis, the better. Typing in source after source is mind-numbing enough; do you really want to do it for hours on end in late April? Think of it as procrastination.
-\item
-  The cite key (a citation's label) needs to be unique from the other entries.
-\item
-  When you have more than one author or editor, you need to separate each author's name by the word ``and'' e.g.~\texttt{Author\ =\ \{Noble,\ Sam\ and\ Youngberg,\ Jessica\},}.
-\item
-  Bibliographies made using BibTeX (whether manually or using a manager) accept LaTeX markup, so you can italicize and add symbols as necessary.
-\item
-  To force capitalization in an article title or where all lowercase is generally used, bracket the capital letter in curly braces.
-\item
-  You can add a Thesis citation\footnote{Noble (2002)} option. The best way to do this is to use the phdthesis type of citation, and use the optional ``type'' field to enter ``Undergraduate thesis.''
-\end{itemize}
-
-\hypertarget{anything-else}{%
-\section{Anything else?}\label{anything-else}}
-
-If you'd like to see examples of other things in this template, please contact the \ldots. @ \ldots. team (email \href{mailto:email@email.email}{\nolinkurl{email@email.email}}) with your suggestions. We love to see people using \emph{R Markdown} for their theses, and are happy to help.
-
-\hypertarget{Bolum4}{%
-\chapter{Bölüm 4 Başlık}\label{Bolum4}}
+\hypertarget{Bolum3}{%
+\chapter{Bölüm 3 Başlık}\label{Bolum3}}
 
 \hypertarget{bu-bir-alt-baux15flux131k}{%
 \section{Bu bir alt başlık}\label{bu-bir-alt-baux15flux131k}}
@@ -863,6 +519,17 @@ Bu bölümde şu konular yer almaktadır\ldots{}
 
 \hypertarget{bu-ikinci-seviye-bir-alt-baux15flux131k}{%
 \subsection{Bu ikinci seviye bir alt başlık}\label{bu-ikinci-seviye-bir-alt-baux15flux131k}}
+
+\hypertarget{Bolum4}{%
+\chapter{Bölüm 4 Başlık}\label{Bolum4}}
+
+\hypertarget{bu-bir-alt-baux15flux131k-1}{%
+\section{Bu bir alt başlık}\label{bu-bir-alt-baux15flux131k-1}}
+
+Bu bölümde şu konular yer almaktadır\ldots{}
+
+\hypertarget{bu-ikinci-seviye-bir-alt-baux15flux131k-1}{%
+\subsection{Bu ikinci seviye bir alt başlık}\label{bu-ikinci-seviye-bir-alt-baux15flux131k-1}}
 
 \hypertarget{sonuuxe7}{%
 \chapter*{Sonuç}\label{sonuuxe7}}
@@ -978,29 +645,6 @@ This first appendix includes all of the R chunks of code that were hidden throug
 \end{Shaded}
 
 \textbf{In Chapter \ref{ref-labels}:}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# This chunk ensures that the thesisdown package is}
-\CommentTok{\# installed and loaded. This thesisdown package includes}
-\CommentTok{\# the template files for the thesis and also two functions}
-\CommentTok{\# used for labeling and referencing}
-\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(remotes))}
-  \FunctionTok{install.packages}\NormalTok{(}\StringTok{"remotes"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(dplyr))}
-    \FunctionTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(ggplot2))}
-    \FunctionTok{install.packages}\NormalTok{(}\StringTok{"ggplot2"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(ggplot2))}
-    \FunctionTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(thesisdown))\{}
-  \FunctionTok{library}\NormalTok{(remotes)}
-\NormalTok{  remotes}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"ismayc/thesisdown"}\NormalTok{)}
-\NormalTok{  \}}
-\FunctionTok{library}\NormalTok{(thesisdown)}
-\NormalTok{flights }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"data/flights.csv"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \hypertarget{ikinci-ek-baux15flux131ux11fux131}{%
 \chapter{İkinci Ek Başlığı}\label{ikinci-ek-baux15flux131ux11fux131}}

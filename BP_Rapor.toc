@@ -1,32 +1,24 @@
-\babel@toc {english}{}\relax 
+\babel@toc {turkish}{}\relax 
 \contentsline {chapter}{GİRİŞ}{1}{chapter*.8}%
-\contentsline {chapter}{Chapter 1: TEK DEĞİŞİM NOKTASI TESPİTİ}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}}{4}{section.1.1}%
+\contentsline {chapter}{B\"ol\"um 1: DEĞİŞİM NOKTASI}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}TEK DEĞİŞİM NOKTASI TESPİTİ}{3}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Line breaks}{4}{section.1.2}%
-\contentsline {section}{\numberline {1.3}R chunks}{4}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Inline code}{5}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Including plots}{5}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Loading and exploring data}{6}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Additional resources}{10}{section.1.7}%
-\contentsline {chapter}{Chapter 2: Mathematics and Science}{11}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Math}{11}{section.2.1}%
-\contentsline {section}{\numberline {2.2}BİRDEN FAZLA DEĞİŞİM NOKTASI TESPİTİ (MULTI CHANGE POINT DETECTION)}{11}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}İkili Segmentasyon Algoritması}{12}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}PELT}{13}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Parçalı Regresyon}{13}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Other examples of reactions}{15}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Physics}{15}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Biology}{16}{section.2.4}%
-\contentsline {chapter}{Chapter 3: Tables, Graphics, References, and Labels}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Tables}{17}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Figures}{18}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Footnotes and Endnotes}{21}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Bibliographies}{21}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Anything else?}{23}{section.3.5}%
-\contentsline {chapter}{Chapter 4: Bölüm 4 Başlık}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Bu bir alt başlık}{25}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Bu ikinci seviye bir alt başlık}{25}{subsection.4.1.1}%
-\contentsline {chapter}{Sonuç}{27}{chapter*.13}%
-\contentsline {chapter}{Kaynaklar}{29}{chapter*.14}%
-\contentsline {chapter}{Appendix A: İlk Ek Başlığı}{31}{appendix.A}%
-\contentsline {chapter}{Appendix B: İkinci Ek Başlığı}{33}{appendix.B}%
+\contentsline {section}{\numberline {1.3}Inline code}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Including plots}{5}{section.1.4}%
+\contentsline {chapter}{B\"ol\"um 2: Mathematics and Science}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Math}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}BİRDEN FAZLA DEĞİŞİM NOKTASI TESPİTİ (MULTI CHANGE POINT DETECTION)}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}İkili Segmentasyon Algoritması}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}PELT}{9}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Parçalı Regresyon}{9}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Other examples of reactions}{11}{subsection.2.2.4}%
+\contentsline {chapter}{B\"ol\"um 3: Bölüm 3 Başlık}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Bu bir alt başlık}{13}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Bu ikinci seviye bir alt başlık}{13}{subsection.3.1.1}%
+\contentsline {chapter}{B\"ol\"um 4: Bölüm 4 Başlık}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Bu bir alt başlık}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Bu ikinci seviye bir alt başlık}{15}{subsection.4.1.1}%
+\contentsline {chapter}{Sonuç}{17}{chapter*.9}%
+\contentsline {chapter}{Kaynaklar}{19}{chapter*.10}%
+\contentsline {chapter}{Ek A: İlk Ek Başlığı}{21}{appendix.A}%
+\contentsline {chapter}{Ek B: İkinci Ek Başlığı}{23}{appendix.B}%

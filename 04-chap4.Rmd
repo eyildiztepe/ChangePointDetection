@@ -1,5 +1,3 @@
-
-
 # Bölüm 4 Başlık {#Bolum4}
 
 ## Bu bir alt başlık
