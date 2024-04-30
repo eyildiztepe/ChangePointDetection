@@ -115,7 +115,7 @@
 %\author{Pelin PEKERMerve AKEdanur Binnaz DURSUNAhmet ÇALI} %Tek yazar için
 \author{Pelin PEKER \\ Merve AK \\ Edanur Binnaz DURSUN \\ Ahmet ÇALI} %Çok yazar için
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
-\date{April 2024}
+\date{Nisan 2024}
 \division{İSTATİSTİK BÖLÜMÜ}
 \advisor{Dr.~Engin YILDIZTEPE}
 \institution{FEN FAKÜLTESİ}
@@ -289,10 +289,10 @@ Değişim noktası, veri setinde ani ve beklenmedik bir değişikliği ifade ede
 Bu analizler, veri setindeki önemli değişiklikleri objektif bir şekilde belirleyerek, kullanıcılara olayları anlama ve gelecekteki eğilimleri tahmin etme konusunda yardımcı olabilir. Bu sayede, değişim noktalarının belirlenmesi, karar verme süreçlerini destekleyerek daha bilinçli ve stratejik adımlar atılmasına imkan tanır.
 
 \hypertarget{Bolum2}{%
-\chapter{DEĞİŞİM NOKTASI}\label{Bolum2}}
+\chapter{Değişim Noktası}\label{Bolum2}}
 
-\hypertarget{tek-deux11fiux15fim-noktasi-tespiti}{%
-\section{TEK DEĞİŞİM NOKTASI TESPİTİ}\label{tek-deux11fiux15fim-noktasi-tespiti}}
+\hypertarget{tek-deux11fiux15fim-noktasux131-tespiti}{%
+\section{Tek Değişim Noktası Tespiti}\label{tek-deux11fiux15fim-noktasux131-tespiti}}
 
 Tek değişim noktası tespiti, bir veri setinde yalnızca bir değişim noktasının varlığını tespit etmeye odaklanan istatistiksel bir analiz yöntemidir. Bu tür analizler genellikle zaman serileri, süreç kontrolü, finansal veriler gibi çeşitli alanlarda kullanılır. Temel hedef, veri setindeki bu değişim noktasını tanımlamak ve bu noktada meydana gelen ani değişikliği belirlemektir.
 
@@ -315,70 +315,10 @@ Bu test, \(\lambda > c\) ise null hipotezi reddedilir şeklinde bir eşik değer
 
 Açıkça görülmektedir ki, olabilirlik test istatistiği basitçe \(m\) segmentlerinin her biri için olasılığı toplamak suretiyle birden fazla değişime genişletilebilir. Sorun, tüm olası \(\tau_{1:m}\) kombinasyonları üzerinde \(ML(\tau_{1:m})\)'in maksimumunu belirlemeye dönüşür.
 
-\hypertarget{line-breaks}{%
-\section{Line breaks}\label{line-breaks}}
+\hypertarget{birden-fazla-deux11fiux15fim-noktasux131-tespiti}{%
+\section{Birden Fazla Değişim Noktası Tespiti}\label{birden-fazla-deux11fiux15fim-noktasux131-tespiti}}
 
-Make sure to add white space between lines if you'd like to start a new paragraph. Look at what happens below in the outputted document if you don't:
-
-Here is the first sentence. Here is another sentence. Here is the last sentence to end the paragraph.
-This should be a new paragraph.
-
-\emph{Now for the correct way:}
-
-Here is the first sentence. Here is another sentence. Here is the last sentence to end the paragraph.
-
-This should be a new paragraph.
-
-\hypertarget{inline-code}{%
-\section{Inline code}\label{inline-code}}
-
-If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
-
-\begin{quote}
-The \texttt{cos} of \(2 \pi\) is 1.
-\end{quote}
-
-Another example would be the direct calculation of the standard deviation:
-
-\begin{quote}
-The standard deviation of \texttt{speed} in \texttt{cars} is 5.2876444.
-\end{quote}
-
-One last neat feature is the use of the \texttt{ifelse} conditional statement which can be used to output text depending on the result of an \textbf{R} calculation:
-
-\begin{quote}
-The standard deviation is less than 6.
-\end{quote}
-
-Note the use of \texttt{\textgreater{}} here, which signifies a quotation environment that will be indented.
-
-As you see with \texttt{\$2\ \textbackslash{}pi\$} above, mathematics can be added by surrounding the mathematical text with dollar signs. More examples of this are in \protect\hyperlink{math-sci}{Mathematics and Science} if you uncomment the code in \protect\hyperlink{math}{Math}.
-
-\hypertarget{including-plots}{%
-\section{Including plots}\label{including-plots}}
-
-You can also embed plots. For example, here is a way to use the base \textbf{R} graphics package to produce a plot using the built-in \texttt{pressure} dataset:
-
-\includegraphics{BP_Rapor_files/figure-latex/pressure-1.pdf}
-
-Note that the \texttt{echo=FALSE} parameter was added to the code chunk to prevent printing of the \textbf{R} code that generated the plot. There are plenty of other ways to add chunk options. More information is available at \url{http://yihui.name/knitr/options/}.
-
-Another useful chunk option is the setting of \texttt{cache=TRUE} as you see here. If document rendering becomes time consuming due to long computations or plots that are expensive to generate you can use knitr caching to improve performance. Later in this file, you'll see a way to reference plots created in \textbf{R} or external figures.
-
-\hypertarget{math-sci}{%
-\chapter{Mathematics and Science}\label{math-sci}}
-
-\hypertarget{math}{%
-\section{Math}\label{math}}
-
-\TeX~is the best way to typeset mathematics. Donald Knuth designed \TeX~when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics. One nice feature of \emph{R Markdown} is its ability to read LaTeX code directly.
-
-If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over or delete this next commented section.
-
-\hypertarget{birden-fazla-deux11fiux15fim-noktasi-tespiti-multi-change-point-detection}{%
-\section{BİRDEN FAZLA DEĞİŞİM NOKTASI TESPİTİ (MULTI CHANGE POINT DETECTION)}\label{birden-fazla-deux11fiux15fim-noktasi-tespiti-multi-change-point-detection}}
-
-Birden fazla değişim noktasının belirlenmesi, bir veri setinde meydana gelen yapısal değişiklikleri tespit etme sürecini ifade eder. Bu analiz, veri setinin farklı segmentlere bölünmesi ve her bir segmentteki değişim noktalarının tanımlanması yoluyla gerçekleştirilir. Değişim noktaları, verinin genel özelliklerinde veya desenlerinde beklenmeyen değişiklikleri temsil eder.
+Birden fazla değişim noktasının (Multi change points) belirlenmesi, bir veri setinde meydana gelen yapısal değişiklikleri tespit etme sürecini ifade eder. Bu analiz, veri setinin farklı segmentlere bölünmesi ve her bir segmentteki değişim noktalarının tanımlanması yoluyla gerçekleştirilir. Değişim noktaları, verinin genel özelliklerinde veya desenlerinde beklenmeyen değişiklikleri temsil eder.
 
 Özellikle zaman serilerinde birden fazla değişim noktasının belirlenmesi, farklı dönemlerde farklı trendlerin veya desenlerin varlığını anlamak açısından önemlidir. Bu tür analizler, endüstriyel süreçlerde, finansal piyasalarda veya epidemiyolojik veriler gibi farklı alanlarda meydana gelen önemli olayları veya dönemleri belirlemek için kullanılabilir.
 
@@ -493,24 +433,28 @@ Burada \(Y_{r}\), önceki regresyon denklemlerine göre beklenen (tahmin edilen)
 
 Değişim noktasının en uygun değeri, \(C_{d}\) katsayısının maksimum olduğu noktada bulunabilir.
 
-You may wish to put your reaction in an equation environment, which means that LaTeX will place the reaction where it fits and will number the equations for you.
-
-\begin{equation}
-  \mathrm{C_6H_{12}O_6  + 6O_2} \longrightarrow \mathrm{6CO_2 + 6H_2O}
-  \label{eq:reaction}
-\end{equation}
-
-We can reference this combustion of glucose reaction via Equation \eqref{eq:reaction}.
-
-\hypertarget{other-examples-of-reactions}{%
-\subsection{Other examples of reactions}\label{other-examples-of-reactions}}
-
-\(\mathrm{NH_4Cl_{(s)}}\) \(\rightleftharpoons\) \(\mathrm{NH_{3(g)}+HCl_{(g)}}\)
-
-\noindent \(\mathrm{MeCH_2Br + Mg}\) \(\xrightarrow[below]{above}\) \(\mathrm{MeCH_2\bullet Mg \bullet Br}\)
-
 \hypertarget{Bolum3}{%
-\chapter{Bölüm 3 Başlık}\label{Bolum3}}
+\chapter{Uygulama}\label{Bolum3}}
+
+\hypertarget{veri}{%
+\section{Veri}\label{veri}}
+
+Bu bölümde şu konular yer almaktadır\ldots{}
+
+\hypertarget{yapay-veriler}{%
+\subsection{Yapay Veriler}\label{yapay-veriler}}
+
+\hypertarget{geruxe7ek-veriler}{%
+\subsection{Gerçek Veriler}\label{geruxe7ek-veriler}}
+
+\hypertarget{uxe7alux131ux15fma-tasarux131mux131}{%
+\section{Çalışma Tasarımı}\label{uxe7alux131ux15fma-tasarux131mux131}}
+
+\hypertarget{sonuuxe7lar}{%
+\section{Sonuçlar}\label{sonuuxe7lar}}
+
+\hypertarget{Bolum4}{%
+\chapter{Bölüm Başlığı}\label{Bolum4}}
 
 \hypertarget{bu-bir-alt-baux15flux131k}{%
 \section{Bu bir alt başlık}\label{bu-bir-alt-baux15flux131k}}
@@ -520,8 +464,8 @@ Bu bölümde şu konular yer almaktadır\ldots{}
 \hypertarget{bu-ikinci-seviye-bir-alt-baux15flux131k}{%
 \subsection{Bu ikinci seviye bir alt başlık}\label{bu-ikinci-seviye-bir-alt-baux15flux131k}}
 
-\hypertarget{Bolum4}{%
-\chapter{Bölüm 4 Başlık}\label{Bolum4}}
+\hypertarget{Bolum5}{%
+\chapter{Bölüm 4 Başlık}\label{Bolum5}}
 
 \hypertarget{bu-bir-alt-baux15flux131k-1}{%
 \section{Bu bir alt başlık}\label{bu-bir-alt-baux15flux131k-1}}
