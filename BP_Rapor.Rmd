@@ -1,3 +1,87 @@
+---
+authors: 
+  - 'Pelin PEKER'
+  - 'Merve AK'
+  - 'Edanur Binnaz DURSUN'
+  - 'Ahmet ÇALI'
+date:  'Mayıs 2024'
+institution: 'FEN FAKÜLTESİ'
+division: 'İSTATİSTİK BÖLÜMÜ'
+advisor: 'Dr. Engin YILDIZTEPE'
+department: 'İstatistik Bölümü'
+degree: 'Bitirme Projesi Raporu'  
+title: 'Değişim Noktası'
+knit: 'bookdown::render_book'
+site: bookdown::bookdown_site
+
+output: 
+  thesisdown::thesis_pdf: default #"template.tex" şablonuna yönlendiren fonksiyon
+#  thesisdown::thesis_gitbook: default
+#  thesisdown::thesis_word: default
+#  thesisdown::thesis_epub: default
+# If you are creating a PDF you'll need to write your preliminary content here or
+# use code similar to line 20 for the files.  If you are producing in a different
+# format than PDF, you can delete or ignore lines 20-31 in this YAML header.
+
+abstractTR: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-ozet.Rmd", encoding="UTF-8"), collapse = '\n  ')`
+
+abstract: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), collapse = '\n  ')`
+# If you'd rather include the preliminary content in files instead of inline
+# like below, use a command like that for the abstract above.  Note that a tab is 
+# needed on the line after the |.
+
+preface: |  # rapor değerlendirme
+  "`r rmarkdown::metadata$title`" başlıklı bitirme projesi raporu tarafıgitmdan okunmuş, kapsamı ve niteliği açısından bir Bitirme Projesi raporu olarak kabul edilmiştir.\
+  \
+  \
+  `r rmarkdown::metadata$advisor`
+  
+acknowledgements: |
+  Tüm çalışma süresince yönlendiriciliği, katkıları ve yardımları ile yanımızda olan danışmanımız `r rmarkdown::metadata$advisor` 'ye ve böyle bir çalışmayı yapmamız için bize fırsat tanıyan Dokuz Eylül Üniversitesi Fen Fakültesi İstatistik Bölümüne teşekkür ederiz.\
+  \
+  \
+  `r rmarkdown::metadata$authors[[1]]`
+  \
+  `r rmarkdown::metadata$authors[[2]]`
+  \
+  `r rmarkdown::metadata$authors[[3]]`
+  \
+  `r rmarkdown::metadata$authors[[4]]`
+  \
+ 
+# ```{r, echo = FALSE,results="asis"}
+# n<-length(rmarkdown::metadata$authors)
+# for (i in 1:n) {
+#       cat(rmarkdown::metadata$authors[[i]],sep="\n")
+#   }
+# ```
+#
+
+#dedication: |
+#  You can have a dedication here if you wish. 
+bibliography: bib/thesis.bib
+# Download your specific bibliography database file and refer to it in the line above.
+csl: csl/apa-tr.csl
+# Download your specific csl file and refer to it in the line above.
+lot: true
+lof: true
+#space_between_paragraphs: true
+# Delete the # at the beginning of the previous line if you'd like
+# to have a blank new line between each paragraph
+#header-includes:
+#- \usepackage{tikz}
+---
+
+#  thesisdown::thesis_gitbook: default
+
+Placeholder
+
+
+
+<!--chapter:end:index.Rmd-->
+
 # Değişim Noktası {#Bolum2}
 
 
@@ -265,4 +349,101 @@ Burada $Y_{r}$, önceki regresyon denklemlerine göre beklenen (tahmin edilen) y
 $C_{d}$ katsayısı, 0 ile 1 arasında değer alır. Saf, parçalanmamış doğrusal regresyonda, $C_{d}$ ve $R_{a}^2$ değerleri eşittir. Parçalı regresyonda, $C_{d}$'nin $R_{a}^2$'den anlamlı derecede büyük olması, parçalanmanın haklı olduğunu gösterir.
 
 Değişim noktasının en uygun değeri, $C_{d}$ katsayısının maksimum olduğu noktada bulunabilir.
+
+
+<!--chapter:end:01-chap1.Rmd-->
+
+
+# Uygulama {#Bolum3}
+
+Placeholder
+
+
+## Veri
+### Gerçek Veri 
+### Yapay Veri
+### F1 Default
+### Cover Default
+### F1 Oracle
+### Cover Oracle
+## Yapay Veriler
+### F1 Default
+### COVER Default
+### F1 Oracle
+### COVER Oracle
+## Sporcu Verileri
+### Cover Oracle
+### F1 Oracle
+## Çalışma Tasarımı
+## Sonuçlar
+
+<!--chapter:end:02-chap2.Rmd-->
+
+# Bölüm Başlığı {#Bolum4}
+## Bu bir alt başlık
+
+Bu bölümde şu konular yer almaktadır...
+
+### Bu ikinci seviye bir alt başlık
+
+<!--chapter:end:03-chap3.Rmd-->
+
+# Bölüm 4 Başlık {#Bolum5}
+
+## Bu bir alt başlık
+
+Bu bölümde şu konular yer almaktadır...
+
+### Bu ikinci seviye bir alt başlık
+
+<!--chapter:end:04-chap4.Rmd-->
+
+# Sonuç {-}
+
+If we don't want Conclusion to have a chapter number next to it, we can add the `{-}` attribute.
+
+**More info**
+
+And here's some other random info: the first paragraph after a chapter title or section head _shouldn't be_ indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
+
+
+<!--chapter:end:77-conclusion.Rmd-->
+
+
+# Kaynaklar {-}
+
+Placeholder
+
+
+
+<!--chapter:end:88-references.Rmd-->
+
+`r if(knitr:::is_latex_output()) '\\appendix'`
+
+`r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'` 
+
+<!--
+If you feel it necessary to include an appendix, it goes here.
+-->
+
+
+# İlk Ek Başlığı
+
+This first appendix includes all of the R chunks of code that were hidden throughout the document (using the `include = FALSE` chunk tag) to help with readibility and/or setup.
+
+**In the main Rmd file**
+
+```{r ref.label='include_packages', results='hide', echo = TRUE}
+```
+
+**In Chapter \@ref(ref-labels):**
+
+```{r ref.label='include_packages_2', results='hide', echo = TRUE}
+```
+
+# İkinci Ek Başlığı
+
+İkinci Ek
+
+<!--chapter:end:99-appendix.Rmd-->
 

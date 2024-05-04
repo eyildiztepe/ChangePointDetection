@@ -4,14 +4,13 @@ authors:
   - 'Merve AK'
   - 'Edanur Binnaz DURSUN'
   - 'Ahmet ÇALI'
-date:  '`r format(Sys.Date(), "%B %Y")`'
+date:  'Mayıs 2024'
 institution: 'FEN FAKÜLTESİ'
 division: 'İSTATİSTİK BÖLÜMÜ'
-advisor: 'Dr. Engin YILDIZTEPE' #Danışman Ünvan Adı Soyadı
-#altadvisor: 'Your Other Advisor' # Delete line if you only have one advisor
+advisor: 'Dr. Engin YILDIZTEPE'
 department: 'İstatistik Bölümü'
 degree: 'Bitirme Projesi Raporu'  
-title: 'PROJE BAŞLIĞI'
+title: 'Değişim Noktası'
 knit: 'bookdown::render_book'
 site: bookdown::bookdown_site
 
