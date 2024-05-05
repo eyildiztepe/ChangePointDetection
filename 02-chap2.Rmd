@@ -2,12 +2,12 @@
 ## Veri
 ### Gerçek Veri 
 
-Table: (\#tab:nvar) Gerçek Veri
+Table: (\#tab:nvar1) Gerçek Veri
 
 
 ### Yapay Veri
 
-Table: (\#tab:nvar) Yapay Veri
+Table: (\#tab:nvar2) Yapay Veri
 
 | Veri | Gözlem Sayısı | DN Sayısı | DN Konumu                  |
 |------|---------------|-----------|----------------------------|
@@ -36,7 +36,7 @@ Table: (\#tab:nvar) Yapay Veri
 
 ### F1 Default
 
-Table: (\#tab:nvar) F1 Default 
+Table: (\#tab:nvar3) F1 Default 
 
 | Veri                | AMOC  | BINSEG | PELT  | SEGMENTED | PROPHET |
 |---------------------|-------|--------|-------|-----------|---------|
@@ -61,7 +61,7 @@ Değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
 
 ### Cover Default
 
-Table: (\#tab:nvar) Cover Default 
+Table: (\#tab:nvar4) Cover Default 
 
 | Veri                | AMOC  | BINSEG | PELT  | SEGMENTED | PROPHET |
 |---------------------|-------|--------|-------|-----------|---------|
@@ -84,7 +84,7 @@ Değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
 
 ### F1 Oracle
 
-Table: (\#tab:nvar) F1 Oracle 
+Table: (\#tab:nvar5) F1 Oracle 
 
 | Veri                | AMOC  | BINSEG | PELT  | SEGMENTED | PROPHET |
 |---------------------|-------|--------|-------|-----------|---------|
@@ -105,7 +105,7 @@ Ayarlanmış parametreler ile en iyi F1 puanı değerleri parçalı regresyon il
 Tablo xx'e göre parçalı regresyon ve BinSeg algoritmaları denenen tüm gerçek veriler için 0,3 ve üzerinde F1 puanı elde etmişlerdir.Ancak AMOC algoritması için F1 puanı  onbir verinin üçünde 0,3'ün altındadır.																									
 ### Cover Oracle
 
-Table: (\#tab:nvar) Cover Oracle 
+Table: (\#tab:nvar6) Cover Oracle 
 
 | Veri                | AMOC  | BINSEG | PELT  | SEGMENTED | PROPHET |
 |---------------------|-------|--------|-------|-----------|---------|
@@ -130,7 +130,7 @@ Ayarlanmış parametreler ile algoritmalar çalıştırıldığında, kapsama ö
 
 ### F1 Default
 
-Table: (\#tab:nvar) F1 Default 
+Table: (\#tab:nvar7) F1 Default 
 
 | Veri | AMOC  | BINSEG | SEGMENTED | PROPHET | PELT   |
 |------|-------|--------|-----------|---------|--------|
@@ -162,7 +162,7 @@ Varsayılan parametrelerle çalıştırılan algoritmalardan Prophet on yedi, pa
 
 ### COVER Default
 
-Table: (\#tab:nvar) Cover Default 
+Table: (\#tab:nvar8) Cover Default 
 
 | Veri | AMOC   | BINSEG | SEGMENTED | PROPHET | PELT   |
 |------|--------|--------|-----------|---------|--------|
@@ -192,7 +192,7 @@ Varsayılan ayarlar çalıştırılan algoritmalardan sadece parçalı regresyon
 
 ### F1 Oracle
 
-Table: (\#tab:nvar) F1 Oracle 
+Table: (\#tab:nvar9) F1 Oracle 
 
 | Veri | AMOC   | BINSEG | SEGMENTED | PROPHET | PELT   |
 |------|--------|--------|-----------|---------|--------|
@@ -223,7 +223,7 @@ Prophet algoritmasının en kötü F1 puanı değerlerini verdiği görülmekted
 
 ### COVER Oracle
 
-Table: (\#tab:nvar) Cover Oracle 
+Table: (\#tab:nvar10) Cover Oracle 
 
 | Veri | AMOC   | BINSEG | SEGMENTED | PROPHET | PELT   |
 |------|--------|--------|-----------|---------|--------|
@@ -260,7 +260,7 @@ Ayarlanan parametrelerle çalıştırılan beş farklı algoritmanın kullanıld
 
 ### Cover Oracle
 
-Table: (\#tab:nvar) Cover Oracle 
+Table: (\#tab:nvar11) Cover Oracle 
 
 | Veri | BINSEG | SEGMENTED | PELT   |
 |------|--------|-----------|--------|
@@ -286,7 +286,7 @@ Ayarlanan parametrelerle çalıştırılan üç farklı algoritmanın kullanıld
 
 ### F1 Oracle
 
-Table: (\#tab:nvar) F1  Oracle 
+Table: (\#tab:nvar12) F1  Oracle 
 
 | Veri | BINSEG | SEGMENTED | PELT   |
 |------|--------|-----------|--------|

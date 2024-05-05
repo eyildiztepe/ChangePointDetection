@@ -1,18 +1,18 @@
 ---
 authors: 
-  - 'Pelin PEKER'
-  - 'Merve AK'
-  - 'Edanur Binnaz DURSUN'
-  - 'Ahmet ÇALI'
-date:  'Mayıs 2024'
+ - 'Pelin PEKER'
+ - 'Merve AK'
+ - 'Edanur Binnaz DURSUN'
+ - 'Ahmet ÇALI'
+date: 'Mayıs 2024'
 institution: 'FEN FAKÜLTESİ'
 division: 'İSTATİSTİK BÖLÜMÜ'
 advisor: 'Dr. Engin YILDIZTEPE'
 department: 'İstatistik Bölümü'
-degree: 'Bitirme Projesi Raporu'  
-title: 'Değişim Noktası'
+degree: 'Bitirme Projesi Raporu'
+title: 'DEĞİŞİM NOKTASI'
 knit: 'bookdown::render_book'
-site: bookdown::bookdown_site
+site: 'bookdown::bookdown_site'
 
 output: 
   thesisdown::thesis_pdf: default #"template.tex" şablonuna yönlendiren fonksiyon
