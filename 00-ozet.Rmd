@@ -1,14 +1,7 @@
- Bu rapor, değişim noktası tespiti üzerine gerçekleştirilen bir çalışmanın sonuçlarını sunmaktadır. Çalışma, araştırmacılara en uygun değişim noktası tespit yöntemini seçmelerine yardımcı olmayı hedeflemektedir. Değişim noktası tespiti, zaman serisi verilerinde meydana gelen yapısal değişiklikleri belirlemeye yönelik bir istatistiksel analiz yöntemidir. Bu değişiklikler, veri setinde belirgin değişim noktaları olarak adlandırılır ve zaman içinde bu değişim noktalarını tanımlayarak, veri setindeki anlık değişimlerin ve trendlerin zaman içinde nasıl evrildiğini anlamamıza olanak tanır. \
+ Değişim noktası verilerde meydana gelen beklenmedik değişiklikler olarak tanımlanabilir. Değişim noktası tespit yöntemleri bu noktaları istatistiksel tekniklerle bulmayı amaçlar. Değişim noktası analizi finans, kalite kontrol, ağ analizi gibi çok farklı alanlarda kullanılmaktadır. Bu çalışmada değişim noktası tespit yöntemleri incelenmiştir. Çalışma kapsamında AMOC, BinSeg, Parçalı Regresyon, Pelt ve Prophet algoritmaları kullanılmıştır. Algoritmaların uygulamadaki performanslarını belirlemek amacıyla yirmi yapay ve on bir gerçek veri kullanılmıştır. Algoritmaların performansları F1 puanı ve kapsama ölçütü kullanılarak değerlendirilmiştir.  Değişim noktası içeren yapay veri üretmek ve bahsedilen algoritmaları uygulayabilmek amacıyla bir RShiny web uygulaması geliştirilmiştir. Çalışmada R ve Python programlama dilleri kullanılmıştır.\
 \
- Çalışmada, finansal veriler de dahil olmak üzere farklı sektörlerden 11 gerçek veri seti kullanılmış ve bu veri setleri değişim noktası tespit algoritmaları kullanılarak analiz edilmiştir. Ayrıca, R programı kullanılarak rassal olarak oluşturulan 20 simülasyon veri seti de aynı algoritmalar kullanılarak analiz edilmiştir.\
-\
- Analizde kullanılan algoritmalar arasında AMOC, BİNSEG, PELT, Segmented Regression ve Prophet gibi öne çıkan yöntemler bulunmaktadır. Her bir algoritma, çeşitli matematiksel ve istatistiksel teknikleri kullanarak değişim noktalarını tespit etme yeteneğine sahiptir.\
-\
- Algoritmaların performansını değerlendirmek için F1 skoru ve kapsama (cover) metrikleri kullanılmıştır. F1 score, algoritmanın hassasiyetini ve geri çağırma oranını dikkate alarak bir performans ölçütü sağlar. Cover metriği ise doğru olarak tespit edilen değişim noktalarının oranını belirler, bu da algoritmaların ne kadar etkili olduğunu gösterir.\
-\
- Ek olarak, R Shiny uygulaması ile tasarlanan arayüz, kullanıcılara farklı algoritmaları ve ayarları hızlıca karşılaştırma ve sonuçları interaktif grafiklerle görselleştirme imkanı sunar. Bu, araştırmacıların analiz sonuçlarını daha derinlemesine anlamalarına ve karar verme süreçlerini optimize etmelerine yardımcı olur.\
-\
-**Anahtar Kelimeler:** anahtar kelime 1, anahtar kelime 2, anahtar kelime 3
+
+**Anahtar Kelimeler:**  Değişim noktası, AMOC, BinSeg, Pelt, Prophet, Parçalı Regresyon, R Shiny
  <!-- 
  Türkçe anahtar kelimeler küçük harfler ile(özel isimler hariç). virgülle ayır, en az üç tane. 
  -->
