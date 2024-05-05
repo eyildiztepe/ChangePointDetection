@@ -1,5 +1,5 @@
 ---
-authors: 
+authors:
  - 'Pelin PEKER'
  - 'Merve AK'
  - 'Edanur Binnaz DURSUN'
@@ -29,7 +29,7 @@ abstractTR: |
 abstract: |
   `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), collapse = '\n  ')`
 # If you'd rather include the preliminary content in files instead of inline
-# like below, use a command like that for the abstract above.  Note that a tab is 
+# like below, use a command like that for the abstract above.  Note that a tab is
 # needed on the line after the |.
 
 preface: |  # rapor değerlendirme
