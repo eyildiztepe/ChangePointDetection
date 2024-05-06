@@ -1,2 +1,4 @@
+Changepoints can be defined as unexpected alterations in data. Changepoint detection methods aim to identify these points using statistical techniques. Changepoint analysis is utilized in various fields such as finance, quality control, and network analysis. In this study, changepoint detection methods were examined. Within the scope of the study, AMOC, BinSeg,Segmented Regression, Pelt, and Prophet algorithms were employed. Twenty artificial and eleven real datasets were used to determine the performance of the algorithms. The performance of the algorithms was evaluated using the F1 score and cover metric. To generate artificial data containing changepoints and to apply the mentioned algorithms, an RShiny web application was developed. R and Python programming languages were used in the study.\
+\
 
-**Keywords:** keyword1, keyword2, keyword3
+**Keywords:** Changepoint, AMOC, BinSeg, Pelt, Prophet, Segmented Regression, R Shiny
