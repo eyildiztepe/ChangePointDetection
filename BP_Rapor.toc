@@ -1,46 +1,46 @@
 \babel@toc {turkish}{}\relax 
-\contentsline {chapter}{B\"ol\"um 1: thesisdown::thesis\_gitbook: default}{1}{chapter.1}%
-\contentsline {chapter}{B\"ol\"um 2: Değişim Noktası}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Tek Değişim Noktası Tespiti}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Birden Fazla Değişim Noktası Tespiti}{3}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}İkili Segmentasyon Algoritması}{3}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}PROPHET}{3}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}PELT(Pruned Exact Linear Time)}{3}{subsection.2.2.3}%
-\contentsline {subsubsection}{Optimal Bölütleme}{3}{section*.8}%
-\contentsline {subsubsection}{PELT Yöntemi}{3}{section*.9}%
-\contentsline {section}{\numberline {2.3}Parçalı Regresyon}{3}{section.2.3}%
-\contentsline {section}{\numberline {2.4}KAPSAMA METRİĞİ}{3}{section.2.4}%
-\contentsline {section}{\numberline {2.5}F1 PUANI}{3}{section.2.5}%
-\contentsline {subsubsection}{Doğruluk (Accuracy)}{3}{section*.10}%
-\contentsline {subsubsection}{Duyarlılık (Recall)}{3}{section*.11}%
-\contentsline {subsubsection}{Kesinlik (Precision)}{3}{section*.12}%
-\contentsline {subsubsection}{F1 Skoru (F1 Score)}{3}{section*.13}%
-\contentsline {chapter}{B\"ol\"um 3: Uygulama}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Veri}{5}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Gerçek Veri}{5}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Yapay Veri}{5}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Gerçek Veri}{6}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}F1 Default}{6}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Cover Default}{6}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}F1 Oracle}{7}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Cover Oracle}{7}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Sporcu Verileri}{8}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Cover Oracle}{8}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}F1 Oracle}{9}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Yapay Veri}{10}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}F1 Default}{10}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Cover Default}{10}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}F1 Oracle}{11}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Cover Oracle}{12}{subsection.3.4.4}%
-\contentsline {section}{\numberline {3.5}Çalışma Tasarımı}{13}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Sonuçlar}{13}{section.3.6}%
-\contentsline {chapter}{B\"ol\"um 4: Bölüm Başlığı}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Bu bir alt başlık}{15}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Bu ikinci seviye bir alt başlık}{15}{subsection.4.1.1}%
-\contentsline {chapter}{B\"ol\"um 5: Bölüm 4 Başlık}{17}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Bu bir alt başlık}{17}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Bu ikinci seviye bir alt başlık}{17}{subsection.5.1.1}%
-\contentsline {chapter}{Sonuç}{19}{chapter*.14}%
-\contentsline {chapter}{Kaynaklar}{21}{chapter*.15}%
-\contentsline {chapter}{Ek A: İlk Ek Başlığı}{23}{appendix.A}%
-\contentsline {chapter}{Ek B: İkinci Ek Başlığı}{25}{appendix.B}%
+\contentsline {chapter}{GİRİŞ}{1}{chapter*.8}%
+\contentsline {chapter}{B\"ol\"um 1: Değişim Noktası}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Tek Değişim Noktası Tespiti}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Birden Fazla Değişim Noktası Tespiti}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}İkili Segmentasyon Algoritması}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}PROPHET}{6}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}PELT(Pruned Exact Linear Time)}{7}{subsection.1.2.3}%
+\contentsline {subsubsection}{Optimal Bölütleme}{7}{section*.9}%
+\contentsline {subsubsection}{PELT Yöntemi}{8}{section*.10}%
+\contentsline {section}{\numberline {1.3}Parçalı Regresyon}{10}{section.1.3}%
+\contentsline {section}{\numberline {1.4}KAPSAMA METRİĞİ}{13}{section.1.4}%
+\contentsline {section}{\numberline {1.5}F1 PUANI}{14}{section.1.5}%
+\contentsline {subsubsection}{Doğruluk (Accuracy)}{15}{section*.11}%
+\contentsline {subsubsection}{Duyarlılık (Recall)}{15}{section*.12}%
+\contentsline {subsubsection}{Kesinlik (Precision)}{15}{section*.13}%
+\contentsline {subsubsection}{F1 Skoru (F1 Score)}{15}{section*.14}%
+\contentsline {chapter}{B\"ol\"um 2: Uygulama}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Veri}{17}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Gerçek Veri}{17}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Yapay Veri}{17}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Gerçek Veri}{18}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}F1 Default}{18}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Cover Default}{18}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}F1 Oracle}{19}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Cover Oracle}{19}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Sporcu Verileri}{20}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Cover Oracle}{20}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}F1 Oracle}{21}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Yapay Veri}{22}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}F1 Default}{22}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Cover Default}{22}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}F1 Oracle}{23}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Cover Oracle}{24}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Çalışma Tasarımı}{25}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Sonuçlar}{25}{section.2.6}%
+\contentsline {chapter}{B\"ol\"um 3: Bölüm Başlığı}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Bu bir alt başlık}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Bu ikinci seviye bir alt başlık}{27}{subsection.3.1.1}%
+\contentsline {chapter}{B\"ol\"um 4: Bölüm 4 Başlık}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Bu bir alt başlık}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Bu ikinci seviye bir alt başlık}{29}{subsection.4.1.1}%
+\contentsline {chapter}{Sonuç}{31}{chapter*.15}%
+\contentsline {chapter}{Kaynaklar}{33}{chapter*.16}%
+\contentsline {chapter}{Ek A: İlk Ek Başlığı}{35}{appendix.A}%
+\contentsline {chapter}{Ek B: İkinci Ek Başlığı}{37}{appendix.B}%
