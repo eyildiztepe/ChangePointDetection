@@ -1,20 +1,21 @@
 ---
 authors:
- - 'Pelin PEKER'
- - 'Merve AK'
- - 'Edanur Binnaz DURSUN'
- - 'Ahmet ÇALI'
-date: 'Mayıs 2024'
+  - 'Pelin PEKER'
+  - 'Merve AK'
+  - 'Edanur Binnaz DURSUN'
+  - 'Ahmet ÇALI'
+date:  '`r format(Sys.Date(), "%B %Y")`'
 institution: 'FEN FAKÜLTESİ'
 division: 'İSTATİSTİK BÖLÜMÜ'
-advisor: 'Dr. Engin YILDIZTEPE'
+advisor: 'Dr. Engin YILDIZTEPE' #Danışman Ünvan Adı Soyadı
+#altadvisor: 'Your Other Advisor' # Delete line if you only have one advisor
 department: 'İstatistik Bölümü'
-degree: 'Bitirme Projesi Raporu'
-title: 'Değişim Noktası Belirleme Yöntemleri ve Uygulamaları'
+degree: 'Bitirme Projesi Raporu' 
+title: 'PROJE BAŞLIĞI'
 knit: 'bookdown::render_book'
-site: 'bookdown::bookdown_site'
-
-output: 
+site: bookdown::bookdown_site
+ 
+output:
   thesisdown::thesis_pdf: default #"template.tex" şablonuna yönlendiren fonksiyon
 #  thesisdown::thesis_gitbook: default
 #  thesisdown::thesis_word: default
@@ -22,22 +23,22 @@ output:
 # If you are creating a PDF you'll need to write your preliminary content here or
 # use code similar to line 20 for the files.  If you are producing in a different
 # format than PDF, you can delete or ignore lines 20-31 in this YAML header.
-
+ 
 abstractTR: |
   `r if(knitr:::is_latex_output()) paste(readLines("00-ozet.Rmd", encoding="UTF-8"), collapse = '\n  ')`
-
+ 
 abstract: |
   `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), collapse = '\n  ')`
 # If you'd rather include the preliminary content in files instead of inline
 # like below, use a command like that for the abstract above.  Note that a tab is
 # needed on the line after the |.
-
+ 
 preface: |  # rapor değerlendirme
   "`r rmarkdown::metadata$title`" başlıklı bitirme projesi raporu tarafıgitmdan okunmuş, kapsamı ve niteliği açısından bir Bitirme Projesi raporu olarak kabul edilmiştir.\
   \
   \
   `r rmarkdown::metadata$advisor`
-  
+ 
 acknowledgements: |
   Tüm çalışma süresince yönlendiriciliği, katkıları ve yardımları ile yanımızda olan danışmanımız `r rmarkdown::metadata$advisor` 'ye ve böyle bir çalışmayı yapmamız için bize fırsat tanıyan Dokuz Eylül Üniversitesi Fen Fakültesi İstatistik Bölümüne teşekkür ederiz.\
   \
@@ -50,7 +51,6 @@ acknowledgements: |
   \
   `r rmarkdown::metadata$authors[[4]]`
   \
- 
 # ```{r, echo = FALSE,results="asis"}
 # n<-length(rmarkdown::metadata$authors)
 # for (i in 1:n) {
@@ -58,9 +58,9 @@ acknowledgements: |
 #   }
 # ```
 #
-
+ 
 #dedication: |
-#  You can have a dedication here if you wish. 
+#  You can have a dedication here if you wish.
 bibliography: bib/thesis.bib
 # Download your specific bibliography database file and refer to it in the line above.
 csl: csl/apa-tr.csl
@@ -73,32 +73,32 @@ lof: true
 #header-includes:
 #- \usepackage{tikz}
 ---
-
+ 
 <!--
 Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
-
+ 
 If you'd prefer to not include a Dedication, for example, simply delete lines 17 and 18 above or add a # before them to comment them out.  If you have other LaTeX packages you would like to include, delete the # before header-includes and list the packages after hyphens on new lines.
-
+ 
 If you'd like to include a comment that won't be produced in your resulting file enclose it in a block like this.
 -->
-
+ 
 <!--
 If you receive a duplicate label error after knitting, make sure to delete the index.Rmd file and then knit again.
 -->
-
+ 
 ```{r include_packages, include = FALSE}
 # This chunk ensures that the thesisdown package is
 # installed and loaded. This thesisdown package includes
 # the template files for the thesis.
- if(!require(remotes)) install.packages("remotes", repos = "http://cran.rstudio.com")
- if(!require(thesisdown))remotes::install_github("ismayc/thesisdown")
- library(thesisdown)
-
+if(!require(remotes)) install.packages("remotes", repos = "http://cran.rstudio.com")
+if(!require(thesisdown))remotes::install_github("ismayc/thesisdown")
+library(thesisdown)
+ 
 ```
-
+ 
 <!-- You'll need to include the order that you'd like Rmd files to appear in the _bookdown.yml file for PDF files and also delete the # before rmd_files: there.  You'll want to not include 00(two-hyphens)prelim.Rmd and 00-abstract.Rmd since they are handled in the YAML above differently for the PDF version.
 -->
-
+ 
 <!-- The {.unnumbered} option here means that the introduction will be "Chapter 0." You can also use {-} for no numbers
 on chapters.
 -->
