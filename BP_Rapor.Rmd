@@ -1,9 +1,129 @@
+---
+authors:
+  - 'Pelin PEKER'
+  - 'Merve AK'
+  - 'Edanur Binnaz DURSUN'
+  - 'Ahmet ÇALI'
+date:  '`r format(Sys.Date(), "%B %Y")`'
+institution: 'FEN FAKÜLTESİ'
+division: 'İSTATİSTİK BÖLÜMÜ'
+advisor: 'Dr. Engin YILDIZTEPE' #Danışman Ünvan Adı Soyadı
+#altadvisor: 'Your Other Advisor' # Delete line if you only have one advisor
+department: 'İstatistik Bölümü'
+degree: 'Bitirme Projesi Raporu' 
+title: 'PROJE BAŞLIĞI'
+knit: 'bookdown::render_book'
+site: bookdown::bookdown_site
+ 
+output:
+  thesisdown::thesis_pdf: default #"template.tex" şablonuna yönlendiren fonksiyon
+#  thesisdown::thesis_gitbook: default
+#  thesisdown::thesis_word: default
+#  thesisdown::thesis_epub: default
+# If you are creating a PDF you'll need to write your preliminary content here or
+# use code similar to line 20 for the files.  If you are producing in a different
+# format than PDF, you can delete or ignore lines 20-31 in this YAML header.
+ 
+abstractTR: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-ozet.Rmd", encoding="UTF-8"), collapse = '\n  ')`
+ 
+abstract: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), collapse = '\n  ')`
+# If you'd rather include the preliminary content in files instead of inline
+# like below, use a command like that for the abstract above.  Note that a tab is
+# needed on the line after the |.
+ 
+preface: |  # rapor değerlendirme
+  "`r rmarkdown::metadata$title`" başlıklı bitirme projesi raporu tarafıgitmdan okunmuş, kapsamı ve niteliği açısından bir Bitirme Projesi raporu olarak kabul edilmiştir.\
+  \
+  \
+  `r rmarkdown::metadata$advisor`
+ 
+acknowledgements: |
+  Tüm çalışma süresince yönlendiriciliği, katkıları ve yardımları ile yanımızda olan danışmanımız `r rmarkdown::metadata$advisor` 'ye ve böyle bir çalışmayı yapmamız için bize fırsat tanıyan Dokuz Eylül Üniversitesi Fen Fakültesi İstatistik Bölümüne teşekkür ederiz.\
+  \
+  \
+  `r rmarkdown::metadata$authors[[1]]`
+  \
+  `r rmarkdown::metadata$authors[[2]]`
+  \
+  `r rmarkdown::metadata$authors[[3]]`
+  \
+  `r rmarkdown::metadata$authors[[4]]`
+  \
+# ```{r, echo = FALSE,results="asis"}
+# n<-length(rmarkdown::metadata$authors)
+# for (i in 1:n) {
+#       cat(rmarkdown::metadata$authors[[i]],sep="\n")
+#   }
+# ```
+#
+ 
+#dedication: |
+#  You can have a dedication here if you wish.
+bibliography: bib/thesis.bib
+# Download your specific bibliography database file and refer to it in the line above.
+csl: csl/apa-tr.csl
+# Download your specific csl file and refer to it in the line above.
+lot: true
+lof: true
+#space_between_paragraphs: true
+# Delete the # at the beginning of the previous line if you'd like
+# to have a blank new line between each paragraph
+#header-includes:
+#- \usepackage{tikz}
+---
+
+#  thesisdown::thesis_gitbook: default
+
+Placeholder
+
+
+
+<!--chapter:end:index.Rmd-->
+
+
+# Değişim Noktası {#Bolum2}
+
+Placeholder
+
+
+## Tek Değişim Noktası Tespiti
+## Birden Fazla Değişim Noktası Tespiti
+### İkili Segmentasyon Algoritması
+### PROPHET
+### PELT(Pruned Exact Linear Time)
+#### Optimal Bölütleme
+#### PELT Yöntemi
+## Parçalı Regresyon
+## KAPSAMA METRİĞİ
+## F1 PUANI
+#### Doğruluk (Accuracy)
+#### Duyarlılık (Recall)
+#### Kesinlik (Precision)
+#### F1 Skoru (F1 Score)
+
+<!--chapter:end:01-chap1.Rmd-->
+
 # Uygulama {#Bolum3}
 ## Veri
 ### Gerçek Veri 
 
 Table: (\#tab:nvar1) Gerçek Veri
 
+| Veri                | Gözlem Sayısı | 1. DN Sayısı | 2. DN Sayısı | 3. DN Sayısı | 4. DN Sayısı | 5. DN Sayısı |
+|---------------------|---------------|--------------|--------------|--------------|--------------|--------------|
+| Bitcoin             | NA            | 4            | 1            | 1            | 7            | 7            |
+| Brent-spot          | 500           | 3            | 2            | 5            | 9            | 11           |
+| children-per women  | 301           | 2            | 1            | 2            | 4            | 2            |
+| co2- canada         | 215           | 2            | 6            | 2            | 5            | 7            |
+| debt -Ireland       | 21            | 2            | 2            | 2            | 4            | 2            |
+| rail-lines          | 37            | 2            | 2            | 2            | 2            | 1            |
+| rather-stock        | 600           | 1            | 2            | 1            | 2            | 2            |
+| scanline-42049      | 481           | 10           | 7            | 2            | 7            | 7            |
+| shangai-license     | 205           | 1            | 1            | 1            | 1            | 2            |
+| usd-isk             | 247           | 2            | 4            | 1            | 3            | 2            |
+| well-log            | 675           | 11           | 9            | 9            | 2            | 17           |
 
 
 ### Yapay Veri
@@ -313,3 +433,74 @@ Pelt ve parçalı regresyon  algoritmalarının 0,3'ün altında  F1 puanı yokk
 ## Çalışma Tasarımı
 
 ## Sonuçlar
+
+<!--chapter:end:02-chap2.Rmd-->
+
+# Bölüm Başlığı {#Bolum4}
+## Bu bir alt başlık
+
+Bu bölümde şu konular yer almaktadır...
+
+### Bu ikinci seviye bir alt başlık
+
+<!--chapter:end:03-chap3.Rmd-->
+
+# Bölüm 4 Başlık {#Bolum5}
+
+## Bu bir alt başlık
+
+Bu bölümde şu konular yer almaktadır...
+
+### Bu ikinci seviye bir alt başlık
+
+<!--chapter:end:04-chap4.Rmd-->
+
+# Sonuç {-}
+
+If we don't want Conclusion to have a chapter number next to it, we can add the `{-}` attribute.
+
+**More info**
+
+And here's some other random info: the first paragraph after a chapter title or section head _shouldn't be_ indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
+
+
+<!--chapter:end:77-conclusion.Rmd-->
+
+
+# Kaynaklar {-}
+
+Placeholder
+
+
+
+<!--chapter:end:88-references.Rmd-->
+
+`r if(knitr:::is_latex_output()) '\\appendix'`
+
+`r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'` 
+
+<!--
+If you feel it necessary to include an appendix, it goes here.
+-->
+
+
+# İlk Ek Başlığı
+
+This first appendix includes all of the R chunks of code that were hidden throughout the document (using the `include = FALSE` chunk tag) to help with readibility and/or setup.
+
+**In the main Rmd file**
+
+```{r ref.label='include_packages', results='hide', echo = TRUE}
+```
+
+**In Chapter \@ref(ref-labels):**
+
+```{r ref.label='include_packages_2', results='hide', echo = TRUE}
+```
+
+# İkinci Ek Başlığı
+
+İkinci Ek
+
+<!--chapter:end:99-appendix.Rmd-->
+

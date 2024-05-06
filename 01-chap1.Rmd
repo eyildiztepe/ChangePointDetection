@@ -268,7 +268,8 @@ Değişim noktasının en uygun değeri, $C_{d}$ katsayısının maksimum olduğ
 
 ## KAPSAMA METRİĞİ
 
-```{r, echo=FALSE}
+
+```{r, echo=FALSE, out.width="400px", out.height="400px"}
 knitr::include_graphics("figure/cover.png")
 ```
 
@@ -296,7 +297,7 @@ $$F_{\beta} = \frac{(1 + \beta^2) \cdot P \cdot R}{(\beta^2 \cdot P) + R}$$
 
 $X$, bir tespit algoritması ile bulunan değişim noktası konumları olsun. $T^* = \cup T_k$, tüm işaretleyicilerin birleşik kümesidir. Değişim noktalarının gerçek konumları $T$ için, algoritmalar ile elde edilen gerçek pozitifler $TP(T, X)$ olarak tanımlanır ($\tau \in T$).Bu küme içindeki her bir $\tau$, $|\tau - x| \leq M$ koşulunu sağlayan en az bir $x \in X$ için bulunur. Ancak bir $\tau \in T$ için yalnızca bir $x \in X$ kullanılır.
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="357px", out.height="109px"}
 knitr::include_graphics("figure/conmat.png")
 ```
 
