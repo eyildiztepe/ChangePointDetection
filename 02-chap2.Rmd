@@ -1,7 +1,9 @@
 # Uygulama {#Bolum3}
 
 ## Veri
+
 ### Gerçek Veri
+
 ### Yapay Veri
 
 Table: (\#tab:nvar1) Yapay Veri 
