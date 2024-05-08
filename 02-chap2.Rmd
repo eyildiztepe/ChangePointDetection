@@ -58,7 +58,11 @@ Table: (\#tab:ngercek) Gerçek Veriler
 | Usd-isk           | 247 | 2     | 4     | 1     | 3     | 2     |
 | Well-log          | 675 | 11    | 9     | 9     | 2     | 17    |
 
+*GS: Gözlem sayısı ,DNS: Değişim Noktası Sayısı*
 
+Çalışmada kullanılan gerçek veriler 5 ayrı işaretleyici tarafından işaretlenmiştir [@van2020evaluation].Bu nedenle değişim noktası konumları değişiklik göstermektedir .
+
+ 
 ## Değişim Noktası Analizi
 
 Bu bölümde kullanılan yöntemler ile elde edilen sonuçlara yer verilmiştir. Kullanılan fonksiyonların varsayılan ayarları ile elde edilen sonuçlar F1 puanı varsayılan ve kapsama ölçütü varsayılan olarak adlandırılmıştır. Ayrıca, argümanların değerleri değiştirilerek elde edilen en iyi sonuçlar F1 puanı ayarlanmış ve kapsama ölçütü ayarlanmış olarak sunulmuştur.
@@ -95,7 +99,7 @@ Table: (\#tab:nvar8) F1 puanı (Varsayılan)
 Algoritmalar varsayılan parametre ayarlarıyla çalıştırıldığında (\@ref(tab:nvar8)), yirmi yapay  verinin sekizinde BinSeg, altısında AMOC ve birinde PELT  0,7 ve üzerinde F1 puanına sahipken, parçalı regresyon ve Prophet algoritmasında F1 puanı 0,7 ve üzerinde olan veri bulunmamaktadır.
 Varsayılan parametrelerle çalıştırılan algoritmalardan Prophet on yedi, parçalı regresyon üç, AMOC, BinSeg ve Pelt algoritmalarında birer tane 0,3'ün altında F1 puanına sahip veri  bulunmaktadır.
 
-Table: (\#tab:nvar9) Kapsama Ölçütü (varsayılan)
+Table: (\#tab:nvar9) Kapsama Ölçütü (Varsayılan)
 
 | Veri | AMOC   | BINSEG | SEGMENTED | PROPHET | PELT   |
 |------|--------|--------|-----------|---------|--------|
@@ -124,7 +128,7 @@ Tablo \@ref(tab:nvar9)'daki sonuçlara göre, BinSeg varsayılan parametre ayarl
 
 Varsayılan ayarlar çalıştırılan algoritmalardan sadece parçalı regresyonda bir veri 0,3'ün altında kapsama ölçütü değerine sahiptir.
 
-Table: (\#tab:nvar10) F1 Puanı (ayarlanmış)
+Table: (\#tab:nvar10) F1 Puanı (Ayarlanmış)
 
 | Veri | AMOC   | BINSEG | SEGMENTED | PROPHET | PELT   |
 |------|--------|--------|-----------|---------|--------|
@@ -153,7 +157,7 @@ Ayarlanmış parametreler sonucunda en iyi F1 puanı değerleri BinSeg ile elde 
 
 Prophet algoritmasının en kötü F1 puanı değerlerini verdiği görülmektedir. AMOC, parçalı regresyon ve Pelt algoritmalarında 0,3 'ün altında birer tane veri bulunmaktadır.
 
-Table: (\#tab:nvar11) Kapsama Ölçütü (ayarlanmış)
+Table: (\#tab:nvar11) Kapsama Ölçütü (Ayarlanmış)
 
 | Veri | AMOC   | BINSEG | SEGMENTED | PROPHET | PELT   |
 |------|--------|--------|-----------|---------|--------|
@@ -208,7 +212,7 @@ Varsayılan ayarlarda, on bir verinin ikisinde AMOC ve Prophet ile, birinde PELT
 BinSeg algoritmasında F1 puanı 0,3 ve altında olan veri bulunmamaktadır.
 Değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
 
-Table: (\#tab:nvar3) Kapsama Ölçütü (varsayılan)
+Table: (\#tab:nvar3) Kapsama Ölçütü (Varsayılan)
 
 | Veri                | AMOC   | BINSEG | PELT   | SEGMENTED | PROPHET |
 |---------------------|--------|--------|--------|-----------|---------|
@@ -230,7 +234,7 @@ Prophet algoritmasında hiçbir veri için kapsama ölçütü değeri  0,7 nin �
 Varsayılan ayarlar ile Prophet algoritmasında başarılı kapsama ölçütü değerleri elde edilemediği görülmektedir. Prophet on bir verinin beşinde 0,3 ve altında kapsama ölçütü değerine sahiptir.
 Değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
 
-Table: (\#tab:nvar4) F1 Puanı (ayarlanmış)
+Table: (\#tab:nvar4) F1 Puanı (Ayarlanmış)
 
 | Veri                | AMOC   | BINSEG | PELT   | SEGMENTED | PROPHET |
 |---------------------|--------|--------|--------|-----------|---------|
@@ -250,7 +254,7 @@ Ayarlanmış parametreler ile en iyi F1 puanı değerleri parçalı regresyon il
 
 Tablo \@ref(tab:nvar4)'e göre parçalı regresyon ve BinSeg algoritmaları denenen tüm gerçek veriler için 0,3 ve üzerinde F1 puanı elde etmişlerdir.  Ancak AMOC algoritması için F1 puanı  onbir verinin üçünde 0,3'ün altındadır.
 
-Table: (\#tab:nvar5) Kapsama Ölçütü (ayarlanmış)
+Table: (\#tab:nvar5) Kapsama Ölçütü (Ayarlanmış)
 
 | Veri                | AMOC   | BINSEG | PELT   | SEGMENTED | PROPHET |
 |---------------------|--------|--------|--------|-----------|---------|
@@ -275,7 +279,7 @@ Ayarlanmış parametreler ile algoritmalar çalıştırıldığında, kapsama ö
 
 Bu bölümde 15 sporcunun kademeli bir rampa testi sonucunda elde edilen veriler kullanılarak eşik egzersiz şiddetlerini değişim noktası belirleme yöntemleri ile tespit etmek denenmiştir.
 
-Table: (\#tab:nvar6) Kapsama Ölçütü (ayarlanmış)
+Table: (\#tab:nvar6) Kapsama Ölçütü (Ayarlanmış)
 
 | Veri | BINSEG | SEGMENTED | PELT  |
 |------|--------|-----------|-------|
@@ -300,7 +304,7 @@ Ayarlanan parametrelerle çalıştırılan üç farklı algoritmanın kullanıld
 
 İki değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
 
-Table: (\#tab:nvar7) F1 Puanı (ayarlanmış)
+Table: (\#tab:nvar7) F1 Puanı (Ayarlanmış)
 
 | Veri | BINSEG | SEGMENTED | PELT  |
 |------|--------|-----------|-------|
@@ -321,6 +325,7 @@ Table: (\#tab:nvar7) F1 Puanı (ayarlanmış)
 | 15   | 0,2857 | 0,4615    | 0,6600|
 
 Ayarlanmış parametreler sonucunda en iyi F1 puanı değerleri parçalı regresyon ile elde edilmiştir. Parçalı regresyon algoritmasında on iki veri 0,8 ve üzerinde F1 puanına sahiptir. Pelt algoritmasında dokuz, BinSeg algoritmasında ise altı verinin 0,8'in üzerinde F1 puanına sahip olduğu görülmektedir.
+
 Pelt ve parçalı regresyon  algoritmalarının 0,3'ün altında  F1 puanı yokken, BinSeg algoritmasında ise iki veride 0,3'ün altında F1 puanı elde edilmiştir.
 
 İki değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.

@@ -278,7 +278,7 @@ Bu analizler, veri setindeki önemli değişiklikleri objektif bir şekilde beli
 \hypertarget{tek-deux11fiux15fim-noktasux131-tespiti}{%
 \section{Tek Değişim Noktası Tespiti}\label{tek-deux11fiux15fim-noktasux131-tespiti}}
 
-Tek değişim noktası tespiti, bir veri setinde yalnızca bir değişim noktasının varlığını tespit etmeye odaklanan istatistiksel bir analiz yöntemidir. Bu tür analizler genellikle zaman serileri, süreç kontrolü, finansal veriler gibi çeşitli alanlarda kullanılır. Temel hedef, veri setindeki bu değişim noktasını tanımlamak ve bu noktada meydana gelen ani değişikliği belirlemektir.
+AMOC (At Most One Change), bir veri setinde yalnızca bir değişim noktasının varlığını tespit etmeye odaklanan istatistiksel bir analiz yöntemidir. Bu tür analizler genellikle zaman serileri, süreç kontrolü, finansal veriler gibi çeşitli alanlarda kullanılır. Temel hedef, veri setindeki bu değişim noktasını tanımlamak ve bu noktada meydana gelen ani değişikliği belirlemektir.
 
 Tek değişim noktası tespiti, bir zaman serisinde veya veri setinde belirli bir anın, örneğin bir trendin başlangıcı veya bir olayın etkisi gibi bir değişiklik noktasını belirlemek için kullanılır. Bu analiz genellikle istatistiksel yöntemler, matematiksel modeller veya makine öğrenimi algoritmaları kullanılarak gerçekleştirilir. Bu yöntemler, veri setindeki değişim noktasının istatistiksel olarak anlamlı olup olmadığını değerlendirir ve belirli bir ölçüye dayanarak değişim noktasını tanımlar. Bu tür analizler, anormal durumları tespit etmek, süreçlerdeki değişiklikleri anlamak veya zaman içindeki önemli olayları belirlemek gibi bir dizi uygulama alanında kullanılır. Örneğin, endüstriyel süreçlerde bir makinenin arızasının başlangıcını belirlemek veya finansal piyasalardaki bir trend değişikliğini saptamak gibi durumlar, tek değişim noktası tespiti analizine örnek olabilir. Bu yöntemler, veri analizi ve karar verme süreçlerinde bilinçli ve stratejik adımlar atılmasına yardımcı olabilir, çünkü belirli bir değişim noktasının tanımlanması, olayların anlaşılmasını ve gelecekteki trendlerin tahmin edilmesini destekleyebilir.
 
@@ -580,7 +580,7 @@ Kapsama metriğini \(G\) ve \(G'\) olarak tanımlarız.
 \hypertarget{f1-puanux131}{%
 \section{F1 Puanı}\label{f1-puanux131}}
 
-Değişim noktası tespiti algoritmalarını değerlendirmeye ilişkin alternatif bir görüş, değişim noktası tespitini bir sınıflandırma problemi olarak kabul eder. Burada her bir gözlem ``değişim noktası'' veya ``tipik gözlem'' sınıflarına ait olarak değerlendirilir (Killick ve ark., 2012; Aminikhanghahi ve Cook, 2017).
+Değişim noktası tespiti algoritmalarını değerlendirmeye ilişkin alternatif bir görüş, değişim noktası tespitini bir sınıflandırma problemi olarak kabul eder. Burada her bir gözlem ``değişim noktası'' veya ``tipik gözlem'' sınıflarına ait olarak değerlendirilir (Aminikhanghahi ve Cook, 2017; Killick, Fearnhead ve Eckley, 2012).
 
 Değişim noktalarının sayısı genellikle serideki gözlem sayısından çok küçüktür. Bu nedenle doğruluk oranı gibi ölçütler oldukça çarpık olacaktır.
 
@@ -713,6 +713,10 @@ Usd-isk & 247 & 2 & 4 & 1 & 3 & 2 \\
 Well-log & 675 & 11 & 9 & 9 & 2 & 17 \\
 \end{longtable}
 
+\emph{GS: Gözlem sayısı ,DNS: Değişim Noktası Sayısı}
+
+Çalışmada kullanılan gerçek veriler 5 ayrı işaretleyici tarafından işaretlenmiştir (Van den Burg ve Williams, 2020).Bu nedenle değişim noktası konumları değişiklik göstermektedir .
+
 \hypertarget{deux11fiux15fim-noktasux131-analizi}{%
 \section{Değişim Noktası Analizi}\label{deux11fiux15fim-noktasux131-analizi}}
 
@@ -761,7 +765,7 @@ Algoritmalar varsayılan parametre ayarlarıyla çalıştırıldığında (\ref{
 Varsayılan parametrelerle çalıştırılan algoritmalardan Prophet on yedi, parçalı regresyon üç, AMOC, BinSeg ve Pelt algoritmalarında birer tane 0,3'ün altında F1 puanına sahip veri bulunmaktadır.
 
 \begin{longtable}[]{@{}llllll@{}}
-\caption{\label{tab:nvar9} Kapsama Ölçütü (varsayılan)}\tabularnewline
+\caption{\label{tab:nvar9} Kapsama Ölçütü (Varsayılan)}\tabularnewline
 \toprule\noalign{}
 Veri & AMOC & BINSEG & SEGMENTED & PROPHET & PELT \\
 \midrule\noalign{}
@@ -799,7 +803,7 @@ Tablo \ref{tab:nvar9}'daki sonuçlara göre, BinSeg varsayılan parametre ayarla
 Varsayılan ayarlar çalıştırılan algoritmalardan sadece parçalı regresyonda bir veri 0,3'ün altında kapsama ölçütü değerine sahiptir.
 
 \begin{longtable}[]{@{}llllll@{}}
-\caption{\label{tab:nvar10} F1 Puanı (ayarlanmış)}\tabularnewline
+\caption{\label{tab:nvar10} F1 Puanı (Ayarlanmış)}\tabularnewline
 \toprule\noalign{}
 Veri & AMOC & BINSEG & SEGMENTED & PROPHET & PELT \\
 \midrule\noalign{}
@@ -837,7 +841,7 @@ Ayarlanmış parametreler sonucunda en iyi F1 puanı değerleri BinSeg ile elde 
 Prophet algoritmasının en kötü F1 puanı değerlerini verdiği görülmektedir. AMOC, parçalı regresyon ve Pelt algoritmalarında 0,3 'ün altında birer tane veri bulunmaktadır.
 
 \begin{longtable}[]{@{}llllll@{}}
-\caption{\label{tab:nvar11} Kapsama Ölçütü (ayarlanmış)}\tabularnewline
+\caption{\label{tab:nvar11} Kapsama Ölçütü (Ayarlanmış)}\tabularnewline
 \toprule\noalign{}
 Veri & AMOC & BINSEG & SEGMENTED & PROPHET & PELT \\
 \midrule\noalign{}
@@ -911,7 +915,7 @@ BinSeg algoritmasında F1 puanı 0,3 ve altında olan veri bulunmamaktadır.
 Değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
 
 \begin{longtable}[]{@{}llllll@{}}
-\caption{\label{tab:nvar3} Kapsama Ölçütü (varsayılan)}\tabularnewline
+\caption{\label{tab:nvar3} Kapsama Ölçütü (Varsayılan)}\tabularnewline
 \toprule\noalign{}
 Veri & AMOC & BINSEG & PELT & SEGMENTED & PROPHET \\
 \midrule\noalign{}
@@ -942,7 +946,7 @@ Varsayılan ayarlar ile Prophet algoritmasında başarılı kapsama ölçütü d
 Değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
 
 \begin{longtable}[]{@{}llllll@{}}
-\caption{\label{tab:nvar4} F1 Puanı (ayarlanmış)}\tabularnewline
+\caption{\label{tab:nvar4} F1 Puanı (Ayarlanmış)}\tabularnewline
 \toprule\noalign{}
 Veri & AMOC & BINSEG & PELT & SEGMENTED & PROPHET \\
 \midrule\noalign{}
@@ -971,7 +975,7 @@ Ayarlanmış parametreler ile en iyi F1 puanı değerleri parçalı regresyon il
 Tablo \ref{tab:nvar4}'e göre parçalı regresyon ve BinSeg algoritmaları denenen tüm gerçek veriler için 0,3 ve üzerinde F1 puanı elde etmişlerdir. Ancak AMOC algoritması için F1 puanı onbir verinin üçünde 0,3'ün altındadır.
 
 \begin{longtable}[]{@{}llllll@{}}
-\caption{\label{tab:nvar5} Kapsama Ölçütü (ayarlanmış)}\tabularnewline
+\caption{\label{tab:nvar5} Kapsama Ölçütü (Ayarlanmış)}\tabularnewline
 \toprule\noalign{}
 Veri & AMOC & BINSEG & PELT & SEGMENTED & PROPHET \\
 \midrule\noalign{}
@@ -1005,7 +1009,7 @@ Ayarlanmış parametreler ile algoritmalar çalıştırıldığında, kapsama ö
 Bu bölümde 15 sporcunun kademeli bir rampa testi sonucunda elde edilen veriler kullanılarak eşik egzersiz şiddetlerini değişim noktası belirleme yöntemleri ile tespit etmek denenmiştir.
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{\label{tab:nvar6} Kapsama Ölçütü (ayarlanmış)}\tabularnewline
+\caption{\label{tab:nvar6} Kapsama Ölçütü (Ayarlanmış)}\tabularnewline
 \toprule\noalign{}
 Veri & BINSEG & SEGMENTED & PELT \\
 \midrule\noalign{}
@@ -1039,7 +1043,7 @@ Ayarlanan parametrelerle çalıştırılan üç farklı algoritmanın kullanıld
 İki değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{\label{tab:nvar7} F1 Puanı (ayarlanmış)}\tabularnewline
+\caption{\label{tab:nvar7} F1 Puanı (Ayarlanmış)}\tabularnewline
 \toprule\noalign{}
 Veri & BINSEG & SEGMENTED & PELT \\
 \midrule\noalign{}
@@ -1068,6 +1072,7 @@ Veri & BINSEG & SEGMENTED & PELT \\
 \end{longtable}
 
 Ayarlanmış parametreler sonucunda en iyi F1 puanı değerleri parçalı regresyon ile elde edilmiştir. Parçalı regresyon algoritmasında on iki veri 0,8 ve üzerinde F1 puanına sahiptir. Pelt algoritmasında dokuz, BinSeg algoritmasında ise altı verinin 0,8'in üzerinde F1 puanına sahip olduğu görülmektedir.
+
 Pelt ve parçalı regresyon algoritmalarının 0,3'ün altında F1 puanı yokken, BinSeg algoritmasında ise iki veride 0,3'ün altında F1 puanı elde edilmiştir.
 
 İki değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
@@ -1112,6 +1117,9 @@ And here's some other random info: the first paragraph after a chapter title or 
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-aminikhanghahi2017survey}{}}%
+Aminikhanghahi, S. ve Cook, D. J. (2017). A survey of methods for time series change point detection. \emph{Knowledge and information systems}, \emph{51}(2), 339-367.
+
 \leavevmode\vadjust pre{\hypertarget{ref-angel2000}{}}%
 Angel, E. (2000). \emph{Interactive Computer Graphics : A Top-Down Approach with OpenGL}. Boston, MA: Addison Wesley Longman.
 
@@ -1157,6 +1165,9 @@ Jen, T. ve Gupta, A. K. (1987). On testing homogeneity of variances for Gaussian
 \leavevmode\vadjust pre{\hypertarget{ref-kelle2022mqtt}{}}%
 Kelle, A. C. ve Hüseyin, Y. (2022). MQTT Trafi{ğ}inde DoS Sald{ı}r{ı}lar{ı}n{ı}n Makine {Ö}{ğ}renmesi ile S{ı}n{ı}fland{ı}r{ı}lmas{ı} ve Modelin SHAP ile Yorumlanmas{ı}. \emph{Journal of Materials and Mechatronics: A}, \emph{3}(1), 50-62.
 
+\leavevmode\vadjust pre{\hypertarget{ref-killick2012optimal}{}}%
+Killick, R., Fearnhead, P. ve Eckley, I. A. (2012). Optimal detection of changepoints with a linear computational cost. \emph{Journal of the American Statistical Association}, \emph{107}(500), 1590-1598.
+
 \leavevmode\vadjust pre{\hypertarget{ref-lavielle2005}{}}%
 Lavielle, M. (2005). Using penalized contrasts for the change-point problem. \emph{Signal processing}, \emph{85}(8), 1501-1510.
 
@@ -1183,6 +1194,9 @@ Taylor, S. J. ve Letham, B. (2018). Forecasting at scale. \emph{The American Sta
 
 \leavevmode\vadjust pre{\hypertarget{ref-tukey1984}{}}%
 Tukey, J. W. (1984). \emph{The collected works of John W. Tukey} (C. 1). Taylor \& Francis.
+
+\leavevmode\vadjust pre{\hypertarget{ref-van2020evaluation}{}}%
+Van den Burg, G. J. ve Williams, C. K. (2020). An evaluation of change point detection algorithms. \emph{arXiv preprint arXiv:2003.06222}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wong1999}{}}%
 Wong, E. (1999). \emph{{Artistic Rendering of Portrait Photographs}}. (Yayımlanmamış mathesis). Cornell University.
