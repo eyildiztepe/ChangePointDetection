@@ -279,6 +279,10 @@ Ayarlanmış parametreler ile algoritmalar çalıştırıldığında, kapsama ö
 
 Bu bölümde 15 sporcunun kademeli bir rampa testi sonucunda elde edilen veriler kullanılarak eşik egzersiz şiddetlerini değişim noktası belirleme yöntemleri ile tespit etmek denenmiştir.
 
+```{r, echo=FALSE,fig.cap="Ve/PetCO2-Watt" ,out.width="302px", out.height="228px"}
+knitr::include_graphics("figure/vepetco2.png")
+```
+
 Table: (\#tab:nvar6) Kapsama Ölçütü (Ayarlanmış)
 
 | Veri | BINSEG | SEGMENTED | PELT  |

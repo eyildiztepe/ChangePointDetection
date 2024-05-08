@@ -29,7 +29,7 @@
 \contentsline {chapter}{B\"ol\"um 4: Bölüm 4 Başlık}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Bu bir alt başlık}{29}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Bu ikinci seviye bir alt başlık}{29}{subsection.4.1.1}%
-\contentsline {chapter}{Sonuç}{31}{chapter*.17}%
-\contentsline {chapter}{Kaynaklar}{33}{chapter*.18}%
+\contentsline {chapter}{Sonuç}{31}{chapter*.18}%
+\contentsline {chapter}{Kaynaklar}{33}{chapter*.19}%
 \contentsline {chapter}{Ek A: İlk Ek Başlığı}{35}{appendix.A}%
 \contentsline {chapter}{Ek B: İkinci Ek Başlığı}{37}{appendix.B}%
