@@ -17,4 +17,9 @@ ve_petco2 <- matrix(c(0.7023, NA, NA, 0.7485, 0.9326, NA, NA, 1.0000, 0.8181, 0.
 ve_petco2
 result<-friedman.test(ve_petco2)
 result
-frdAllPairsNemenyiTest(ve_petco2, result)
+
+#Friedman Test Hipotezi 
+#H0:Algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.
+#H1:Algoritmalar arasında en az birinde istatistiksel olarak anlamlı bir fark vardır.
+#p-value 0.05(alpha)'den büyüktür. Bu nedenle H0 hipotezi reddedilememiştir, algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.
+
