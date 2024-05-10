@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.6)  10 MAY 2024 20:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.11)  11 MAY 2024 02:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -422,7 +422,8 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 163.
+Package color Info: Redefining color shadecolor on input line 79.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 203.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -432,68 +433,68 @@ File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
 ) (./BP_Rapor.aux)
 \openout1 = `BP_Rapor.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 163.
+Package hyperref Info: Link coloring OFF on input line 203.
 (./BP_Rapor.out) (./BP_Rapor.out)
 \@outlinefile=\write4
 \openout4 = `BP_Rapor.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 167.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 207.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 167.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 207.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 167.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 207.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 167.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 207.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 167.
+(Font)              <12> on input line 207.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 167.
+(Font)              <8> on input line 207.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 167.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 167.
+(Font)              <6> on input line 207.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 207.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 167.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 207.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 167.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 207.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -505,33 +506,13 @@ Non-PDF special ignored!
 
 {/Users/merve/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/merve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] [2
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 172--176
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 172--176
-
- []
-
-[1
+] [1
 
 ] [2
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 179--186
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--186
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--186
+Underfull \hbox (badness 10000) in paragraph at lines 219--226
 
  []
 
@@ -539,12 +520,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--186
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
@@ -552,146 +528,124 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--191
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
 
 [7] [8
 
 
-] (./BP_Rapor.toc [9])
+] (./BP_Rapor.toc)
 \tf@toc=\write5
 \openout5 = `BP_Rapor.toc'.
 
-[10] (./BP_Rapor.lot)
+[9] [10
+
+] (./BP_Rapor.lot)
 \tf@lot=\write6
 \openout6 = `BP_Rapor.lot'.
 
-[11
-
-] [12
+[11] [12
 
 ] (./BP_Rapor.lof)
 \tf@lof=\write7
 \openout7 = `BP_Rapor.lof'.
 
-[13{/Users/merve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/merve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}] [14
+\cslhangindent=\skip73
+[13] [14
 
 ]
-B\"ol\"um 1.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.223 \chapter{Değişim Noktası}\label{Bolum2}}
-                                                  [1
+l.274 \chapter
+              {Değişim Noktası}\label{Bolum2} [1
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.223 \chapter{Değişim Noktası}\label{Bolum2}}
-                                                  [2
+l.274 \chapter
+              {Değişim Noktası}\label{Bolum2} [2
+
+]
+B\"ol\"um 1.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[3] [4{/Users/merve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/merve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/merve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 323.
+(/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [5{/Users/merve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/merve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [6] [7] [8] [9] [10] [11]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 543.
+
+<figure/cover.png, id=200, 1216.545pt x 1306.8825pt>
+File: figure/cover.png Graphic file (type png)
+<use figure/cover.png>
+Package pdftex.def Info: figure/cover.png  used on input line 554.
+(pdftex.def)             Requested size: 401.49821pt x 401.50006pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[12] [13 <./figure/cover.png>]
+<figure/conmat.png, id=213, 716.6775pt x 218.8175pt>
+File: figure/conmat.png Graphic file (type png)
+<use figure/conmat.png>
+Package pdftex.def Info: figure/conmat.png  used on input line 582.
+(pdftex.def)             Requested size: 358.34882pt x 109.40848pt.
+[14 <./figure/conmat.png>]
+
+LaTeX Warning: Command \u invalid in math mode on input line 601.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 619.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 619.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 619.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 619.
+
+[15] [16
 
 ]
 B\"ol\"um 2.
-[3] [4
-
-]
-B\"ol\"um 3.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 272.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 623.
 (/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [5]
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+) [17]
+
+LaTeX Warning: Reference `tab:ngercek' on page 18 undefined on input line 669.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
 \T1/lmr/m/n/12 �al^^Y�mada farkl^^Y alan-lar-dan ger-�ek ve-ri-ler kul-la-n^^Yl-m^^Y�-t^^Yr. Ve-ri-ler ([]$\T1/lmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
 \T1/lmtt/m/n/12 / / github . com / alan -[] turing -[] institute / TCPD / tree / master / datasets$[]\T1/lmr/m/n/12 ) ad-re-
  []
 
-
-Overfull \hbox (91.21481pt too wide) in alignment at lines 322--327
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (91.21481pt too wide) in alignment at lines 327--331
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (91.21481pt too wide) in alignment at lines 331--344
- [] [] [] [] [] [] [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[6] [7] [8] [9]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 552.
-(/Users/merve/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [10{/Users/merve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [11] [12]
-<figure/vepetco2.png, id=358, 606.265pt x 449.68pt>
-File: figure/vepetco2.png Graphic file (type png)
-<use figure/vepetco2.png>
-Package pdftex.def Info: figure/vepetco2.png  used on input line 731.
-(pdftex.def)             Requested size: 303.13176pt x 228.85345pt.
-[13] [14 <./figure/vepetco2.png>] [15] [16]
-B\"ol\"um 4.
-[17
-
-] [18
-
-]
-B\"ol\"um 5.
-[19] [20
-
-] [21] [22
-
-] [23] [24
-
-]
-Ek A.
-
-LaTeX Warning: Reference `ref-labels' on page 25 undefined on input line 870.
-
-[25] [26
-
-]
-Ek B.
-[27] (./BP_Rapor.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-04-11>
- ***********
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `BP_Rapor.out' has not changed.
-(rerunfilecheck)             Checksum: 25C826BA253A6CF1523A6AD441C10768;5661.
- ) 
+! Undefined control sequence.
+<argument> @{} >{\raggedright \arraybackslash 
+                                              }p{(\columnwidth - 12\tabcolse...
+l.678 ...idth - 12\tabcolsep) * \real{0.1474}}@{}}
+                                                   
 Here is how much of TeX's memory you used:
- 13872 strings out of 475995
- 224265 string characters out of 5789985
- 1950751 words of memory out of 5000000
- 35663 multiletter control sequences out of 15000+600000
- 609694 words of font info for 71 fonts, out of 8000000 for 9000
+ 13790 strings out of 475995
+ 222438 string characters out of 5789984
+ 1938751 words of memory out of 5000000
+ 35653 multiletter control sequences out of 15000+600000
+ 605432 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,11n,79p,1231b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/merve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/merve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></Users/merve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></Users/merve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/merve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/merve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb></Users/merve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro12.pfb></Users/merve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on BP_Rapor.pdf (43 pages, 261662 bytes).
-PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
- 451 compressed objects within 5 object streams
- 143 named destinations out of 1000 (max. 500000)
- 254 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 75i,12n,79p,1308b,586s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
+!  ==> Fatal error occurred, no output PDF file produced!
