@@ -38,7 +38,7 @@ Literatürde birden fazla değişim noktasını belirleme konusunda en yaygın y
 
 ### İkili Segmentasyon Algoritması
 
-İkili segmentasyon algoritması (BinSeg), değişim noktası literatüründe kullanılan en köklü arama yöntemidir. İkili segmentasyon arama algoritmasının erken uygulamaları arasında Scott ve Knott (1974) ile Sen ve Srivastava (1975) bulunmaktadır.
+İkili segmentasyon algoritması (BinSeg), değişim noktası literatüründe kullanılan en köklü arama yöntemidir. İkili segmentasyon arama algoritmasının erken uygulamaları arasında [@sen1975tests;@scott1974cluster] bulunmaktadır.
 
 İkili segmentasyon, herhangi bir tek değişim noktası yöntemini ardışık olarak farklı veri setlerinde tekrarlayarak çoklu değişim noktalarına genişletmek için kullanılabilir. İlk olarak, tek bir değişim noktası test istatistiğini tüm veri setine uygular. $y_{1},y_{2},...,y_{n}$ şeklindeki veri seti üzerinde bir başlangıç noktası belirlenir. Bu başlangıç noktası, veri setinin ortalaması, medyanı veya başka bir özelliği olabilir. Belirlenen başlangıç noktasında bir değişim noktası testi yapılır. Bu test, veri setini iki alt küme olarak böldüğünde, oluşan alt kümelerin toplam maliyetinin belirli bir kritere göre düşük olup olmadığını kontrol eder, yani bir $\tau$'nin aşağıdaki koşulu sağlayıp sağlamadığını test eder:
 
@@ -64,7 +64,7 @@ Burada, $C$ bir segment için bir maliyet fonksiyonu ve $\beta f(m)$ aşırı uy
 
 İkili segmentasyon, herhangi bir değişim noktasının konumu önceden belirlenmiş değişim noktalarına bağlı olduğu için ($f(m) = m$ olarak) yukarıdaki denklemin yaklaşık bir minimize edilmesidir. Algoritmanın her adımı, bu denklemi azaltıyorsa ek bir değişim noktası eklemeye çalışır. İkili segmentasyon algoritmasının avantajı, $n$'nin veri uzunluğu olduğu durumda $O(n)$ hesaplama maliyeti ile uygulanabilen hızlı bir algoritma olmasıdır. Ancak, $C$'yi uygun bir şekilde seçmek zor olabilir ve farklı $C$ seçimleri, değişim noktalarının sayısının tahmininde önemli farklara neden olabilir.
 
-### PROPHET
+### Prophet
 
 Facebook tarafından 2017'de önerilen Prophet tahmin modeli [@taylor2018forecasting] , aynı anda birden fazla mevsimsellik dönemini modelleyebilir. Güçlü tahmin yeteneklerinin yanı sıra, Prophet aynı zamanda büyük aykırı değerlere ve trendlerdeki kaymalara sahip günlük periyodik verileri işlemede de başarılıdır.[@zhao2018day].
 
@@ -80,7 +80,7 @@ Prophet algoritması kullanıldığında, potansiyel değişim noktaları otomat
 
 ### PELT(Pruned Exact Linear Time)
 
-PELT (Pruned Exact Linear Time) algoritması, 2012 yılında, Killick, Fearnhead ve Eckley tarafından geliştirilmiştir. Bu algoritma, zaman serisindeki değişim noktalarını tespit etmektedir ve bu değişim noktalarını tespit ederken belirli bir maliyet fonksiyonunu minimize etmeyi amaçlar.
+PELT (Pruned Exact Linear Time) algoritması [@killick2012optimal] tarafından geliştirilmiştir. Bu algoritma, zaman serisindeki değişim noktalarını tespit etmektedir ve bu değişim noktalarını tespit ederken belirli bir maliyet fonksiyonunu minimize etmeyi amaçlar.
 
 Değişim noktası analizi, genel anlamda, bir veri seti içerisinde istatistiksel özelliklerin değiştiği noktaların belirlenmesidir. Daha resmi olarak, $y_{1:n} = (y_1, \ldots, y_n)$ şeklinde sıralı bir veri dizisine sahiptir.
 
