@@ -41,21 +41,6 @@ Table: (\#tab:nvar1) Yapay Veriler
 
 Çalışmada farklı alanlardan gerçek veriler kullanılmıştır. Veriler (https://github.com/alan-turing-institute/TCPD/tree/master/datasets) adresinden temin edilmiştir. Gerçek verilerin özellikleri Tablo \@ref(tab:ngercek)'de verilmiştir.
 
-Table: (\#tab:ngercek) Gerçek Veriler
-
-| Veri               | N   | DN Sayısı(1) | DN Sayısı(2) | DN Sayısı(3) | DN Sayısı(4) | DN Sayısı(5) |
-|--------------------|-----|--------------|--------------|--------------|--------------|--------------|
-| Bitcoin            | 774 | 4            | 1            | 1            | 7            | 7            |
-| Brent-spot         | 500 | 3            | 2            | 5            | 9            | 11           |
-| Children-per women | 301 | 2            | 1            | 2            | 4            | 2            |
-| Co2- canada        | 215 | 2            | 6            | 2            | 5            | 7            |
-| Debt -Ireland      | 21  | 2            | 2            | 2            | 4            | 2            |
-| Rail-lines         | 37  | 2            | 2            | 2            | 2            | 1            |
-| Rather-stock       | 600 | 1            | 2            | 1            | 2            | 2            |
-| Scanline-42049     | 481 | 10           | 7            | 2            | 7            | 7            |
-| Shangai-license    | 205 | 1            | 1            | 1            | 1            | 2            |
-| Usd-isk            | 247 | 2            | 4            | 1            | 3            | 2            |
-| Well-log           | 675 | 11           | 9            | 9            | 2            | 17           |
 
 
 Çalışmada kullanılan gerçek veriler 5 ayrı işaretleyici tarafından işaretlenmiştir [@van2020evaluation].Bu nedenle değişim noktası konumları değişiklik göstermektedir .
@@ -209,9 +194,10 @@ result_sim
 ```
 
 \begin{align*}
-& H_0: \text{Algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
-& H_1: \text{Algoritmalar arasında en az birinde istatistiksel olarak anlamlı bir fark vardır.}
+&H_0:\text{Algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
+&H_1:\text{Algoritmalar arasında en az birinde istatistiksel olarak anlamlı bir fark vardır.}
 \end{align*}
+
 
 $p$-değeri 0.05 ($\alpha$)'den küçüktür. Bu nedenle $H_0$ hipotezi reddedilmiştir, algoritmalar arasında en az bir tanesi farklıdır.
 
@@ -223,12 +209,12 @@ $p$-değeri 0.05 ($\alpha$)'den küçüktür. Bu nedenle $H_0$ hipotezi reddedil
 frdAllPairsNemenyiTest(sim, result_sim)
 ```
 
-\begin{itemize}
-    \item AMOC ve BinSeg algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
-    \item Parçalı Regresyon ve AMOC algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
-    \item Prophet ile BinSeg ve Parçalı Regresyon algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
-    \item PELT ile BinSeg ve Parçalı Regresyon algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
-\end{itemize}
+
+- AMOC ve BinSeg algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
+- Parçalı Regresyon ve AMOC algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
+- Prophet ile BinSeg ve Parçalı Regresyon algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
+- PELT ile BinSeg ve Parçalı Regresyon algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
+
 
 
 ### Gerçek Veriler için Sonuçlar
@@ -344,8 +330,8 @@ print(result_real)
 ```
 
 \begin{align*}
-& H_0: \text{Algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
-& H_1: \text{Algoritmalar arasında en az birinde istatistiksel olarak anlamlı bir fark vardır.}
+& H_0:\text{Algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
+& H_1:\text{Algoritmalar arasında en az birinde istatistiksel olarak anlamlı bir fark vardır.}
 \end{align*}
 
 $p$-değeri 0.05 ($\alpha$)'den küçüktür. Bu nedenle $H_0$ hipotezi reddedilmiştir, algoritmalar arasında en az bir tanesi farklıdır.
@@ -426,6 +412,7 @@ Pelt ve parçalı regresyon  algoritmalarının 0,3'ün altında  F1 puanı yokk
 İki değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
 
 ### Kademeli Egzersiz Test Verileri için Friedman Test 
+
 ```{r,echo=FALSE}
 if(!require('PMCMRplus')) {
   install.packages('PMCMRplus')
@@ -445,8 +432,9 @@ result
 ```
 
 \begin{align*}
-& H_0: \text{Algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
-& H_1: \text{Algoritmalar arasında en az birinde istatistiksel olarak anlamlı bir fark vardır.}
+& H_0:\text{Algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
+& H_1:\text{Algoritmalar arasında en az birinde istatistiksel olarak anlamlı bir fark vardır.}
 \end{align*}
+
 
 $p$-değeri 0.05 ($\alpha$)'den büyüktür. Bu nedenle $H_0$ hipotezi reddedilememiştir, algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.
