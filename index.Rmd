@@ -4,14 +4,14 @@ authors:
   - 'Merve AK'
   - 'Edanur Binnaz DURSUN'
   - 'Ahmet ÇALI'
-date:  '`r format(Sys.Date(), "%B %Y")`'
+date:  '`r format(Sys.time(), "%B %Y")`'
 institution: 'FEN FAKÜLTESİ'
 division: 'İSTATİSTİK BÖLÜMÜ'
 advisor: 'Dr. Engin YILDIZTEPE' #Danışman Ünvan Adı Soyadı
 #altadvisor: 'Your Other Advisor' # Delete line if you only have one advisor
 department: 'İstatistik Bölümü'
 degree: 'Bitirme Projesi Raporu' 
-title: 'Değişim Noktası Belirleme Yöntemleri ve Uygulamaları'
+title: 'DEĞİŞİM NOKTASI BELİRLEME YÖNTEMLERİ VE UYGULAMALARI'
 knit: 'bookdown::render_book'
 site: bookdown::bookdown_site
  

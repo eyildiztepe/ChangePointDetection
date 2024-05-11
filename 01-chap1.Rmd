@@ -79,7 +79,7 @@ Burada, $g(t)$ zaman serisinin değerindeki periyodik olmayan değişimleri mode
 
 Prophet algoritması kullanıldığında, potansiyel değişim noktaları otomatik olarak tespit edilebilir. Prophet algoritması çok küçük değişiklikleri tespit edebilir. Zaman boyutundaki potansiyel değişim noktalarını ayırt eder ve gerçek değişim noktasıyla, potansiyel değişim arasında minimum değişim oranına sahip olan noktaları bulur.
 
-### PELT(Pruned Exact Linear Time)
+### PELT
 
 PELT (Pruned Exact Linear Time) algoritması [@killick2012optimal] tarafından geliştirilmiştir. Bu algoritma, zaman serisindeki değişim noktalarını tespit etmektedir ve bu değişim noktalarını tespit ederken belirli bir maliyet fonksiyonunu minimize etmeyi amaçlar.
 
@@ -260,7 +260,9 @@ Ayrıca, tüm verilerin korelasyon katsayısı ($R_{a}$), belirleme katsayısı 
 
 $C_{d}$ katsayısı, tüm veri seti için belirlenen şartlar altında maksimize edilmesi gereken bir belirleme katsayısıdır ve şu formülle hesaplanır:
 
-$C_{d}=1-{\sum (y-Y_{r})^{2} \over \sum (y-Y_{a})^{2}}$
+<!-- $C_{d}=1-{\sum (y-Y_{r})^{2} \over \sum (y-Y_{a})^{2}}$ -->
+<!-- over kullanımı uyarı çıkmasına neden oluyor \frac ile yazılmalı  -->
+$C_{d} = 1 - \frac{\sum (y-Y_{r})^{2}}{\sum (y-Y_{a})^{2}}$
 
 Burada $Y_{r}$, önceki regresyon denklemlerine göre beklenen (tahmin edilen) y değeridir ve $Y_{a}$, tüm y değerlerinin ortalamasıdır.
 
@@ -288,17 +290,17 @@ $$C(G,G') = \frac{1}{T} \sum_{A \in G} |A| \cdot \max_{A' \in G'} J(A,A')$$.
 
 ## F1 Puanı
 
-Değişim noktası tespiti algoritmalarını değerlendirmeye ilişkin alternatif bir görüş, değişim noktası tespitini bir sınıflandırma problemi olarak kabul eder. Burada her bir gözlem “değişim noktası ” veya “tipik gözlem” sınıflarına ait olarak değerlendirilir [@killick2012optimal; @aminikhanghahi2017survey].
+Değişim noktası tespiti algoritmalarını değerlendirmeye ilişkin alternatif bir görüş, değişim noktası tespitini bir sınıflandırma problemi olarak kabul eder. Burada her bir gözlem “değişim noktası ” veya “tipik gözlem” sınıflarına ait olarak değerlendirilir [@killick2012optimal; @aminikhanghahi2017survey]. $X$, bir tespit algoritması ile bulunan değişim noktası konumları olsun. $T^* = \cup T_k$, tüm işaretleyicilerin birleşik kümesidir. Değişim noktalarının gerçek konumları $T$ için, algoritmalar ile elde edilen gerçek pozitifler $TP(T, X)$ olarak tanımlanır ($\tau \in T$).Bu küme içindeki her bir $\tau$, $|\tau - x| \leq M$ koşulunu sağlayan en az bir $x \in X$ için bulunur. Ancak bir $\tau \in T$ için yalnızca bir $x \in X$ kullanılır. Bu çalışmada $ M = 5$ alınmıştır.
 
-Değişim noktalarının sayısı genellikle serideki gözlem sayısından çok küçüktür. Bu nedenle doğruluk oranı gibi ölçütler oldukça çarpık olacaktır.
+Doğruluk değeri, 0 ile 1 arasındadır. Doğru tahmin edilen değerlerin, tüm değerlere bölünmesi ile elde edilmektedir.  Doğruluk değeri 1’e yaklaştıkça başarı artmaktadır[@kelle2022mqtt].
 
-F puanında, bir algoritmanın performansı kesinlik ($P$) (doğru tespit edilen değişim noktalarının tespit edilen değişim noktalarının sayısına oranı) ve duyarlılık (doğru tespit edilen değişim noktalarının gerçek değişim noktalarının sayısına oranı) kullanılarak ölçülür ($\beta = 1$ olarak varsayılır).
+$$Dogruluk = \frac{(GP + GN)}{(GP + GN + FP + FN)}$$
+
+Değişim noktalarının sayısı genellikle serideki gözlem sayısından çok küçüktür. Bu nedenle doğruluk oranı gibi ölçütler oldukça çarpık olacaktır. Bu durumda F puanı kullanılabilir. F puanında, bir algoritmanın performansı kesinlik ($P$) (doğru tespit edilen değişim noktalarının tespit edilen değişim noktalarının sayısına oranı) ve duyarlılık (doğru tespit edilen değişim noktalarının gerçek değişim noktalarının sayısına oranı) kullanılarak ölçülür ($\beta = 1$ olarak varsayılır).
 
 $$F_{\beta} = \frac{(1 + \beta^2) \cdot P \cdot R}{(\beta^2 \cdot P) + R}$$
 
-$X$, bir tespit algoritması ile bulunan değişim noktası konumları olsun. $T^* = \cup T_k$, tüm işaretleyicilerin birleşik kümesidir. Değişim noktalarının gerçek konumları $T$ için, algoritmalar ile elde edilen gerçek pozitifler $TP(T, X)$ olarak tanımlanır ($\tau \in T$).Bu küme içindeki her bir $\tau$, $|\tau - x| \leq M$ koşulunu sağlayan en az bir $x \in X$ için bulunur. Ancak bir $\tau \in T$ için yalnızca bir $x \in X$ kullanılır.
-
-```{r, echo=FALSE,fig.cap="Karışıklık matrisi",out.width="357px", out.height="109px"}
+```{r, echo=FALSE,fig.cap="Yanılgı matrisi",out.width="357px", out.height="109px"}
 knitr::include_graphics("figure/conmat.png")
 ```
 
@@ -307,26 +309,15 @@ knitr::include_graphics("figure/conmat.png")
 -   Yanlış Pozitif (YP): Doğru olarak tahmin edilen, gerçekte yanlış olan değerler,
 -   Yanlış Negatif (YN): Yanlış olarak tahmin edilen, gerçekte doğru olan değerleri ifade etmektedir.
 
-#### Doğruluk (Accuracy)
 
-Doğru tahmin edilen değerlerin, tüm değerlere bölünmesi ile elde edilmektedir. Doğruluk değeri, 0 ile 1 arasındadır. Doğruluk değeri 1’e yaklaştıkça başarı artmaktadır[@kelle2022mqtt].
+Duyarlılık (recall), doğru olarak tahmin etmemiz gereken değerlerin, ne kadarını doğru tahmin ettiğimizi belirtmektedir. Duyarlılık değeri, gerçekte doğru olan ve doğru olarak tahmin edilen değerlerin, tüm doğru değerlere bölünmesi ile elde edilmektedir[@kelle2022mqtt].
 
-$$Doğruluk = \frac{(GP + GN)}{(GP + GN + FP + FN)}$$
+$$Duyarlilik =  \frac{GP}{(GP + YN)}$$
 
-#### Duyarlılık (Recall)
+Kesinlik (precision), doğru olarak tahmin ettiğimiz değerlerin, ne kadarının gerçekte doğru olduğunu göstermektedir. Kesinlik değeri, gerçekte doğru olan ve doğru olarak tahmin edilen değerlerin, doğru olarak tahmin edilen tüm değerlere bölünmesi ile elde edilmektedir[@kelle2022mqtt].
 
-Doğru olarak tahmin etmemiz gereken değerlerin, ne kadarını doğru tahmin ettiğimizi belirtmektedir. Duyarlılık değeri, gerçekte doğru olan ve doğru olarak tahmin edilen değerlerin, tüm doğru değerlere bölünmesi ile elde edilmektedir[@kelle2022mqtt].
+$$Kesinlik =  \frac{GP}{(GP + YP)}$$
 
-$$Duyarlilik =  \frac{GP}{(GP + FN)}$$
+F1 puanı, duyarlılık ve kesinlik değerlerinin harmonik ortalamasının hesaplanması ile elde edilmektedir. Her iki değerinde hesaplamaya katılarak dengeli bir değer elde edilmesi amaçlanmaktadır. Dengesiz verilerde başarılı sonuçlar elde etmek için kullanılmaktadır[@kelle2022mqtt].
 
-#### Kesinlik (Precision)
-
-Doğru olarak tahmin ettiğimiz değerlerin, ne kadarının gerçekte doğru olduğunu göstermektedir. Kesinlik değeri, gerçekte doğru olan ve doğru olarak tahmin edilen değerlerin, doğru olarak tahmin edilen tüm değerlere bölünmesi ile elde edilmektedir[@kelle2022mqtt].
-
-$$Kesinlik =  \frac{GP}{(GP + FP)}$$
-
-#### F1 Skoru (F1 Score)
-
-F1 skoru, duyarlılık ve kesinlik değerlerinin harmonik ortalamasının hesaplanması ile elde edilmektedir. Her iki değerinde hesaplamaya katılarak dengeli bir değer elde edilmesi amaçlanmaktadır. Eşit dağılıma sahip olmayan veri setlerinde başarılı sonuçlar elde etmek için kullanılmaktadır[@kelle2022mqtt].
-
-$$ F1 Skoru = \frac{2 * Kesinlik * Duyarlılık}{(Kesinlik + Duyarlılık)} $$
+$$ F1\text{-}Puani = \frac{2 * Kesinlik * Duyarlilik}{(Kesinlik + Duyarlilik)} $$

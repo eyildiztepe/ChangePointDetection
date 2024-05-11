@@ -41,9 +41,7 @@ Table: (\#tab:nvar1) Yapay Veriler
 
 Çalışmada farklı alanlardan gerçek veriler kullanılmıştır. Veriler (https://github.com/alan-turing-institute/TCPD/tree/master/datasets) adresinden temin edilmiştir. Gerçek verilerin özellikleri Tablo \@ref(tab:ngercek)'de verilmiştir.
 
-
-
-Çalışmada kullanılan gerçek veriler 5 ayrı işaretleyici tarafından işaretlenmiştir [@van2020evaluation].Bu nedenle değişim noktası konumları değişiklik göstermektedir .
+Çalışmada kullanılan gerçek veriler 5 ayrı işaretleyici tarafından işaretlenmiştir [@van2020evaluation].Bu nedenle değişim noktası konumları değişiklik gösterebilmektedir.
 
  
 ## Değişim Noktası Analizi
@@ -168,54 +166,54 @@ Table: (\#tab:nvar11) Kapsama Ölçütü (Ayarlanmış)
 Ayarlanan parametreler ile hesaplanan kapsama ölçütü değerinin BinSeg ve parçalı regresyon algoritmalarının tamamında 0,8'in üzerinde olduğu görülmektedir. Pelt için on dört, AMOC için dokuz ve Prophet algortiması için üç verinin 0,7'nin üzerindekapsama ölçütü değerine sahip olduğu görülmektedir.
 Ayarlanan parametrelerle çalıştırılan beş farklı algoritmanın kullanıldığı yirmi verinin hiçbirinde 0,3'ün altından kapsama ölçütü değeri bulunmamaktadır.
 
-### Yapay Veriler için Friedman Test 
-```{r,echo=FALSE}
+Elde edilen sonuçlara göre yapay veriler için algoritmaların performansları arasında anlamlı bir fark olup olmadığı Friedman testi ile araştırılmıştır. Takip eden bölümlerde PMCMRplus paketindeki friedman.test() ve frdAllPairsNemenyiTest() fonksiyonları ile elde edilen sonuçlara yer verilmiştir. Hipotez testlerinde ($\alpha=0.05$) alınmıştır. 
+
+```{r,echo=TRUE,warning=F}
 if(!require('PMCMRplus')) {
   install.packages('PMCMRplus')
   library('PMCMRplus')
 }
 
-sim <- matrix(c(0.5975, 0.5388, 0.4937, 0.5850, 0.7707, 0.6079, 0.9648, 0.6084, 0.6629,
-              0.6269, 0.8764, 0.5639, 0.8771, 0.8932, 0.9992, 0.9950, 0.8408, 0.7744,
-              0.6932, 0.5905, 0.9930, 0.8914, 0.9950, 0.9957, 0.9688, 0.8853, 0.9648,
-              0.8831, 0.9467, 0.9092, 0.9689, 0.8220, 0.9976, 0.9567, 0.9992, 0.9950,
-              0.9980, 0.9976, 0.9983, 0.9854, 0.9930, 0.8914, 0.9950, 0.9957, 0.9688,
-              0.8853, 0.9648, 0.8831, 0.9467, 0.9092, 0.9689, 0.8220, 0.9976, 0.9567,
-              0.9992, 0.9950, 0.9980, 0.9976, 0.9983, 0.9854, 0.6104, 0.6793, 0.6152,
-              0.6830, 0.7494, 0.3967, 0.6002, 0.6700, 0.5665, 0.4866, 0.9998, 0.6338,
-              0.6158, 0.5356, 0.5255, 0.5825, 0.7171, 0.4701, 0.4816, 0.5511, 0.7081,
-              0.8194, 0.9246, 0.8840, 0.7706, 0.5599, 0.9670, 0.7364, 0.6067, 0.7201,
-              0.9387, 0.5604, 0.6509, 0.8589, 0.8189, 0.7296, 0.7905, 0.6171, 0.6680,
-              0.7184),nrow=20, ncol=5, 
-            dimnames=list(1:20,c("AMOC","BinSeg","Parçalı Reg","Prophet","PELT")))
+sim <- matrix(c(0.5975, 0.5388, 0.4937, 0.5850, 0.7707, 0.6079, 0.9648,
+                0.6084, 0.6629, 0.6269, 0.8764, 0.5639, 0.8771, 0.8932,
+                0.9992, 0.9950, 0.8408, 0.7744, 0.6932, 0.5905, 0.9930,
+                0.8914, 0.9950, 0.9957, 0.9688, 0.8853, 0.9648, 0.8831,
+                0.9467, 0.9092, 0.9689, 0.8220, 0.9976, 0.9567, 0.9992,
+                0.9950, 0.9980, 0.9976, 0.9983, 0.9854, 0.9930, 0.8914,
+                0.9950, 0.9957, 0.9688, 0.8853, 0.9648, 0.8831, 0.9467,
+                0.9092, 0.9689, 0.8220, 0.9976, 0.9567, 0.9992, 0.9950,
+                0.9980, 0.9976, 0.9983, 0.9854, 0.6104, 0.6793, 0.6152,
+                0.6830, 0.7494, 0.3967, 0.6002, 0.6700, 0.5665, 0.4866,
+                0.9998, 0.6338, 0.6158, 0.5356, 0.5255, 0.5825, 0.7171,
+                0.4701, 0.4816, 0.5511, 0.7081, 0.8194, 0.9246, 0.8840,
+                0.7706, 0.5599, 0.9670, 0.7364, 0.6067, 0.7201, 0.9387,
+                0.5604, 0.6509, 0.8589, 0.8189, 0.7296, 0.7905, 0.6171,
+                0.6680,0.7184), nrow=20, ncol=5,
+              dimnames=list(1:20,c("AMOC","BinSeg","Parçalı Reg",
+                                   "Prophet","PELT")))
+```
 
+```{r,echo=TRUE, warning=F}
 result_sim <- friedman.test(sim)
 result_sim
 ```
 
+
 \begin{align*}
-&H_0:\text{Algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
-&H_1:\text{Algoritmalar arasında en az birinde istatistiksel olarak anlamlı bir fark vardır.}
+&H_0:\text{Algoritmaların performansları arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
+&H_1:\text{En az bir algoritmanın performansı farklıdır.}
 \end{align*}
 
 
-$p$-değeri 0.05 ($\alpha$)'den küçüktür. Bu nedenle $H_0$ hipotezi reddedilmiştir, algoritmalar arasında en az bir tanesi farklıdır.
+$p$-değeri 0.05 ($\alpha$)'den küçüktür. Bu nedenle $H_0$ hipotezi reddedilmiştir, en az bir algoritmanın performansının diğerlerinden farklı olduğu söylenebilir. 
 
+İkili karşılaştırmalar için Nemenyi testi (ATIF) kullanılmıştır.
 
-#### Yapay Veriler için Nemenyi Test 
-
-```{r,echo=FALSE}
-
+```{r,echo=TRUE, warning=FALSE }
 frdAllPairsNemenyiTest(sim, result_sim)
 ```
 
-
-- AMOC ve BinSeg algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
-- Parçalı Regresyon ve AMOC algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
-- Prophet ile BinSeg ve Parçalı Regresyon algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
-- PELT ile BinSeg ve Parçalı Regresyon algoritmaları arasında istatistiksel olarak anlamlı fark vardır.
-
-
+Buna göre; AMOC ve BinSeg algoritmaları arasında; Parçalı Regresyon ve AMOC algoritmaları arasında, Prophet ile BinSeg ve Parçalı Regresyon algoritmaları arasında, PELT ile BinSeg ve Parçalı Regresyon algoritmaları arasında istatistiksel olarak anlamlı fark olduğu, sonucuna varılmıştır.
 
 ### Gerçek Veriler için Sonuçlar
 
@@ -306,59 +304,79 @@ Ayarlanmış parametreler ile algoritmalar çalıştırıldığında, kapsama ö
 
 Çalışmada incelenen algoritmaların ihtiyaç duyduğu parametre değerleri verilere göre en uygun hale getirildiğinde BinSeg ve parçalı regresyon algoritmalarının diğerlerine göre değişim noktalarının konumlarını belirlemede daha başarılı olduğu görülmüştür.
 
-### Gerçek Veriler için Friedman Test 
+Elde edilen sonuçlara göre gerçek veriler için algoritmaların performansları arasında anlamlı bir fark olup olmadığı Friedman testi ile araştırılmıştır. Takip eden bölümlerde PMCMRplus paketindeki friedman.test() ve frdAllPairsNemenyiTest() fonksiyonları ile elde edilen sonuçlara yer verilmiştir. Hipotez testlerinde ($\alpha=0.05$) alınmıştır.
+
 ```{r,echo=FALSE}
 if (!require('PMCMRplus')) {
   install.packages('PMCMRplus')
   library('PMCMRplus')
 }
 
+
+```
+
+```{r,echo=T,warning=F}
 # Define the data matrix
-real <- matrix(c(0.7640, 0.4251, 0.7938, 0.5264, 0.5844, 0.7665, 0.3870, 0.4305, 0.9105,
-                 0.8577, 0.4527, 0.4352, 0.4858, 0.7625, 0.7001, 0.8136, 0.7731, 0.3941,
-                 0.8570, 0.7961, 0.7549, 0.6371, 0.2182, 0.3257, 0.7635, 0.7494, 0.7042,
-                 0.5113, 0.4840, 0.4157, 0.3955, 0.5609, 0.4873, 0.3833, 0.5273, 0.7062,
-                 0.6622, 0.8217, 0.6964, 0.4488, 0.7944, 0.8058, 0.7819, 0.5511, 0.2045,
-                 0.3206, 0.3485, 0.4366, 0.6919, 0.6222, 0.3470, 0.4097, 0.3625, 0.4211,
-                 0.4615), nrow = 11, ncol = 5, 
-               dimnames = list(c("Bitcoin", "Brent-spot", "childeren-per women", "co2- canada", "debt -Ireland", "rail-lines", "rather-stock", "scanline-42049", "shangai-license", "usd-isk", "well-log"),
-                               c("AMOC","BinSeg","PELT","Parçalı Reg","Prophet")))
+real <- matrix(c(0.7640, 0.4251, 0.7938, 0.5264, 0.5844, 0.7665, 0.3870,
+                 0.4305, 0.9105,0.8577, 0.4527, 0.4352, 0.4858, 0.7625,
+                 0.7001, 0.8136, 0.7731, 0.3941,0.8570, 0.7961, 0.7549,
+                 0.6371, 0.2182, 0.3257, 0.7635, 0.7494, 0.7042,0.5113,
+                 0.4840, 0.4157, 0.3955, 0.5609, 0.4873, 0.3833, 0.5273,
+                 0.7062,0.6622, 0.8217, 0.6964, 0.4488, 0.7944, 0.8058,
+                 0.7819, 0.5511, 0.2045,0.3206, 0.3485, 0.4366, 0.6919,
+                 0.6222, 0.3470, 0.4097, 0.3625, 0.4211,0.4615), 
+               nrow =11, ncol = 5, 
+               dimnames = list(c("Bitcoin", "Brent-spot", 
+                                 "childeren-per women", "co2- canada",
+                                 "debt -Ireland", "rail-lines",
+                                 "rather-stock", "scanline-42049",
+                                 "shangai-license", "usd-isk","well-log"),
+                               c("AMOC","BinSeg","PELT",
+                                 "Parçalı Reg","Prophet")))
 
 # Perform Friedman test
 result_real <- friedman.test(real)
-print(result_real)
+result_real
 ```
 
+
 \begin{align*}
-& H_0:\text{Algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
-& H_1:\text{Algoritmalar arasında en az birinde istatistiksel olarak anlamlı bir fark vardır.}
+&H_0:\text{Algoritmaların performansları arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
+&H_1:\text{En az bir algoritmanın performansı farklıdır.}
 \end{align*}
 
-$p$-değeri 0.05 ($\alpha$)'den küçüktür. Bu nedenle $H_0$ hipotezi reddedilmiştir, algoritmalar arasında en az bir tanesi farklıdır.
 
-#### Gerçek Veriler için Nemenyi Test 
+$p$-değeri 0.05 ($\alpha$)'den küçüktür. Bu nedenle $H_0$ hipotezi reddedilmiştir, algoritmaların performanslarının en az birinin farklı olduğu söylenebilir.
+
+
 ```{r,echo=FALSE}
 if(!require('PMCMRplus')) {
   install.packages('PMCMRplus')
   library('PMCMRplus')
 }
 
-nemenyi_result <- frdAllPairsNemenyiTest(real, result_real)
-print(nemenyi_result)
 ```
-Prophet ile AMOC, BinSeg ve parçalı regresyon algoritmaları arasında istatistiksel olarak anlamlı bir fark vardır.
+
+```{r, echo=T, warning=F}
+
+nemenyi_result <- frdAllPairsNemenyiTest(real, result_real)
+nemenyi_result
+
+```
+
+Nemenyi testi sonuçlarına göre Prophet ile AMOC, BinSeg ve parçalı regresyon algoritmaları arasında istatistiksel olarak anlamlı bir fark vardır.
 
 ## Kademeli Egzersiz Test Verileri
 
-Bu bölümde 15 sporcunun kademeli bir rampa testi sonucunda elde edilen veriler kullanılarak eşik egzersiz şiddetlerini değişim noktası belirleme yöntemleri ile tespit etmek denenmiştir.
+Bu bölümde bir başka gerçek veri için uygulama yapılmıştır. Onbeş sporcunun kademeli bir rampa testi sonucunda elde edilen verileri kullanılarak eşik egzersiz şiddetlerini değişim noktası belirleme yöntemleri ile tespit etmek denenmiştir.
 
-```{r, echo=FALSE,fig.cap="$V_E/P_{ET}CO_2$ - Power (W)" ,out.width="302px", out.height="228px"}
+(ref:ozkaya2021) $V_E/P_{ET}CO_2$ - Power (W) [@ozkaya2021new]
+
+```{r, echo=FALSE,fig.cap="(ref:ozkaya2021)" ,out.width="302px", out.height="228px"}
 knitr::include_graphics("figure/vepetco2.png")
 ```
 
-$V_E/P_{ET}CO_2$ :Dakika ventilasyonu bölü ekspirasyon sonu $CO_2$ kısmi basıncı [@hakan2022solunumsal]
-
-Power(W) :Egzersiz şiddeti [@hakan2022solunumsal]
+Uygulamada $V_E/P_{ET}CO_2$ (Dakika ventilasyonu bölü ekspirasyon sonu $CO_2$ kısmi basıncı) değerleri kullanılarak değişim noktası egzersiz şiddeti (Power(W)) olarak bulunmaya çalışılmıştır.
 
 Table: (\#tab:nvar6) Kapsama Ölçütü (Ayarlanmış)
 
@@ -380,7 +398,7 @@ Table: (\#tab:nvar6) Kapsama Ölçütü (Ayarlanmış)
 | 14   | 0,5434 | 0,7423    | 1,0000|
 | 15   | 0,7141 | 0,4571    | 0,8194|
 
-Ayarlanan parametreler ile hesaplanan kapsama ölçütü değerinin parçalı regresyon algoritmasında yedi, Pelt ve BinSeg algoritmalarında ise altı veride 0,8'in üzerinde olduğu görülmektedir.
+Ayarlanan parametreler ile hesaplanan kapsama ölçütü değerinin parçalı regresyon algoritmasında yedi, PELT ve BinSeg algoritmalarında ise altı veride 0,8'in üzerinde olduğu görülmektedir.
 Ayarlanan parametrelerle çalıştırılan üç farklı algoritmanın kullanıldığı on beş verinin hiçbirinde 0,3'ün altından kapsama ölçütü değeri bulunmamaktadır.
 
 İki değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
@@ -411,30 +429,27 @@ Pelt ve parçalı regresyon  algoritmalarının 0,3'ün altında  F1 puanı yokk
 
 İki değişim noktası tespit edilemeyen durumlar (NA) ile gösterilmiştir.
 
-### Kademeli Egzersiz Test Verileri için Friedman Test 
+Aşağıda PMCMRplus paketindeki friedman.test() ve frdAllPairsNemenyiTest() fonksiyonları ile elde edilen sonuçlara yer verilmiştir. Hipotez testlerinde ($\alpha=0.05$) alınmıştır.
 
-```{r,echo=FALSE}
-if(!require('PMCMRplus')) {
-  install.packages('PMCMRplus')
-  library('PMCMRplus')
-}
-
-ve_petco2 <- matrix(c(0.7023, NA, NA, 0.7485, 0.9326, NA, NA, 1.0000, 0.8181, 0.8039,
-                1.0000, 1.0000, 0.6520, 0.5434, 0.7141,
-                0.6688, 0.8232, 0.5097, 0.9547, 0.8972, 0.7793, 0.9493, 0.8930,
-                0.9545, 0.6843, 0.6111, 0.7270, 0.8486, 0.7423, 0.4571,
-                0.7340, NA, NA, 0.7308, 0.7314, NA, NA, 0.8425, 0.8723, 0.7189,
-                0.5965, 0.9353, 0.9805, 1.0000, 0.8194),
-              nrow = 15, ncol = 3,
-              dimnames = list(1:15, c("BinSeg", "Parcali_Regresyon", "PELT")))
+```{r,echo=T,warning=F}
+ve_petco2 <- matrix(c(0.7023, NA, NA, 0.7485, 0.9326, NA, NA, 1.0000,
+                      0.8181, 0.8039,1.0000, 1.0000, 0.6520, 0.5434,
+                      0.7141,0.6688, 0.8232, 0.5097, 0.9547, 0.8972,
+                      0.7793, 0.9493, 0.8930,0.9545, 0.6843, 0.6111,
+                      0.7270, 0.8486, 0.7423, 0.4571,0.7340, NA, NA,
+                      0.7308, 0.7314, NA, NA, 0.8425, 0.8723,
+                      0.7189,0.5965, 0.9353, 0.9805, 1.0000, 0.8194),
+                    nrow = 15, ncol = 3,
+                    dimnames = list(1:15, c("BinSeg", "Parcali_Regresyon",
+                                            "PELT")))
 result <- friedman.test(ve_petco2)
 result
 ```
 
 \begin{align*}
-& H_0:\text{Algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
-& H_1:\text{Algoritmalar arasında en az birinde istatistiksel olarak anlamlı bir fark vardır.}
+&H_0:\text{Algoritmaların performansları arasında istatistiksel olarak anlamlı bir fark yoktur.} \\
+&H_1:\text{En az bir algoritmanın performansı farklıdır.}
 \end{align*}
 
 
-$p$-değeri 0.05 ($\alpha$)'den büyüktür. Bu nedenle $H_0$ hipotezi reddedilememiştir, algoritmalar arasında istatistiksel olarak anlamlı bir fark yoktur.
+$p$-değeri 0.05 ($\alpha$)'den büyüktür. Bu nedenle $H_0$ hipotezi reddedilememiştir, kademeli egzersiz test verileri için algoritmaların performansları arasında istatistiksel olarak anlamlı bir fark yoktur.
