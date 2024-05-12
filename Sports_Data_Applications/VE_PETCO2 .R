@@ -9,8 +9,9 @@ library(ggplot2)
 install.packages("segmented")
 library(segmented)
 library(zoo)
+library(tibble)
 
-file <- file.path("C:", "Users", "USER", "Desktop", "VE_PETCO2_v1.xlsx")
+file <- file.path("C:", "Users", "PC", "Downloads", "VE_PETCO2_v1.xlsx")
 sheet_names <- excel_sheets(file)
 data_list <- lapply(sheet_names, function(sheet) {
   data <- read_excel(file, sheet = sheet)
@@ -29,13 +30,7 @@ P1_df <- data.frame(
 )
 
 P1_df
-plot(P1_df$time, P1_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P1 Time Series")
-
-P1_df$time <- as.Date(P1_df$time)
-
-tsdata1 <- ts(P1_df$value, start = min(P1_df$time), frequency = 1)
-tsdata1
-plot(tsdata1)
+P1_ts <- zoo::zoo(P1_df$value, order.by = P1_df$time)
 
 ### CP KONUMLAR ###
 # 24 #
@@ -44,17 +39,17 @@ plot(tsdata1)
 ## BINSEG ##
 
 # oracle settings
-o_binseg1 <- cpt.mean(tsdata1, penalty = "BIC",pen.value = 10, method = "BinSeg", Q = 2)
-plot(o_binseg1)
+o_binseg1 <- cpt.mean(P1_ts, penalty = "BIC",pen.value = 10, method = "BinSeg", Q = 2)
+plot(o_binseg1,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg1), col = "red", lty = 2,lwd=2)
 cpts(o_binseg1)
 
 ## PELT ##
 
 # oracle settings
-o_pelt1_1<- cpt.mean(tsdata1, method = "PELT", penalty = "BIC", pen.value = 0.05, minseglen = 12)
-plot(o_pelt1_1, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt1_1), col = "blue", lty = 2,lwd=1)
+o_pelt1_1<- cpt.mean(P1_ts, method = "PELT", penalty = "BIC", pen.value = 0.05, minseglen = 12)
+plot(o_pelt1_1, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt1_1), col = "red", lty = 2,lwd=2)
 cpts(o_pelt1_1)  
 
 ## SEGMENTED REGRESSION ##
@@ -90,13 +85,7 @@ P2_df <- data.frame(
 )
 
 P2_df
-plot(P2_df$time, P2_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P2 Time Series")
-
-P2_df$time <- as.Date(P2_df$time)
-
-tsdata2 <- ts(P2_df$value, start = min(P2_df$time), frequency = 1)
-tsdata2
-plot(tsdata2)
+P2_ts <- zoo::zoo(P2_df$value, order.by = P2_df$time)
 
 ### CP KONUMLAR ###
 # 16 #
@@ -105,17 +94,17 @@ plot(tsdata2)
 ## BINSEG ##
 
 # oracle settings
-o_binseg2 <- cpt.mean(tsdata2, penalty = "BIC",pen.value = 2 * log(29) , method = "BinSeg", Q = 2)
-plot(o_binseg2)
+o_binseg2 <- cpt.mean(P2_ts, penalty = "BIC",pen.value = 2 * log(29) , method = "BinSeg", Q = 2)
+plot(o_binseg2,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg2), col = "red", lty = 2,lwd=2)
 cpts(o_binseg2)
 
 ## PELT ##
 
 # oracle settings
-o_pelt2<- cpt.mean(tsdata2, method = "PELT", penalty = "BIC", pen.value = 2 * log(29), minseglen = 5)
-plot(o_pelt2, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt2), col = "blue", lty = 2,lwd=1)
+o_pelt2<- cpt.mean(P2_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(29), minseglen = 5)
+plot(o_pelt2, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt2), col = "red", lty = 2,lwd=2)
 cpts(o_pelt2)  
 
 
@@ -152,13 +141,7 @@ P3_df <- data.frame(
 )
 
 P3_df
-plot(P3_df$time, P3_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P3 Time Series")
-
-P3_df$time <- as.Date(P3_df$time)
-
-tsdata3 <- ts(P3_df$value, start = min(P3_df$time), frequency = 1)
-tsdata3
-plot(tsdata3)
+P3_ts <- zoo::zoo(P3_df$value, order.by = P3_df$time)
 
 ### CP KONUMLAR ###
 # 10 #
@@ -167,17 +150,17 @@ plot(tsdata3)
 ## BINSEG ##
 
 # oracle settings
-o_binseg3 <- cpt.mean(tsdata3, penalty = "BIC",pen.value = 2 * log(28), method = "BinSeg", Q = 2)
-plot(o_binseg3)
+o_binseg3 <- cpt.mean(P3_ts, penalty = "BIC",pen.value = 2 * log(28), method = "BinSeg", Q = 2)
+plot(o_binseg3,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg3), col = "red", lty = 2,lwd=2)
 cpts(o_binseg3)
 
 ## PELT ##
 
 # oracle settings
-o_pelt3<- cpt.mean(tsdata3, method = "PELT", penalty = "BIC", pen.value = 2 * log(28), minseglen = 5)
-plot(o_pelt3, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt3), col = "blue", lty = 2,lwd=1)
+o_pelt3<- cpt.mean(P3_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(28), minseglen = 5)
+plot(o_pelt3, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt3), col = "red", lty = 2,lwd=2)
 cpts(o_pelt3)  
 
 ## SEGMENTED REGRESSION ##
@@ -211,16 +194,8 @@ P4_df <- data.frame(
   time = data_list[[4]]$watt,  
   value = as.numeric(data_list[[4]]$VE_PETCO2)
 )
-
 P4_df
-plot(P4_df$time, P4_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P4 Time Series")
-
-P4_df$time <- as.Date(P4_df$time)
-
-tsdata4 <- ts(P4_df$value, start = min(P4_df$time), frequency = 1)
-tsdata4
-plot(tsdata4)
-
+P4_ts <- zoo::zoo(P4_df$value, order.by = P4_df$time)
 
 ### CP KONUMLAR ###
 # 23 #
@@ -229,17 +204,17 @@ plot(tsdata4)
 ## BINSEG ##
 
 # oracle settings
-o_binseg4 <- cpt.mean(tsdata4, penalty = "BIC",pen.value = 2 * log(42), method = "BinSeg", Q = 2)
-plot(o_binseg4)
+o_binseg4 <- cpt.mean(P4_ts, penalty = "BIC",pen.value = 2 * log(42), method = "BinSeg", Q = 2)
+plot(o_binseg4,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg4), col = "red", lty = 2,lwd=2)
 cpts(o_binseg4)
 
 ## PELT ##
 
 # oracle settings1
-o_pelt4<- cpt.mean(tsdata4, method = "PELT", penalty = "BIC", pen.value = 2 * log(42), minseglen = 11)
-plot(o_pelt4, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt4), col = "blue", lty = 2,lwd=1)
+o_pelt4<- cpt.mean(P4_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(42), minseglen = 11)
+plot(o_pelt4, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt4), col = "red", lty = 2,lwd=2)
 cpts(o_pelt4)  
 
 ## SEGMENTED REGRESSION ##
@@ -273,15 +248,8 @@ P5_df <- data.frame(
   time = data_list[[5]]$watt,  
   value = as.numeric(data_list[[5]]$VE_PETCO2)
 )
-
 P5_df
-plot(P5_df$time, P5_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P5 Time Series")
-
-P5_df$time <- as.Date(P5_df$time)
-
-tsdata5 <- ts(P5_df$value, start = min(P5_df$time), frequency = 1)
-tsdata5
-plot(tsdata5)
+P5_ts <- zoo::zoo(P5_df$value, order.by = P5_df$time)
 
 
 ### CP KONUMLAR ###
@@ -291,17 +259,17 @@ plot(tsdata5)
 ## BINSEG ##
 
 # oracle settings
-o_binseg5 <- cpt.mean(tsdata5, penalty = "BIC",pen.value = 2 * log(54), method = "BinSeg", Q = 2)
-plot(o_binseg5)
+o_binseg5 <- cpt.mean(P5_ts, penalty = "BIC",pen.value = 2 * log(54), method = "BinSeg", Q = 2)
+plot(o_binseg5,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg5), col = "red", lty = 2,lwd=2)
 cpts(o_binseg5)
 
 ## PELT ##
 
 # oracle settings1
-o_pelt5<- cpt.mean(tsdata5, method = "PELT", penalty = "BIC", pen.value = 2 * log(54), minseglen = 14)
-plot(o_pelt5, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt5), col = "blue", lty = 2,lwd=1)
+o_pelt5<- cpt.mean(P5_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(54), minseglen = 14)
+plot(o_pelt5, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt5), col = "red", lty = 2,lwd=2)
 cpts(o_pelt5)  
 
 ## SEGMENTED REGRESSION ##
@@ -337,14 +305,7 @@ P6_df <- data.frame(
 )
 
 P6_df
-plot(P6_df$time, P6_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P6 Time Series")
-
-P6_df$time <- as.Date(P6_df$time)
-
-tsdata6 <- ts(P6_df$value, start = min(P6_df$time), frequency = 1)
-tsdata6
-plot(tsdata6)
-
+P6_ts <- zoo::zoo(P6_df$value, order.by = P6_df$time)
 
 ### CP KONUMLAR ###
 # 18 #
@@ -354,17 +315,17 @@ plot(tsdata6)
 ## BINSEG ##
 
 # oracle settings
-o_binseg6 <- cpt.mean(tsdata6, penalty = "BIC",pen.value = 2 * log(29), method = "BinSeg", Q = 2)
-plot(o_binseg6)
+o_binseg6 <- cpt.mean(P6_ts, penalty = "BIC",pen.value = 2 * log(29), method = "BinSeg", Q = 2)
+plot(o_binseg6,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg6), col = "red", lty = 2,lwd=2)
 cpts(o_binseg6)
 
 ## PELT ##
 
 # oracle settings
-o_pelt6<- cpt.mean(tsdata6, method = "PELT", penalty = "BIC", pen.value = 2 * log(29), minseglen = 10, Q = 2)
-plot(o_pelt6, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt6), col = "blue", lty = 2,lwd=1)
+o_pelt6<- cpt.mean(P6_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(29), minseglen = 10, Q = 2)
+plot(o_pelt6, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt6), col = "red", lty = 2,lwd=2)
 cpts(o_pelt6)  
 
 ## SEGMENTED REGRESSION ##
@@ -398,15 +359,8 @@ P7_df <- data.frame(
   time = data_list[[7]]$watt,  
   value = as.numeric(data_list[[7]]$VE_PETCO2)
 )
-
 P7_df
-plot(P7_df$time, P7_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P7 Time Series")
-
-P7_df$time <- as.Date(P7_df$time)
-
-tsdata7 <- ts(P7_df$value, start = min(P7_df$time), frequency = 1)
-tsdata7
-plot(tsdata7)
+P7_ts <- zoo::zoo(P7_df$value, order.by = P7_df$time)
 
 
 ### CP KONUMLAR ###
@@ -417,17 +371,17 @@ plot(tsdata7)
 ## BINSEG ##
 
 # oracle settings
-o_binseg7 <- cpt.mean(tsdata7, penalty = "BIC",pen.value = 2 * log(37), method = "BinSeg", Q = 2)
-plot(o_binseg7)
+o_binseg7 <- cpt.mean(P7_ts, penalty = "BIC",pen.value = 2 * log(37), method = "BinSeg", Q = 2)
+plot(o_binseg7,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg7), col = "red", lty = 2,lwd=2)
 cpts(o_binseg7)
 
 ## PELT ##
 
 # oracle settings1
-o_pelt7<- cpt.mean(tsdata7, method = "PELT", penalty = "BIC", pen.value = 2 * log(37), minseglen = 13)
-plot(o_pelt7, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt7), col = "blue", lty = 2,lwd=1)
+o_pelt7<- cpt.mean(P7_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(37), minseglen = 13)
+plot(o_pelt7, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt7), col = "red", lty = 2,lwd=2)
 cpts(o_pelt7)  
 
 ## SEGMENTED REGRESSION ##
@@ -461,16 +415,7 @@ P8_df <- data.frame(
   time = data_list[[8]]$watt,  
   value = as.numeric(data_list[[8]]$VE_PETCO2)
 )
-
-P8_df
-plot(P8_df$time, P8_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P8 Time Series")
-
-P8_df$time <- as.Date(P8_df$time)
-
-tsdata8 <- ts(P8_df$value, start = min(P8_df$time), frequency = 1)
-tsdata8
-plot(tsdata8)
-
+P8_ts <- zoo::zoo(P8_df$value, order.by = P8_df$time)
 
 ### CP KONUMLAR ###
 # 16 #
@@ -479,17 +424,17 @@ plot(tsdata8)
 ## BINSEG ##
 
 # oracle settings
-o_binseg8 <- cpt.mean(tsdata8, penalty = "BIC",pen.value = 2 * log(34), method = "BinSeg", Q = 2)
-plot(o_binseg8)
+o_binseg8 <- cpt.mean(P8_ts, penalty = "BIC", pen.value = 2 * log(34), method = "BinSeg", Q = 2)
+plot(o_binseg8, main = "BinSeg", xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg8), col = "red", lty = 2,lwd=2)
 cpts(o_binseg8)
 
 ## PELT ##
  
 # oracle settings1
-o_pelt8<- cpt.mean(tsdata8, method = "PELT", penalty = "BIC", pen.value = 2 * log(34), minseglen = 10)
-plot(o_pelt8, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt8), col = "blue", lty = 2,lwd=1)
+o_pelt8<- cpt.mean(P8_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(34), minseglen = 10)
+plot(o_pelt8, main = "PELT", xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt8), col = "red", lty = 2,lwd=2)
 cpts(o_pelt8)  
 
 ## SEGMENTED REGRESSION ##
@@ -521,15 +466,9 @@ P9_df <- data.frame(
   time = data_list[[9]]$watt,  
   value = as.numeric(data_list[[9]]$VE_PETCO2)
 )
-
 P9_df
-plot(P9_df$time, P9_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P9 Time Series")
 
-P9_df$time <- as.Date(P9_df$time)
-
-tsdata9 <- ts(P9_df$value, start = min(P9_df$time), frequency = 1)
-tsdata9
-plot(tsdata9)
+P9_ts <- zoo::zoo(P9_df$value, order.by = P9_df$time)
 
 ### CP KONUMLAR ###
 # 19 #
@@ -538,17 +477,17 @@ plot(tsdata9)
 ## BINSEG ##
 
 # oracle settings
-o_binseg9 <- cpt.mean(tsdata9, penalty = "BIC",pen.value = 2 * log(44), method = "BinSeg", Q = 2)
-plot(o_binseg9)
+o_binseg9 <- cpt.mean(P9_ts, penalty = "BIC",pen.value = 2 * log(44), method = "BinSeg", Q = 2)
+plot(o_binseg9, main = "BinSeg",xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg9), col = "red", lty = 2,lwd=2)
 cpts(o_binseg9)
 
 ## PELT ##
 
 # oracle settings
-o_pelt9<- cpt.mean(tsdata9, method = "PELT", penalty = "BIC", pen.value = 2 * log(44), minseglen = 12)
-plot(o_pelt9, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt9), col = "blue", lty = 2,lwd=1)
+o_pelt9<- cpt.mean(P9_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(44), minseglen = 12)
+plot(o_pelt9,main = "PELT", xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt9), col = "red", lty = 2,lwd=2)
 cpts(o_pelt9)  
 
 ## SEGMENTED REGRESSION ##
@@ -580,15 +519,8 @@ P10_df <- data.frame(
   time = data_list[[10]]$watt,  
   value = as.numeric(data_list[[10]]$VE_PETCO2)
 )
-
 P10_df
-plot(P10_df$time, P10_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P10 Time Series")
-
-P10_df$time <- as.Date(P10_df$time)
-
-tsdata10 <- ts(P10_df$value, start = min(P10_df$time), frequency = 1)
-tsdata10
-plot(tsdata10)
+P10_ts <- zoo::zoo(P10_df$value, order.by = P10_df$time)
 
 ### CP KONUMLAR ###
 # 19 #
@@ -597,17 +529,17 @@ plot(tsdata10)
 ## BINSEG ##
 
 # oracle settings
-o_binseg10 <- cpt.mean(tsdata10, penalty = "BIC",pen.value = 2 * log(34), method = "BinSeg", Q = 2)
-plot(o_binseg10)
+o_binseg10 <- cpt.mean(P10_ts, penalty = "BIC",pen.value = 2 * log(34), method = "BinSeg", Q = 2)
+plot(o_binseg10,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg10), col = "red", lty = 2,lwd=2)
 cpts(o_binseg10)
 
 ## PELT ##
 
 # oracle settings
-o_pelt10<- cpt.mean(tsdata10, method = "PELT", penalty = "BIC", pen.value = 2 * log(34), minseglen = 9)
-plot(o_pelt10, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt10), col = "blue", lty = 2,lwd=1)
+o_pelt10<- cpt.mean(P10_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(34), minseglen = 9)
+plot(o_pelt10, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt10), col = "red", lty = 2,lwd=2)
 cpts(o_pelt10)  
 
 ## SEGMENTED REGRESSION ##
@@ -639,15 +571,8 @@ P11_df <- data.frame(
   time = data_list[[11]]$watt,  
   value = as.numeric(data_list[[11]]$VE_PETCO2)
 )
-
 P11_df
-plot(P11_df$time, P11_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P11 Time Series")
-
-P11_df$time <- as.Date(P11_df$time)
-
-tsdata11 <- ts(P11_df$value, start = min(P11_df$time), frequency = 1)
-tsdata11
-plot(tsdata11)
+P11_ts <- zoo::zoo(P11_df$value, order.by = P11_df$time)
 
 ### CP KONUMLAR ###
 # 24 #
@@ -656,17 +581,17 @@ plot(tsdata11)
 ## BINSEG ##
 
 # oracle settings
-o_binseg11 <- cpt.mean(tsdata11, penalty = "BIC",pen.value = 2 * log(37), method = "BinSeg", Q = 2)
-plot(o_binseg11)
+o_binseg11 <- cpt.mean(P11_ts, penalty = "BIC",pen.value = 2 * log(37), method = "BinSeg", Q = 2)
+plot(o_binseg11,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg11), col = "red", lty = 2,lwd=2)
 cpts(o_binseg11)
 
 ## PELT ##
 
 # oracle settings
-o_pelt11<- cpt.mean(tsdata11, method = "PELT", penalty = "BIC", pen.value = 2 * log(37), minseglen = 10)
-plot(o_pelt11, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt11), col = "blue", lty = 2,lwd=1)
+o_pelt11<- cpt.mean(P11_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(37), minseglen = 10)
+plot(o_pelt11, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt11), col = "red", lty = 2,lwd=2)
 cpts(o_pelt11)  
 
 ## SEGMENTED REGRESSION ##
@@ -698,15 +623,8 @@ P12_df <- data.frame(
   time = data_list[[12]]$watt,  
   value = as.numeric(data_list[[12]]$VE_PETCO2)
 )
-
 P12_df
-plot(P12_df$time, P12_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P12 Time Series")
-
-P12_df$time <- as.Date(P12_df$time)
-
-tsdata12 <- ts(P12_df$value, start = min(P12_df$time), frequency = 1)
-tsdata12
-plot(tsdata12)
+P12_ts <- zoo::zoo(P12_df$value, order.by = P12_df$time)
 
 ### CP KONUMLAR ###
 # 14 #
@@ -715,17 +633,17 @@ plot(tsdata12)
 ## BINSEG ##
 
 # oracle settings
-o_binseg12 <- cpt.mean(tsdata12, penalty = "BIC",pen.value = 2 * log(29), method = "BinSeg", Q = 2)
-plot(o_binseg12)
+o_binseg12 <- cpt.mean(P12_ts, penalty = "BIC",pen.value = 2 * log(29), method = "BinSeg", Q = 2)
+plot(o_binseg12,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg12), col = "red", lty = 2,lwd=2)
 cpts(o_binseg12)
 
 ## PELT ##
 
 # oracle settings
-o_pelt12<- cpt.mean(tsdata12, method = "PELT", penalty = "BIC", pen.value = 2 * log(29), minseglen = 8)
-plot(o_pelt12, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt12), col = "blue", lty = 2,lwd=1)
+o_pelt12<- cpt.mean(P12_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(29), minseglen = 8)
+plot(o_pelt12, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt12), col = "red", lty = 2,lwd=2)
 cpts(o_pelt12)  
 
 ## SEGMENTED REGRESSION ##
@@ -759,32 +677,27 @@ P13_df <- data.frame(
 )
 
 P13_df
-plot(P13_df$time, P13_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P13 Time Series")
-
-P13_df$time <- as.Date(P13_df$time)
-
-tsdata13 <- ts(P13_df$value, start = min(P13_df$time), frequency = 1)
-tsdata13
-plot(tsdata13)
+P13_ts <- zoo::zoo(P13_df$value, order.by = P13_df$time)
 
 ### CP KONUMLAR ###
-# 54#
+
+# 54 #
 # 84 #
 
 ## BINSEG ##
 
 # oracle settings
-o_binseg13 <- cpt.mean(tsdata13, penalty = "BIC",pen.value = 2 * log(101), method = "BinSeg", Q = 2)
-plot(o_binseg13)
+o_binseg13 <- cpt.mean(P13_ts, penalty = "BIC",pen.value = 2 * log(101), method = "BinSeg", Q = 2)
+plot(o_binseg13,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg13), col = "red", lty = 2,lwd=2)
 cpts(o_binseg13)
 
 ## PELT ##
 
 # oracle settings
-o_pelt13<- cpt.mean(tsdata13, method = "PELT", penalty = "BIC", pen.value = 2 * log(101), minseglen = 12)
-plot(o_pelt13, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt13), col = "blue", lty = 2,lwd=1)
+o_pelt13<- cpt.mean(P13_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(101), minseglen = 12)
+plot(o_pelt13, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt13), col = "red", lty = 2,lwd=2)
 cpts(o_pelt13)  
 
 ## SEGMENTED REGRESSION ##
@@ -817,15 +730,8 @@ P14_df <- data.frame(
   time = data_list[[14]]$watt,  
   value = as.numeric(data_list[[14]]$VE_PETCO2)
 )
-
 P14_df
-plot(P14_df$time, P14_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P14 Time Series")
-
-P14_df$time <- as.Date(P14_df$time)
-
-tsdata14 <- ts(P14_df$value, start = min(P14_df$time), frequency = 1)
-tsdata14
-plot(tsdata14)
+P14_ts <- zoo::zoo(P14_df$value, order.by = P14_df$time)
 
 ### CP KONUMLAR ###
 # 48 #
@@ -835,17 +741,17 @@ plot(tsdata14)
 ## BINSEG ##
 
 # oracle settings
-o_binseg14 <- cpt.mean(tsdata14, penalty = "BIC",pen.value = 2 * log(92), method = "BinSeg", Q = 2)
-plot(o_binseg14)
+o_binseg14 <- cpt.mean(P14_ts, penalty = "BIC",pen.value = 2 * log(92), method = "BinSeg", Q = 2)
+plot(o_binseg14,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg14), col = "red", lty = 2,lwd=2)
 cpts(o_binseg14)
 
 ## PELT ##
 
 # oracle settings
-o_pelt14<- cpt.mean(tsdata14, method = "PELT", penalty = "BIC", pen.value = 2 * log(92), minseglen = 20)
-plot(o_pelt14, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt14), col = "blue", lty = 2,lwd=1)
+o_pelt14<- cpt.mean(P14_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(92), minseglen = 20)
+plot(o_pelt14, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt14), col = "red", lty = 2,lwd=2)
 cpts(o_pelt14)  
 
 ## SEGMENTED REGRESSION ##
@@ -877,15 +783,8 @@ P15_df <- data.frame(
   time = data_list[[15]]$watt,  
   value = as.numeric(data_list[[15]]$VE_PETCO2)
 )
-
 P15_df
-plot(P15_df$time, P15_df$value, type = "l", xlab = "watt", ylab = "VE_PETCO2", main = "P15 Time Series")
-
-P15_df$time <- as.Date(P15_df$time)
-
-tsdata15 <- ts(P15_df$value, start = min(P15_df$time), frequency = 1)
-tsdata15
-plot(tsdata15)
+P15_ts <- zoo::zoo(P15_df$value, order.by = P15_df$time)
 
 ### CP KONUMLAR ###
 # 78 #
@@ -895,17 +794,17 @@ plot(tsdata15)
 ## BINSEG ##
 
 # oracle settings
-o_binseg15 <- cpt.mean(tsdata15, penalty = "BIC",pen.value = 2 * log(120), method = "BinSeg", Q = 2)
-plot(o_binseg15)
+o_binseg15 <- cpt.mean(P15_ts, penalty = "BIC",pen.value = 2 * log(120), method = "BinSeg", Q = 2)
+plot(o_binseg15,xlab = "watt", ylab = "VE_PETCO2")
 abline(v = cpts(o_binseg15), col = "red", lty = 2,lwd=2)
 cpts(o_binseg15)
 
 ## PELT ##
 
 # oracle settings
-o_pelt15<- cpt.mean(tsdata15, method = "PELT", penalty = "BIC", pen.value = 2 * log(120), minseglen = 2)
-plot(o_pelt15, type = "l", cpt.col = "blue", xlab = "Index")
-abline(v = cpts(o_pelt15), col = "blue", lty = 2,lwd=1)
+o_pelt15<- cpt.mean(P15_ts, method = "PELT", penalty = "BIC", pen.value = 2 * log(120), minseglen = 2)
+plot(o_pelt15, xlab = "watt", ylab = "VE_PETCO2")
+abline(v = cpts(o_pelt15), col = "red", lty = 2,lwd=2)
 cpts(o_pelt15)  
 
 ## SEGMENTED REGRESSION ##
@@ -932,3 +831,19 @@ o_cp_closest15
 })
 detach(P15_df)
 
+if(!require('PMCMRplus')) {
+  install.packages('PMCMRplus')
+  library('PMCMRplus')
+}
+
+ve_petco2 <- matrix(c(0.7023, NA, NA, 0.7485, 0.9326, NA, NA, 1.0000, 0.8181, 0.8039,
+                      1.0000, 1.0000, 0.6520, 0.5434, 0.7141,
+                      0.6688, 0.8232, 0.5097, 0.9547, 0.8972, 0.7793, 0.9493, 0.8930,
+                      0.9545, 0.6843, 0.6111, 0.7270, 0.8486, 0.7423, 0.4571,
+                      0.7340, NA, NA, 0.7308, 0.7314, NA, NA, 0.8425, 0.8723, 0.7189,
+                      0.5965, 0.9353, 0.9805, 1.0000, 0.8194),
+                    nrow = 15, ncol = 3,
+                    dimnames = list(1:15, c("BinSeg", "Parcali_Regresyon", "PELT")))
+ve_petco2
+result<-friedman.test(ve_petco2)
+result

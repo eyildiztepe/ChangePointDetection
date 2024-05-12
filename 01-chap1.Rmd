@@ -174,9 +174,12 @@ $$ \hat{\theta}_n = \arg\max_{\theta} \sum_{i=1}^n \log f(y_i|\theta). $$
 
 $B_n = \sum_{i=1}^n \left| \log f(y_i|\theta_n) - \log f(y_i|\theta^*) \right|$ ifadesine sahip olarak, $E(B_n) = o(n)$ ve $E[(B_n - E(B_n))^4] = O(n^2)$ olmaktadır.
 
+
+
 (A2)
 
 $$ \mathbb{E} \left( \log(f(Y|\theta)) - \log(f(Y|\theta^{'})) \right) < \infty; $$
+
 
 (A3)
 
