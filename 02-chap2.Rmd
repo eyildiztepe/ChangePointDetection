@@ -460,9 +460,18 @@ R Shiny, R programlama dilinde interaktif web tabanlı uygulamalar oluşturmak i
 Bu çalışmada, Shiny uygulamaları oluşturmak için shiny paketi kullanılmıştır. Ayrıca, uygulamanın görünümünü özelleştirmek için shinythemes paketi tercih edilmiştir. Değişim noktaları analizi için ise changepoint paketi kullanılmıştır. Son olarak, veri görselleştirmesi için ggplot2 paketi tercih edilmiştir.
 
 ### Anasayfa
+```{r, echo=FALSE,fig.cap="Anasayfa",out.width="400px", out.height="200px"}
+knitr::include_graphics("figure/anasayfa.png")
+```
+
 Uygulamanın ana sayfası, kullanıcıları karşılayan bir giriş noktasıdır. Burada, uygulamanın genel tanımı ve geliştiricilerin bilgileri yer almaktadır. Ayrıca, kullanıcıları uygulamanın sağladığı imkanlar hakkında bilgilendirir.
 
 ### Simüle Edilmiş Veri
+
+```{r, echo=FALSE,fig.cap="Simüle Edilmiş Veri",out.width="400px", out.height="200px"}
+knitr::include_graphics("figure/sim.png")
+```
+
 Veri Seti Üretme İşlevi: Kullanıcılar, simüle edilmiş veri setini oluşturmak için veri seti üretme panelini kullanabilirler. Bu panel, çeşitli parametreleri içerir:
 
 - Örneklem Sayısı (Sample Size): Kullanıcılar, oluşturulacak veri setinin büyüklüğünü bu parametre ile belirleyebilirler.
@@ -480,6 +489,11 @@ Veri Seti Üretme İşlevi: Kullanıcılar, simüle edilmiş veri setini oluştu
 - Tahmin Edilen Değişim Noktalarını Göster (Show Predicted Show Change Points): Bu onay kutusu işaretlendiğinde ekranda kırmızı çizgi ile algoritmaların tahmin ettiği değişim noktaları mavi çizgi ile gösterilir.
 
 ### Veri Yükleme
+
+```{r, echo=FALSE,fig.cap="Veri Yükleme",out.width="400px", out.height="200px"}
+knitr::include_graphics("figure/veriyükleme.png")
+```
+
 Bu kısımda kullanıcılar tek değişkenli verilerini txt veya csv formatında yükleyerek herhangi bir kod bilgisine gerek kalmadan ‘changepoint’ paketini kullanarak analiz edebilirler. Sunduğu imkanlar şu şekildedir:
 - Değişiklik Türü (Type of change to detect): Kullanıcılar ortalama, varyans, ortalama ve varyans seçeneklerinden uygun olanı seçebilirler.
 
