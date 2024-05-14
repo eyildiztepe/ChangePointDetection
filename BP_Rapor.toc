@@ -21,9 +21,9 @@
 \contentsline {section}{\numberline {2.3}Kademeli Egzersiz Test Verileri}{25}{section.2.3}%
 \contentsline {section}{\numberline {2.4}R Shiny Uygulaması}{28}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}R Shiny Nedir?}{28}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Kullanılan Kütüphaneler}{28}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.2}Kullanılan Paketler}{28}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Anasayfa}{29}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Simüle Edilmiş Veri}{29}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.4}Yapay Veri Üretme}{29}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}Veri Yükleme}{30}{subsection.2.4.5}%
 \contentsline {chapter}{Sonuç}{33}{chapter*.18}%
 \contentsline {chapter}{Kaynaklar}{35}{chapter*.19}%

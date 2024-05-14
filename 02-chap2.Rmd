@@ -456,7 +456,7 @@ Bu uygulama genel olarak değişim noktası içeren yapay veriler üretmeyi ve c
 ### R Shiny Nedir?
 R Shiny, R programlama dilinde interaktif web tabanlı uygulamalar oluşturmak için kullanılan bir pakettir. Bu paket, R kullanıcılarının veri analizi ve görselleştirme yeteneklerini web tabanlı arayüzler üzerinden paylaşmalarını sağlar. R Shiny, istatistiksel analizlerin ve veri görselleştirmenin yanı sıra, R dilinin sağladığı zengin paket ve fonksiyonlardan da yararlanabilir. Bu şekilde, kullanıcılar, veri analizlerini ve sonuçlarını paylaşmak için HTML, CSS ve JavaScript gibi web teknolojilerine ihtiyaç duymadan, R kodunu kullanarak web tabanlı arayüzler oluşturabilirler.
 
-### Kullanılan Kütüphaneler
+### Kullanılan Paketler
 Bu çalışmada, Shiny uygulamaları oluşturmak için shiny paketi kullanılmıştır. Ayrıca, uygulamanın görünümünü özelleştirmek için shinythemes paketi tercih edilmiştir. Değişim noktaları analizi için ise changepoint paketi kullanılmıştır. Son olarak, veri görselleştirmesi için ggplot2 paketi tercih edilmiştir.
 
 ### Anasayfa
@@ -466,7 +466,7 @@ knitr::include_graphics("figure/anasayfa.png")
 
 Uygulamanın ana sayfası, kullanıcıları karşılayan bir giriş noktasıdır. Burada, uygulamanın genel tanımı ve geliştiricilerin bilgileri yer almaktadır. Ayrıca, kullanıcıları uygulamanın sağladığı imkanlar hakkında bilgilendirir.
 
-### Simüle Edilmiş Veri
+### Yapay Veri Üretme
 
 ```{r, echo=FALSE,fig.cap="Simüle Edilmiş Veri",out.width="400px", out.height="200px"}
 knitr::include_graphics("figure/sim.png")
