@@ -4,7 +4,8 @@ authors:
   - 'Merve AK'
   - 'Edanur Binnaz DURSUN'
   - 'Ahmet ÇALI'
-date:  '`r format(Sys.time(), "%B %Y")`'
+#date:  '`r format(Sys.time(), "%B %Y")`'
+date:  'Mayıs 2024'
 institution: 'FEN FAKÜLTESİ'
 division: 'İSTATİSTİK BÖLÜMÜ'
 advisor: 'Dr. Engin YILDIZTEPE' #Danışman Ünvan Adı Soyadı

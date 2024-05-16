@@ -44,7 +44,7 @@ Table:(\#tab:nvar1) Yapay Veriler
 ````{r ngercek, results='asis', echo = FALSE}
 library(readxl)
 library(kableExtra)
-table1 <- read_excel("~/Downloads/Veri Tabloları (1).xlsx", sheet ="Gerçek Veri")
+table1 <- read_excel("./data/VeriTablolari.xlsx", sheet ="GercekVeri")
 kbl(table1, caption = "Gerçek Veriler", booktabs = T,digits=4) %>%  kable_classic(html_font = "Cambria") %>%
   kable_styling(position = "center", latex_options = "hold_position", font_size = 6)
 ```
