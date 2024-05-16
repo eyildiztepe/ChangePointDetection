@@ -17,8 +17,8 @@
 \contentsline {subsection}{\numberline {2.1.2}Gerçek Veri}{18}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Değişim Noktası Analizi}{18}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Yapay Veriler için Sonuçlar}{19}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Gerçek Veriler için Sonuçlar}{23}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Kademeli Egzersiz Test Verileri}{26}{section.2.3}%
+\contentsline {subsection}{\numberline {2.2.2}Gerçek Veriler için Sonuçlar}{22}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Kademeli Egzersiz Test Verileri}{25}{section.2.3}%
 \contentsline {section}{\numberline {2.4}R Shiny Uygulaması}{28}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}R Shiny Nedir?}{28}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Kullanılan Paketler}{28}{subsection.2.4.2}%
