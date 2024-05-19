@@ -2,7 +2,7 @@
 
 Bu çalışmada, değişim noktalarını tespit etmek için AMOC, BinSeg, parçalı regresyon, PELT ve Prophet algoritmaları kullanılmıştır ve performansları karşılaştırılmıştır. Yapay veri, gerçek veri ve kademeli egzersiz test verileri kullanılarak gerçekleştirilen analizlerde, algoritmaların performansları F1 puanı ve kapsama ölçütü ile değerlendirilmiştir.
 
-Sonuçlar, yapay verilerde BinSeg algoritmasının F1 puanı açısından en başarılı sonuçları verdiğini, gerçek verilerde ve kademeli egzersiz test verilerinde ise parçalı regresyon algoritmasının en iyi performansı sergilediğini göstermiştir. Kapsama ölçütüne göre, yapay verilerde BinSeg ve parçalı regresyon algoritmalarının, gerçek verilerde ve kademeli egzersiz test verilerinde parçalı regresyon algoritmasının en iyi sonuçları elde ettiği tespit edilmiştir.
+Sonuçlar, yapay verilerde BinSeg algoritmasının F1 puanı açısından en başarılı sonuçları verdiğini, gerçek verilerde ve kademeli egzersiz test verilerinde ise parçalı regresyon algoritmasının en iyi performansı sergilediğini göstermiştir. Kapsama ölçütüne göre, yapay verilerde BinSeg ve parçalı regresyon algoritmalarının, gerçek verilerde  parçalı regresyon algoritmasının en iyi sonuçları elde ettiği tespit edilmiştir.
 
 Friedman testi sonuçlarına göre, yapay verilerde AMOC ve BinSeg, parçalı regresyon ve AMOC, Prophet ile BinSeg ve parçalı regresyon, PELT ile BinSeg ve parçalı regresyon algoritmaları arasında istatistiksel olarak anlamlı farklar bulunmuştur. Gerçek verilerde ise Prophet algoritması ile AMOC, BinSeg ve parçalı regresyon algoritmaları arasında istatistiksel olarak anlamlı farklar mevcuttur. Ancak, kademeli egzersiz test verilerinde algoritmaların performansları arasında istatistiksel olarak anlamlı bir fark bulunmamıştır.
 

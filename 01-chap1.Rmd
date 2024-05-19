@@ -6,7 +6,7 @@ AMOC (At Most One Change), bir veride yalnızca bir değişim noktasının varl�
 
 Tek değişim noktası tespiti, bir zaman serisinde veya veri setinde belirli bir anın, örneğin bir trendin başlangıcı veya bir olayın etkisi gibi bir değişiklik noktasını belirlemek için kullanılır[@lykou2020change]. Bu analiz genellikle istatistiksel yöntemler, matematiksel modeller veya makine öğrenimi algoritmaları kullanılarak gerçekleştirilir. Bu yöntemler, verilerdeki değişim noktasının istatistiksel olarak anlamlı olup olmadığını değerlendirir ve belirli bir ölçüye dayanarak değişim noktasını tanımlar. Bu tür analizler, anormal durumları tespit etmek, süreçlerdeki değişiklikleri anlamak veya zaman içindeki önemli olayları belirlemek gibi bir dizi uygulama alanında kullanılır. Örneğin, endüstriyel süreçlerde bir makinenin arızasının başlangıcını belirlemek veya finansal piyasalardaki bir trend değişikliğini saptamak gibi durumlar, tek değişim noktası tespiti analizine örnek olabilir. Bu yöntemler, veri analizi ve karar verme süreçlerinde bilinçli ve stratejik adımlar atılmasına yardımcı olabilir, çünkü belirli bir değişim noktasının tanımlanması, olayların anlaşılmasını ve gelecekteki trendlerin tahmin edilmesini destekleyebilir.
 
-Tek bir değişim noktasının tespiti için hipotez testi bir olasılık oranı tabanlı yaklaşımla formüle edilebilir. Burada, H0 null hipotezi, değişim noktasının olmadığına (m = 0) karşılık gelirken, alternatif hipotez H1 tek bir değişim noktasına (m = 1) karşılık gelir.
+Tek bir değişim noktasının tespiti için hipotez testi bir olasılık oranı tabanlı yaklaşımla formüle edilebilir. Burada, H0 boş hipotezi, değişim noktasının olmadığına (m = 0) karşılık gelirken, alternatif hipotez H1 tek bir değişim noktasına (m = 1) karşılık gelir.
 
 Bu hipotezi test etmek için olasılık oranı test istatistiği, genel bir hipotez tabanlı yaklaşımı kullanır. İlk olarak, @hinkley1970 tarafından önerilen bu yöntem, asimptotik dağılımı türetilen bir olasılık tabanlı yaklaşımı benimser. Bu yaklaşım, normal olarak dağılmış gözlemler içindeki ortalama değişikliği için olasılık oranı test istatistiğini hesaplar.
 
@@ -14,33 +14,33 @@ Bu hipotezi test etmek için olasılık oranı test istatistiği, genel bir hipo
 
 Bu yöntemler, belirli bir değişim noktasının varlığını istatistiksel olarak değerlendirmek ve bu değişim noktasının ne zaman gerçekleştiğini belirlemek için kullanılır. Bu analizler, verilerdeki belirli bir noktadaki değişikliklerin anlamlılığını değerlendirerek, değişim noktasının varlığını istatistiksel olarak doğrulamaya yöneliktir.
 
-Null hipotezi için maksimum log-olabilirlik, $\log p(y_{1:n}|\hat{\theta})$ şeklinde ifade edilir, burada $p(\cdot)$ verilerin dağılımıyla ilişkilendirilen olasılık yoğunluk fonksiyonudur ve $\hat{\theta}$ parametrelerin maksimum olabilirlik tahminidir.
+Boş hipotezi için maksimum log-olabilirlik, $\log p(y_{1:n}|\hat{\theta})$ şeklinde ifade edilir, burada $p(\cdot)$ verilerin dağılımıyla ilişkilendirilen olasılık yoğunluk fonksiyonudur ve $\hat{\theta}$ parametrelerin maksimum olabilirlik tahminidir.
 
 Alternatif hipotez altında, $\tau_1$ ile bir değişim noktası içeren bir modeli ele alalım, burada $\tau_1 \in {1, 2, \dots, n - 1}$. Bu durumda, belirli bir $\tau_1$ için maksimum log-olabilirlik şu şekildedir: $ML(\tau_1) = \log p(y_{1:\tau_1}|\hat{\theta}_1) + \log p(y_{(\tau_1+1):n}|\hat{\theta}_2)$. Değişim noktasının doğası göz önüne alındığında, alternatif hipotez altındaki maksimum log-olabilirlik değeri basitçe $\max{\tau_1} ML(\tau_1)$ olarak ifade edilir, burada maksimum tüm olası değişim noktası konumları için alınır. Test istatistiği şu şekildedir: $\lambda = 2\tau_1 ML(\tau_1) - \log p(y_{1:n}|\hat{\theta})_{\max}$.
 
-Bu test, $\lambda > c$ ise null hipotezi reddedilir şeklinde bir eşik değeri $c$ seçerek yapılır. Eğer null hipotezi reddedilirse, yani bir değişim noktası algılanırsa, onun pozisyonunu $\hat{\tau}_1$ olarak tahmin ederiz, bu değer $ML(\tau_1)$’i maksimize eden $\tau_1$ değeridir. Bu parametre için uygun değer $c$ henüz açık bir araştırma sorusudur ve farklı değişim tipleri altında $p$ değerleri ve diğer bilgi kriterleri oluşturan birkaç yazar bulunmaktadır [@guyon1999; @chen2000; @lavielle2005; @birge2007].
+Bu test, $\lambda > c$ ise boş hipotezi reddedilir şeklinde bir eşik değeri $c$ seçerek yapılır. Eğer boş hipotezi reddedilirse, yani bir değişim noktası algılanırsa, onun pozisyonunu $\hat{\tau}_1$ olarak tahmin ederiz, bu değer $ML(\tau_1)$’i maksimize eden $\tau_1$ değeridir. Bu parametre için uygun değer $c$ henüz açık bir araştırma sorusudur ve farklı değişim tipleri altında $p$ değerleri ve diğer bilgi kriterleri oluşturan birkaç yazar bulunmaktadır [@guyon1999; @chen2000; @lavielle2005; @birge2007].
 
-Açıkça görülmektedir ki, olabilirlik test istatistiği basitçe $m$ segmentlerinin her biri için olasılığı toplamak suretiyle birden fazla değişime genişletilebilir. Sorun, tüm olası $\tau_{1:m}$ kombinasyonları üzerinde $ML(\tau_{1:m})$’in maksimumunu belirlemeye dönüşür.
+Açıkça görülmektedir ki, olabilirlik test istatistiği basitçe $m$ parçaların her biri için olasılığı toplamak suretiyle birden fazla değişime genişletilebilir. Sorun, tüm olası $\tau_{1:m}$ kombinasyonları üzerinde $ML(\tau_{1:m})$’in maksimumunu belirlemeye dönüşür.
 
 ## Birden Fazla Değişim Noktası Tespiti
 
-Birden fazla değişim noktasının (Multi change points) belirlenmesi, bir veride meydana gelen yapısal değişiklikleri tespit etme sürecini ifade eder. Bu analiz, verilerin farklı segmentlere bölünmesi ve her bir segmentteki değişim noktalarının tanımlanması yoluyla gerçekleştirilir. Değişim noktaları, verinin genel özelliklerinde veya desenlerinde beklenmeyen değişiklikleri temsil eder.
+Birden fazla değişim noktasının (Multi change points) belirlenmesi, bir veride meydana gelen yapısal değişiklikleri tespit etme sürecini ifade eder. Bu analiz, verilerin farklı parçalara bölünmesi ve her bir parçadaki değişim noktalarının tanımlanması yoluyla gerçekleştirilir. Değişim noktaları, verinin genel özelliklerinde veya desenlerinde beklenmeyen değişiklikleri temsil eder.
 
 Özellikle zaman serilerinde birden fazla değişim noktasının belirlenmesi, farklı dönemlerde farklı trendlerin veya desenlerin varlığını anlamak açısından önemlidir. Bu tür analizler, endüstriyel süreçlerde, finansal piyasalarda veya epidemiyolojik veriler gibi farklı alanlarda meydana gelen önemli olayları veya dönemleri belirlemek için kullanılabilir.
 
-Bu tür analizler genellikle istatistiksel yöntemler, matematiksel modeller veya makine öğrenimi algoritmaları kullanılarak gerçekleştirilir. Birden fazla değişim noktası tespiti, verilerdeki karmaşık yapısal değişiklikleri belirleme ve anlama amacı taşır. Bu da kullanıcılara önemli olayları tespit etme ve verilerdeki farklı bölümlerindeki değişiklikleri anlama imkânı sağlar. Bu analizler, verilerin farklı segmentlerine ayrılmasını sağlayarak, her bir segmentteki farklı özellikleri ve eğilimleri anlamak için bir yol sunar. Bu da karar verme süreçlerinde daha bilinçli ve stratejik adımlar atılmasına yardımcı olabilir.
+Bu tür analizler genellikle istatistiksel yöntemler, matematiksel modeller veya makine öğrenimi algoritmaları kullanılarak gerçekleştirilir. Birden fazla değişim noktası tespiti, verilerdeki karmaşık yapısal değişiklikleri belirleme ve anlama amacı taşır. Bu da kullanıcılara önemli olayları tespit etme ve verilerdeki farklı bölümlerindeki değişiklikleri anlama imkânı sağlar. Bu analizler, verilerin farklı parçalara ayrılmasını sağlayarak, her bir parçadaki farklı özellikleri ve eğilimleri anlamak için bir yol sunar. Bu da karar verme süreçlerinde daha bilinçli ve stratejik adımlar atılmasına yardımcı olabilir.
 
 Belirli bir zaman serisi veya sinyal akışındaki birden fazla değişim noktasını verimli ve doğru bir şekilde belirleyebilmek için literatürde yaygın olarak kullanılan bir yöntem, maliyet fonksiyonunu (C) minimize ederek birden çok değişim noktasının konumunu belirlemektir. Bu yöntemde, aşırı uyumu önlemek için bir ceza terimi $\beta f(m)$ ile birlikte maliyet fonksiyonunun toplamı minimize edilmeye çalışılır. Formülü şu şekilde ifade edebiliriz: $\sum_{i=1}^{m+1} C(y(\tau_{i-1}+1):\tau_i) + \beta f(m)$
 
-Bu denklem, değişiklik noktaları ($y(\tau_{i-1}+1)$ ile $\tau_i$ arasındaki segmentler) için maliyet fonksiyonunun toplamını ve aşırı uyumu önlemek için ceza terimini içerir. Bu yöntem, verileri birden çok bölüme bölmek (maliyet fonksiyonu tarafından belirlenen) ile aşırı karmaşıklığı veya fazla uyumu önlemeye yönelik ceza terimi arasında bir denge kurarak birden fazla değişim noktasını etkili bir şekilde bulmayı amaçlar.
+Bu denklem, değişiklik noktaları ($y(\tau_{i-1}+1)$ ile $\tau_i$ arasındaki parçalar) için maliyet fonksiyonunun toplamını ve aşırı uyumu önlemek için ceza terimini içerir. Bu yöntem, verileri birden çok bölüme bölmek (maliyet fonksiyonu tarafından belirlenen) ile aşırı karmaşıklığı veya fazla uyumu önlemeye yönelik ceza terimi arasında bir denge kurarak birden fazla değişim noktasını etkili bir şekilde bulmayı amaçlar.
 
-Literatürde birden fazla değişim noktasını belirleme konusunda en yaygın yöntem, bir segment için bir maliyet fonksiyonunu (genellikle negatif log olasılık gibi) minimize etmek ve aşırı uyumlanmayı engellemek için bir ceza terimi (c'nin birden fazla değişim noktası versiyonu olan $\beta f(m)$) kullanmaktır. Bu, aynı zamanda benimsediğimiz ve eşlik eden pakette kullandığımız yaklaşımdır. Bu minimize işlemini gerçekleştirmek için bir kaba kuvvet yöntemi, $2n-1$ çözümü düşünerek, $m$ bilindiğinde $n-1$m'ye indirgenir.
+Literatürde birden fazla değişim noktasını belirleme konusunda en yaygın yöntem, bir parça için bir maliyet fonksiyonunu (genellikle negatif log olasılık gibi) minimize etmek ve aşırı uyumlanmayı engellemek için bir ceza terimi (c'nin birden fazla değişim noktası versiyonu olan $\beta f(m)$) kullanmaktır. Bu, aynı zamanda benimsediğimiz ve eşlik eden pakette kullandığımız yaklaşımdır. Bu minimize işlemini gerçekleştirmek için bir kaba kuvvet yöntemi, $2n-1$ çözümü düşünerek, $m$ bilindiğinde $n-1$m'ye indirgenir.
 
-### İkili Segmentasyon Algoritması
+### İkili Bölümleme Algoritması
 
-İkili segmentasyon algoritması (BinSeg), değişim noktası literatüründe kullanılan en köklü arama yöntemidir. İkili segmentasyon arama algoritmasının erken uygulamaları arasında [@sen1975tests; @scott1974cluster] bulunmaktadır.
+İkili bölümleme algoritması (BinSeg), değişim noktası literatüründe kullanılan en köklü arama yöntemidir. İkili bölümleme arama algoritmasının erken uygulamaları arasında [@sen1975tests; @scott1974cluster] bulunmaktadır.
 
-İkili segmentasyon, herhangi bir tek değişim noktası yöntemini ardışık olarak farklı verilerde tekrarlayarak çoklu değişim noktalarına genişletmek için kullanılabilir. İlk olarak, tek bir değişim noktası test istatistiğini tüm veride uygular. $y_{1},y_{2},...,y_{n}$ şeklindeki veriler üzerinde bir başlangıç noktası belirlenir. Bu başlangıç noktası, verinin ortalaması, medyanı veya başka bir özelliği olabilir. Belirlenen başlangıç noktasında bir değişim noktası testi yapılır. Bu test, verilerin iki alt küme olarak böldüğünde, oluşan alt kümelerin toplam maliyetinin belirli bir kritere göre düşük olup olmadığını kontrol eder, yani bir $\tau$'nin aşağıdaki koşulu sağlayıp sağlamadığını test eder:
+İkili bölümleme, herhangi bir tek değişim noktası yöntemini ardışık olarak farklı verilerde tekrarlayarak çoklu değişim noktalarına genişletmek için kullanılabilir. İlk olarak, tek bir değişim noktası test istatistiğini tüm veride uygular. $y_{1},y_{2},...,y_{n}$ şeklindeki veriler üzerinde bir başlangıç noktası belirlenir. Bu başlangıç noktası, verinin ortalaması, medyanı veya başka bir özelliği olabilir. Belirlenen başlangıç noktasında bir değişim noktası testi yapılır. Bu test, verilerin iki alt küme olarak böldüğünde, oluşan alt kümelerin toplam maliyetinin belirli bir kritere göre düşük olup olmadığını kontrol eder, yani bir $\tau$'nin aşağıdaki koşulu sağlayıp sağlamadığını test eder:
 
 $$C(y_{1:\tau}) + C(y_{(\tau+1):n}) + \beta < C(y_{1:n})$$
 
@@ -48,22 +48,22 @@ Burada:
 
 
 \begin{itemize}
-\item \textbf{C}: Bir segment için maliyet fonksiyonu
+\item \textbf{C}: Bir parça için maliyet fonksiyonu
 \item \textbf{$y_{1:\tau}$}: Başlangıçtan değişim noktasına kadar olan veri 
 \item \textbf{$y_{(\tau+1):n}$}: Değişim noktasından sona kadar olan veri 
 \item \textbf{$\beta$}: Aşırı uyum karşısında koruma sağlayan ceza terimi
 \end{itemize}
 
 
-Eğer bu koşul sağlanmıyorsa, o zaman herhangi bir değişim noktası tespit edilememiştir ve algoritma durur. Aksi takdirde veri, belirlenen değişim noktasından önce ve sonra olmak üzere iki segmente bölünür. Tek değişim noktası tespit yöntemi, değişiklikten önce ve sonra iki yeni segmente de tekrarlanır. Her iki segmentte de değişim noktaları belirlenirse, bunları yeni belirlenen değişim noktasında daha fazla segmentlere böler ve her yeni segmente değişim noktası tespit yöntemini uygular. Bu süreç, verinin herhangi bir bölümünde değişim noktası bulunamayana kadar devam eder(@killick2012optimal).
+Eğer bu koşul sağlanmıyorsa, o zaman herhangi bir değişim noktası tespit edilememiştir ve algoritma durur. Aksi takdirde veri, belirlenen değişim noktasından önce ve sonra olmak üzere iki parçaya bölünür. Tek değişim noktası tespit yöntemi, değişiklikten önce ve sonra iki yeni parçaya da tekrarlanır. Her iki parçada da  değişim noktaları belirlenirse, bunları yeni belirlenen değişim noktasında daha fazla parçalara böler ve her yeni parçaya değişim noktası tespit yöntemini uygular. Bu süreç, verinin herhangi bir bölümünde değişim noktası bulunamayana kadar devam eder(@killick2012optimal).
 
 Çoklu değişim noktalarını belirlemek için yaygın olarak kullanılan bir yaklaşım, aşağıdaki ifadeyi minimize etmektir:
 
 $$\sum_{i=1}^{m+1} C(y(\tau_{i-1}+1):\tau_i) + \beta f(m)$$
 
-Burada, $C$ bir segment için bir maliyet fonksiyonu ve $\beta f(m)$ aşırı uyum karşısında koruma sağlayan bir ceza terimidir.
+Burada, $C$ bir parça için bir maliyet fonksiyonu ve $\beta f(m)$ aşırı uyum karşısında koruma sağlayan bir ceza terimidir.
 
-İkili segmentasyon, herhangi bir değişim noktasının konumu önceden belirlenmiş değişim noktalarına bağlı olduğu için ($f(m) = m$ olarak) yukarıdaki denklemin yaklaşık bir minimize edilmesidir. Algoritmanın her adımı, bu denklemi azaltıyorsa ek bir değişim noktası eklemeye çalışır. İkili segmentasyon algoritmasının avantajı, $n$'nin veri uzunluğu olduğu durumda $O(n)$ hesaplama maliyeti ile uygulanabilen hızlı bir algoritma olmasıdır. Ancak, $C$'yi uygun bir şekilde seçmek zor olabilir ve farklı $C$ seçimleri, değişim noktalarının sayısının tahmininde önemli farklara neden olabilir.
+İkili bölümleme, herhangi bir değişim noktasının konumu önceden belirlenmiş değişim noktalarına bağlı olduğu için ($f(m) = m$ olarak) yukarıdaki denklemin yaklaşık bir minimize edilmesidir. Algoritmanın her adımı, bu denklemi azaltıyorsa ek bir değişim noktası eklemeye çalışır. İkili bölümleme algoritmasının avantajı, $n$'nin veri uzunluğu olduğu durumda $O(n)$ hesaplama maliyeti ile uygulanabilen hızlı bir algoritma olmasıdır. Ancak, $C$'yi uygun bir şekilde seçmek zor olabilir ve farklı $C$ seçimleri, değişim noktalarının sayısının tahmininde önemli farklara neden olabilir.
 
 ### Prophet
 
@@ -91,7 +91,7 @@ $$ \tau_0 = 0 $$ ve $\tau_{m+1} = n$'yi tanımlıyor ve değişim noktalarının
 
 $$ m+1 \sum_{i=1} [C(y(\tau_{i-1}+1):\tau_i)] + \beta f (m). $$
 
-Burada $C$, bir segment için bir maliyet fonksiyonu ve $\beta f(m)$, aşırı uyuma (overfitting) karşı koruma amaçlı bir ceza terimidir.
+Burada $C$, bir parça için bir maliyet fonksiyonu ve $\beta f(m)$, aşırı uyuma (overfitting) karşı koruma amaçlı bir ceza terimidir.
 
 Başlangıçta, tüm zaman noktaları aday değişim noktaları olarak seçilir. Genellikle, zaman serisinin başlangıcı ve sonu da bu aday değişim noktaları arasına dahil edilir. Aday değişim noktaları sırayla ele alınır. Her bir aday değişim noktası için bir budama koşulu kontrol edilir. Bu koşul, değişim noktasının gelecekteki bir zamanda optimal bir değişim noktası olma olasılığını değerlendirir. Koşulu sağlamayan aday değişim noktaları budanır, yani gelecekteki değerlendirmelerden çıkarılır.
 
@@ -151,24 +151,24 @@ $cp(n)$'de kaydedilen değişim noktalarını çıktı olarak verir.
 
 PELT yönteminin teorik hesaplama maliyeti incelendiğinde, değişim noktası modelleri ve cezaların en önemli sınıfına odaklanılır ve yöntemin veri noktalarının sayısına göre doğrusal bir hesaplama maliyetine sahip olması için yeterli koşullar sağlanır.
 
-Odaklanılan durum, segment parametrelerinin segmentler arasında bağımsız olduğu ve bir segment için maliyet fonksiyonunun o segmentteki verinin maksimum log-olabilirlik değerinin eksi olarak alındığı modeller kümesidir.
+Odaklanılan durum, bölüm parametrelerinin bölümler arasında bağımsız olduğu ve bir bölüm için maliyet fonksiyonunun o bölümdeki verinin maksimum log-olabilirlik değerinin eksi olarak alındığı modeller kümesidir.
 
 Daha formal olarak, sonuçlar yöntemin beklenen hesaplama maliyeti ile ilgilidir ve bu maliyetin analiz edilen veri noktalarının sayısına nasıl bağlı olduğunu ele almaktadır. Bu amaçla, veri oluşturma süreci için temel bir stokastik model tanımlanır. Özellikle, bu süreci pozitif tamsayılı zaman noktaları üzerine tanımlanır ve ardından bu süreç tarafından üretilen ilk $n$ veri noktasının analizini ele alınır.
 
-Elde edilen sonuç, belirli bir segmentle ilişkilendirilmiş parametrelerin $\pi(\theta)$ yoğunluk fonksiyonuna sahip olduğunu varsayar. Gösterim basitliği açısından, bir segmentin parametresi $\theta$ verildiğinde, segment içindeki veri noktalarının $\pi(\theta)$ yoğunluk fonksiyonuna sahip olduğunu varsayılır, ancak bir segment içindeki bağımlılıklara genişletmeler basittir. Son olarak, önceki belirtildiği gibi maliyet fonksiyonu, maksimum log-olabilirliğin eksi değerine dayanacaktır.
+Elde edilen sonuç, belirli bir bölümle ilişkilendirilmiş parametrelerin $\pi(\theta)$ yoğunluk fonksiyonuna sahip olduğunu varsayar. Gösterim basitliği açısından, bir bölümün parametresi $\theta$ verildiğinde, bölüm içindeki veri noktalarının $\pi(\theta)$ yoğunluk fonksiyonuna sahip olduğunu varsayılır, ancak bir bölüm içindeki bağımlılıklara genişletmeler basittir. Son olarak, önceki belirtildiği gibi maliyet fonksiyonu, maksimum log-olabilirliğin eksi değerine dayanacaktır.
 
 $$ C(y_{t+1:T}) = - \max_{\theta} \sum_{i=t+1}^{T} \log f(y_i|\theta). $$ (5)
 
 Bu kayıp fonksiyonu için (4) içinde $K = 0$ dikkate alınmalıdır. Bu nedenle, PELT'teki budama, sadece ceza sabiti $\beta$'nın seçimine bağlı olacaktır.
 
--   Ayrıca, her bir segmentin uzunluğu için bir model olarak bir değişim noktasının konumu için stokastik bir model gereklidir. Değişim noktası pozisyonları $\tau_1$, $\tau_2$, . . . ise, segment uzunluklarını $S_1 = \tau_1$ olarak tanımlanırsa ve $i = 2, 3, . . .$ için $S_i = \tau_i - \tau_{i-1}$.
--   $S_i$, bağımsız ve aynı dağılıma(iid) sahip rastgele değişken $S$'in bağımsız ve aynı dağılıma sahip kopyaları olarak kabul edilir. Ayrıca, $S_1$, $S_2$, . . . , segmentlerle ilişkilendirilmiş parametrelerle bağımsızdır.
+-   Ayrıca, her bir bölümün uzunluğu için bir model olarak bir değişim noktasının konumu için stokastik bir model gereklidir. Değişim noktası pozisyonları $\tau_1$, $\tau_2$, . . . ise, bölüm uzunluklarını $S_1 = \tau_1$ olarak tanımlanırsa ve $i = 2, 3, . . .$ için $S_i = \tau_i - \tau_{i-1}$.
+-   $S_i$, bağımsız ve aynı dağılıma(iid) sahip rastgele değişken $S$'in bağımsız ve aynı dağılıma sahip kopyaları olarak kabul edilir. Ayrıca, $S_1$, $S_2$, . . . , bölümlerle ilişkilendirilmiş parametrelerle bağımsızdır.
 
 \textbf{Teorem 3.2:} Beklenen log-olabilirliği maksimize eden değeri tanımlayalım:
 
 $$ \theta^* = \arg\max \int \int f(y|\theta)f(y|\theta_0)dy\pi(\theta_0)d\theta_0. $$
 
-$\theta_i$ gerçek parametre olsun ve bu parametreyi içeren segmentle ilişkilendirilsin. $\hat{\theta}_n$, verilen veri $y_{1:n}$ ve tek bir segment varsayımına dayanarak $\theta$ için en büyük olabilirlik tahminidir:
+$\theta_i$ gerçek parametre olsun ve bu parametreyi içeren bölümle ilişkilendirilsin. $\hat{\theta}_n$, verilen veri $y_{1:n}$ ve tek bir bölüm varsayımına dayanarak $\theta$ için en büyük olabilirlik tahminidir:
 
 $$ \hat{\theta}_n = \arg\max_{\theta} \sum_{i=1}^n \log f(y_i|\theta). $$
 
@@ -189,25 +189,25 @@ $$ E(S^4) < \infty; \text{ ve} $$
 
 $$ E\left(\log f(Y|A) - \log f(Y|O')\right) > \frac{\beta}{E(S')} $$
 
-Burada, $S$ beklenen segment uzunluğudur, $n$ veri noktasını analiz etmek için PELT'in beklenen CPU maliyeti $L_n$ için bazı sabit $L < \infty$ ile yukarıdan sınırlıdır.
+Burada, $S$ beklenen bölüm uzunluğudur, $n$ veri noktasını analiz etmek için PELT'in beklenen CPU maliyeti $L_n$ için bazı sabit $L < \infty$ ile yukarıdan sınırlıdır.
 
-$\Theta_i$, $y_i^{'}$yi içeren segmentle ilişkilendirilmiş gerçek parametre olsun ve $\hat{\Theta}_n$, veri $y_{1:n}$ ve tek bir segment varsayımıyla verilen $\Theta$ için maksimum olabilirlik tahminidir ($q_i$).
+$\Theta_i$, $y_i^{'}$yi içeren bölümle ilişkilendirilmiş gerçek parametre olsun ve $\hat{\Theta}_n$, veri $y_{1:n}$ ve tek bir bölüm varsayımıyla verilen $\Theta$ için maksimum olabilirlik tahminidir ($q_i$).
 
-$S$'nin beklenen segment uzunluğu olduğu durumda, $n$ veri noktasını analiz etmek için PELT'in beklenen CPU maliyeti, $L$ sabiti için yukarıda $L_n$ ile sınırlanır.
+$S$'nin beklenen bölüm uzunluğu olduğu durumda, $n$ veri noktasını analiz etmek için PELT'in beklenen CPU maliyeti, $L$ sabiti için yukarıda $L_n$ ile sınırlanır.
 
 Teorem 3.2'nin Şartları (A1) ve (A2), zayıf teknik şartlardır. Örneğin, maksimum olabilirlik tahminleri içi $n$ genel asimptotik sonuçlar, $B_n = Op(1)$ verecektir, ve (A1), $B_n$'nin $O(n^{1/2})$ veya daha büyük değerleri alma olasılığını kontrol eden biraz daha güçlü bir koşuldur.
 
-Diğer iki koşul daha önemlidir. Koşul (A3), büyük segmentlerin olasılığını kontrol etmek için gereklidir. (A3)'ün önemli bir sonucu, değişim noktalarının beklenen sayısının $n$ ile lineer olarak artacak olmasıdır. Son olarak, (A4) koşulu doğaldır çünkü gerçek değişim noktası ve parametre değerleri ile elde edilen beklenen cezalandırılmış olabilirlik değerinin, veriye tek bir segment uydurulduğunda ve segment parametresi $\Theta^*$ ile elde edildiğinde beklenen cezalandırılmış olabilirlik değerinden daha büyük olması gerekir. Tüm durumlarda, algoritmanın en kötü durum karmaşıklığı, budama yapılmadığı durumdur ve hesaplama maliyeti $O(n^2)$ olacaktır.
+Diğer iki koşul daha önemlidir. Koşul (A3), büyük bölümlerin olasılığını kontrol etmek için gereklidir. (A3)'ün önemli bir sonucu, değişim noktalarının beklenen sayısının $n$ ile lineer olarak artacak olmasıdır. Son olarak, (A4) koşulu doğaldır çünkü gerçek değişim noktası ve parametre değerleri ile elde edilen beklenen cezalandırılmış olabilirlik değerinin, veriye tek bir bölüm uydurulduğunda ve bölüm parametresi $\Theta^*$ ile elde edildiğinde beklenen cezalandırılmış olabilirlik değerinden daha büyük olması gerekir. Tüm durumlarda, algoritmanın en kötü durum karmaşıklığı, budama yapılmadığı durumdur ve hesaplama maliyeti $O(n^2)$ olacaktır.
 
 ### Parçalı Regresyon
 
-Parçalı veya kesik çizgili modeller, yanıt ile bir veya daha fazla açıklayıcı değişken arasındaki ilişkilerin parçalı doğrusal olduğu, yani iki veya daha fazla değişkenle temsil edildiği regresyon modelleridir. Bu ilişkiler, genellikle bilinmeyen değerlerde birleştirilen iki veya daha fazla düz çizgi tarafından temsil edilir, bu değerlere genellikle kırılma noktaları, değişim noktaları veya birleşim noktaları denir. Bu yöntemde bağımsız değişken, aralıklara bölünür ve her bir aralığa ayrı bir çizgi segmenti uyarlanır.Parçalı regresyon analizi ayrıca çeşitli bağımsız değişkenlerle yapılan çok değişkenli veriler üzerinde de gerçekleştirilebilir. Parçalı regresyon analizi, bağımsız değişkenlerin belirli gruplara ayrıldığı durumlarda, bu gruplardaki değişkenler arasındaki ilişkilerin farklı olduğuna inanıldığında kullanışlıdır. Bu parçalar arasındaki sınırlar, değişim noktaları olarak adlandırılır.
+Parçalı veya kesik çizgili modeller, yanıt ile bir veya daha fazla açıklayıcı değişken arasındaki ilişkilerin parçalı doğrusal olduğu, yani iki veya daha fazla değişkenle temsil edildiği regresyon modelleridir. Bu ilişkiler, genellikle bilinmeyen değerlerde birleştirilen iki veya daha fazla düz çizgi tarafından temsil edilir, bu değerlere genellikle kırılma noktaları, değişim noktaları veya birleşim noktaları denir. Bu yöntemde bağımsız değişken, aralıklara bölünür ve her bir aralığa ayrı bir çizgi bölümü uyarlanır.Parçalı regresyon analizi ayrıca çeşitli bağımsız değişkenlerle yapılan çok değişkenli veriler üzerinde de gerçekleştirilebilir. Parçalı regresyon analizi, bağımsız değişkenlerin belirli gruplara ayrıldığı durumlarda, bu gruplardaki değişkenler arasındaki ilişkilerin farklı olduğuna inanıldığında kullanışlıdır. Bu parçalar arasındaki sınırlar, değişim noktaları olarak adlandırılır.
 
 Matematiksel olarak, model şu şekilde ifade edilir:
 
 $y = \beta_{0i} + \beta_{1i} x + \epsilon$
 
-Bu denklemde, $\beta_{0i}$ ve $\beta_{1i}$ sırasıyla i-inci segmentin kesişim noktası ve eğimini temsil eder.
+Bu denklemde, $\beta_{0i}$ ve $\beta_{1i}$ sırasıyla i-inci bölümün kesişim noktası ve eğimini temsil eder.
 
 Parçalı regresyon, ekonomi, biyoloji, çevre bilimleri, epidemiyoloji gibi çeşitli alanlarda kullanılır.Kalite iyileştirme müdahaleleriyle ilgili çalışmalarda parçalı regresyon analizlerinin kullanımına dair birçok örnek yayınlanmıştır.
 
@@ -225,7 +225,7 @@ Burada:
 
 \begin{itemize}
 \item $Y_{r}$, x'in belirli bir değeri için beklenen (tahmin edilen) y değeridir;
-\item A1 ve A2 regresyon katsayılarıdır (çizgi segmentinin eğimini gösterir);
+\item A1 ve A2 regresyon katsayılarıdır (çizgi bölümünün eğimini gösterir);
 \item K1 ve K2 regresyon sabitleridir (y-ekseninde kesişimi gösterir).
 \end{itemize}
 
@@ -288,7 +288,7 @@ K işaretleyici sayısı $(k=1,...,K)$ olmak üzere, $k.$ işaretleyici tarafın
 
 Kapsama metriğini $G$ ve $G'$ olarak tanımlarız.
 
-$$C(G,G') = \frac{1}{T} \sum_{A \in G} |A| \cdot \max_{A' \in G'} J(A,A')$$.
+$$C(G,G') = \frac{1}{T} \sum_{A \in G} |A| \cdot \max_{A' \in G'} J(A,A')$$
 
 İşaretleyiciler tarafından sağlanan temel doğruluk bölümlerinin $\{G_k\}_{k=1}^K$, bir algoritma tarafından verilen bir $S$ bölümü için, $C(G_k,S)$ ortalamasını hesaplayarak işaretleyicilerin tek bir performansını değerlendirilir.
 
@@ -316,7 +316,7 @@ knitr::include_graphics("figure/conmat.png")
 
 Duyarlılık (recall), doğru olarak tahmin etmemiz gereken değerlerin, ne kadarını doğru tahmin ettiğimizi belirtmektedir. Duyarlılık değeri, gerçekte doğru olan ve doğru olarak tahmin edilen değerlerin, tüm doğru değerlere bölünmesi ile elde edilmektedir[@kelle2022mqtt].
 
-$$Duyarlilik =  \frac{GP}{(GP + YN)}$$
+$$Duyarlılık =  \frac{GP}{(GP + YN)}$$
 
 Kesinlik (precision), doğru olarak tahmin ettiğimiz değerlerin, ne kadarının gerçekte doğru olduğunu göstermektedir. Kesinlik değeri, gerçekte doğru olan ve doğru olarak tahmin edilen değerlerin, doğru olarak tahmin edilen tüm değerlere bölünmesi ile elde edilmektedir[@kelle2022mqtt].
 
@@ -324,4 +324,4 @@ $$Kesinlik =  \frac{GP}{(GP + YP)}$$
 
 F1 puanı, duyarlılık ve kesinlik değerlerinin harmonik ortalamasının hesaplanması ile elde edilmektedir. Her iki değerinde hesaplamaya katılarak dengeli bir değer elde edilmesi amaçlanmaktadır. Dengesiz verilerde başarılı sonuçlar elde etmek için kullanılmaktadır[@kelle2022mqtt].
 
-$$ F1\text{-}Puani = \frac{2 * Kesinlik * Duyarlilik}{(Kesinlik + Duyarlilik)} $$
+$$ F1\text{-}Puanı = \frac{2 * Kesinlik * Duyarlılık}{(Kesinlik + Duyarlılık)} $$

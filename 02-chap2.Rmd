@@ -363,7 +363,7 @@ nemenyi_result
 
 Nemenyi testi sonuçlarına göre Prophet ile AMOC, BinSeg ve parçalı regresyon algoritmaları arasında istatistiksel olarak anlamlı bir fark vardır.
 
-## Kademeli Egzersiz Test Verileri
+### Kademeli Egzersiz Test Verileri
 
 Bu bölümde bir başka gerçek veri için uygulama yapılmıştır. On beş sporcunun kademeli bir rampa testi sonucunda elde edilen verileri kullanılarak eşik egzersiz şiddetlerini değişim noktası belirleme yöntemleri ile tespit etmek denenmiştir.
 
@@ -502,7 +502,7 @@ Bu kısımda kullanıcılar tek değişkenli verilerini txt veya csv formatında
 
 - Parametre Seçeneği (Penalty Choice): Kullanıcılar, Changepoint kütüphanesinde bulunan algoritmaların parametre ayarlamalarını, kütüphanenin içerdiği seçeneklerle veya manuel olarak ayarlayabilirler.
 
-- Grafik seçenekleri:Tahmin edilen değişim noktaları ve segment ortalamaları grafik üzerinde opsiyonel olarak gösterilebilir.
+- Grafik seçenekleri:Tahmin edilen değişim noktaları ve parça ortalamaları grafik üzerinde opsiyonel olarak gösterilebilir.
 
 
 

@@ -3,7 +3,7 @@
 \contentsline {chapter}{B\"ol\"um 1: Değişim Noktası}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Tek Değişim Noktası Tespiti}{3}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Birden Fazla Değişim Noktası Tespiti}{4}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}İkili Segmentasyon Algoritması}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}İkili Bölümleme Algoritması}{5}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Prophet}{6}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}PELT}{7}{subsection.1.2.3}%
 \contentsline {subsubsection}{Optimal Bölütleme}{7}{section*.9}%
@@ -18,12 +18,12 @@
 \contentsline {section}{\numberline {2.2}Değişim Noktası Analizi}{18}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Yapay Veriler için Sonuçlar}{19}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Gerçek Veriler için Sonuçlar}{22}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Kademeli Egzersiz Test Verileri}{25}{section.2.3}%
-\contentsline {section}{\numberline {2.4}R Shiny Uygulaması}{28}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}R Shiny Nedir?}{28}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Kullanılan Paketler}{28}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Anasayfa}{29}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Yapay Veri Üretme}{29}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Veri Yükleme}{30}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.2.3}Kademeli Egzersiz Test Verileri}{25}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}R Shiny Uygulaması}{28}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}R Shiny Nedir?}{28}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Kullanılan Paketler}{28}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Anasayfa}{29}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Yapay Veri Üretme}{29}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Veri Yükleme}{30}{subsection.2.3.5}%
 \contentsline {chapter}{B\"ol\"um 3: Sonuç}{33}{chapter.3}%
 \contentsline {chapter}{Kaynaklar}{35}{chapter*.18}%
