@@ -2,9 +2,9 @@
 
 ## Tek Değişim Noktası Tespiti
 
-AMOC (At Most One Change), bir veri setinde yalnızca bir değişim noktasının varlığını tespit etmeye odaklanan istatistiksel bir analiz yöntemidir. Bu tür analizler genellikle zaman serileri, süreç kontrolü, finansal veriler gibi çeşitli alanlarda kullanılır. Temel hedef, veri setindeki bu değişim noktasını tanımlamak ve bu noktada meydana gelen ani değişikliği belirlemektir.
+AMOC (At Most One Change), bir veride yalnızca bir değişim noktasının varlığını tespit etmeye odaklanan istatistiksel bir analiz yöntemidir(@hinkley1970). Bu tür analizler genellikle zaman serileri, süreç kontrolü, finansal veriler gibi çeşitli alanlarda kullanılır. Temel hedef, verilerdeki değişim noktasını tanımlamak ve bu noktada meydana gelen ani değişikliği belirlemektir.
 
-Tek değişim noktası tespiti, bir zaman serisinde veya veri setinde belirli bir anın, örneğin bir trendin başlangıcı veya bir olayın etkisi gibi bir değişiklik noktasını belirlemek için kullanılır[@lykou2020change]. Bu analiz genellikle istatistiksel yöntemler, matematiksel modeller veya makine öğrenimi algoritmaları kullanılarak gerçekleştirilir. Bu yöntemler, veri setindeki değişim noktasının istatistiksel olarak anlamlı olup olmadığını değerlendirir ve belirli bir ölçüye dayanarak değişim noktasını tanımlar. Bu tür analizler, anormal durumları tespit etmek, süreçlerdeki değişiklikleri anlamak veya zaman içindeki önemli olayları belirlemek gibi bir dizi uygulama alanında kullanılır. Örneğin, endüstriyel süreçlerde bir makinenin arızasının başlangıcını belirlemek veya finansal piyasalardaki bir trend değişikliğini saptamak gibi durumlar, tek değişim noktası tespiti analizine örnek olabilir. Bu yöntemler, veri analizi ve karar verme süreçlerinde bilinçli ve stratejik adımlar atılmasına yardımcı olabilir, çünkü belirli bir değişim noktasının tanımlanması, olayların anlaşılmasını ve gelecekteki trendlerin tahmin edilmesini destekleyebilir.
+Tek değişim noktası tespiti, bir zaman serisinde veya veri setinde belirli bir anın, örneğin bir trendin başlangıcı veya bir olayın etkisi gibi bir değişiklik noktasını belirlemek için kullanılır[@lykou2020change]. Bu analiz genellikle istatistiksel yöntemler, matematiksel modeller veya makine öğrenimi algoritmaları kullanılarak gerçekleştirilir. Bu yöntemler, verilerdeki değişim noktasının istatistiksel olarak anlamlı olup olmadığını değerlendirir ve belirli bir ölçüye dayanarak değişim noktasını tanımlar. Bu tür analizler, anormal durumları tespit etmek, süreçlerdeki değişiklikleri anlamak veya zaman içindeki önemli olayları belirlemek gibi bir dizi uygulama alanında kullanılır. Örneğin, endüstriyel süreçlerde bir makinenin arızasının başlangıcını belirlemek veya finansal piyasalardaki bir trend değişikliğini saptamak gibi durumlar, tek değişim noktası tespiti analizine örnek olabilir. Bu yöntemler, veri analizi ve karar verme süreçlerinde bilinçli ve stratejik adımlar atılmasına yardımcı olabilir, çünkü belirli bir değişim noktasının tanımlanması, olayların anlaşılmasını ve gelecekteki trendlerin tahmin edilmesini destekleyebilir.
 
 Tek bir değişim noktasının tespiti için hipotez testi bir olasılık oranı tabanlı yaklaşımla formüle edilebilir. Burada, H0 null hipotezi, değişim noktasının olmadığına (m = 0) karşılık gelirken, alternatif hipotez H1 tek bir değişim noktasına (m = 1) karşılık gelir.
 
@@ -12,7 +12,7 @@ Bu hipotezi test etmek için olasılık oranı test istatistiği, genel bir hipo
 
 @jengupta1987 tarafından yapılan genişletme ile bu olasılık tabanlı yaklaşım, normal olarak dağılmış gözlemler içindeki varyans değişiklikleri için de geçerli bir test istatistiği sağlar.
 
-Bu yöntemler, belirli bir değişim noktasının varlığını istatistiksel olarak değerlendirmek ve bu değişim noktasının ne zaman gerçekleştiğini belirlemek için kullanılır. Bu analizler, veri setindeki belirli bir noktadaki değişikliklerin anlamlılığını değerlendirerek, değişim noktasının varlığını istatistiksel olarak doğrulamaya yöneliktir.
+Bu yöntemler, belirli bir değişim noktasının varlığını istatistiksel olarak değerlendirmek ve bu değişim noktasının ne zaman gerçekleştiğini belirlemek için kullanılır. Bu analizler, verilerdeki belirli bir noktadaki değişikliklerin anlamlılığını değerlendirerek, değişim noktasının varlığını istatistiksel olarak doğrulamaya yöneliktir.
 
 Null hipotezi için maksimum log-olabilirlik, $\log p(y_{1:n}|\hat{\theta})$ şeklinde ifade edilir, burada $p(\cdot)$ verilerin dağılımıyla ilişkilendirilen olasılık yoğunluk fonksiyonudur ve $\hat{\theta}$ parametrelerin maksimum olabilirlik tahminidir.
 
@@ -24,15 +24,15 @@ Açıkça görülmektedir ki, olabilirlik test istatistiği basitçe $m$ segment
 
 ## Birden Fazla Değişim Noktası Tespiti
 
-Birden fazla değişim noktasının (Multi change points) belirlenmesi, bir veri setinde meydana gelen yapısal değişiklikleri tespit etme sürecini ifade eder. Bu analiz, veri setinin farklı segmentlere bölünmesi ve her bir segmentteki değişim noktalarının tanımlanması yoluyla gerçekleştirilir. Değişim noktaları, verinin genel özelliklerinde veya desenlerinde beklenmeyen değişiklikleri temsil eder.
+Birden fazla değişim noktasının (Multi change points) belirlenmesi, bir veride meydana gelen yapısal değişiklikleri tespit etme sürecini ifade eder. Bu analiz, verilerin farklı segmentlere bölünmesi ve her bir segmentteki değişim noktalarının tanımlanması yoluyla gerçekleştirilir. Değişim noktaları, verinin genel özelliklerinde veya desenlerinde beklenmeyen değişiklikleri temsil eder.
 
 Özellikle zaman serilerinde birden fazla değişim noktasının belirlenmesi, farklı dönemlerde farklı trendlerin veya desenlerin varlığını anlamak açısından önemlidir. Bu tür analizler, endüstriyel süreçlerde, finansal piyasalarda veya epidemiyolojik veriler gibi farklı alanlarda meydana gelen önemli olayları veya dönemleri belirlemek için kullanılabilir.
 
-Bu tür analizler genellikle istatistiksel yöntemler, matematiksel modeller veya makine öğrenimi algoritmaları kullanılarak gerçekleştirilir. Birden fazla değişim noktası tespiti, veri setindeki karmaşık yapısal değişiklikleri belirleme ve anlama amacı taşır. Bu da kullanıcılara önemli olayları tespit etme ve veri setinin farklı bölümlerindeki değişiklikleri anlama imkânı sağlar. Bu analizler, veri setinin farklı segmentlerine ayrılmasını sağlayarak, her bir segmentteki farklı özellikleri ve eğilimleri anlamak için bir yol sunar. Bu da karar verme süreçlerinde daha bilinçli ve stratejik adımlar atılmasına yardımcı olabilir.
+Bu tür analizler genellikle istatistiksel yöntemler, matematiksel modeller veya makine öğrenimi algoritmaları kullanılarak gerçekleştirilir. Birden fazla değişim noktası tespiti, verilerdeki karmaşık yapısal değişiklikleri belirleme ve anlama amacı taşır. Bu da kullanıcılara önemli olayları tespit etme ve verilerdeki farklı bölümlerindeki değişiklikleri anlama imkânı sağlar. Bu analizler, verilerin farklı segmentlerine ayrılmasını sağlayarak, her bir segmentteki farklı özellikleri ve eğilimleri anlamak için bir yol sunar. Bu da karar verme süreçlerinde daha bilinçli ve stratejik adımlar atılmasına yardımcı olabilir.
 
 Belirli bir zaman serisi veya sinyal akışındaki birden fazla değişim noktasını verimli ve doğru bir şekilde belirleyebilmek için literatürde yaygın olarak kullanılan bir yöntem, maliyet fonksiyonunu (C) minimize ederek birden çok değişim noktasının konumunu belirlemektir. Bu yöntemde, aşırı uyumu önlemek için bir ceza terimi $\beta f(m)$ ile birlikte maliyet fonksiyonunun toplamı minimize edilmeye çalışılır. Formülü şu şekilde ifade edebiliriz: $\sum_{i=1}^{m+1} C(y(\tau_{i-1}+1):\tau_i) + \beta f(m)$
 
-Bu denklem, değişiklik noktaları ($y(\tau_{i-1}+1)$ ile $\tau_i$ arasındaki segmentler) için maliyet fonksiyonunun toplamını ve aşırı uyumu önlemek için ceza terimini içerir. Bu yöntem, veri setini birden çok bölüme bölmek (maliyet fonksiyonu tarafından belirlenen) ile aşırı karmaşıklığı veya fazla uyumu önlemeye yönelik ceza terimi arasında bir denge kurarak birden fazla değişim noktasını etkili bir şekilde bulmayı amaçlar.
+Bu denklem, değişiklik noktaları ($y(\tau_{i-1}+1)$ ile $\tau_i$ arasındaki segmentler) için maliyet fonksiyonunun toplamını ve aşırı uyumu önlemek için ceza terimini içerir. Bu yöntem, verileri birden çok bölüme bölmek (maliyet fonksiyonu tarafından belirlenen) ile aşırı karmaşıklığı veya fazla uyumu önlemeye yönelik ceza terimi arasında bir denge kurarak birden fazla değişim noktasını etkili bir şekilde bulmayı amaçlar.
 
 Literatürde birden fazla değişim noktasını belirleme konusunda en yaygın yöntem, bir segment için bir maliyet fonksiyonunu (genellikle negatif log olasılık gibi) minimize etmek ve aşırı uyumlanmayı engellemek için bir ceza terimi (c'nin birden fazla değişim noktası versiyonu olan $\beta f(m)$) kullanmaktır. Bu, aynı zamanda benimsediğimiz ve eşlik eden pakette kullandığımız yaklaşımdır. Bu minimize işlemini gerçekleştirmek için bir kaba kuvvet yöntemi, $2n-1$ çözümü düşünerek, $m$ bilindiğinde $n-1$m'ye indirgenir.
 
@@ -40,7 +40,7 @@ Literatürde birden fazla değişim noktasını belirleme konusunda en yaygın y
 
 İkili segmentasyon algoritması (BinSeg), değişim noktası literatüründe kullanılan en köklü arama yöntemidir. İkili segmentasyon arama algoritmasının erken uygulamaları arasında [@sen1975tests; @scott1974cluster] bulunmaktadır.
 
-İkili segmentasyon, herhangi bir tek değişim noktası yöntemini ardışık olarak farklı veri setlerinde tekrarlayarak çoklu değişim noktalarına genişletmek için kullanılabilir. İlk olarak, tek bir değişim noktası test istatistiğini tüm veri setine uygular. $y_{1},y_{2},...,y_{n}$ şeklindeki veri seti üzerinde bir başlangıç noktası belirlenir. Bu başlangıç noktası, veri setinin ortalaması, medyanı veya başka bir özelliği olabilir. Belirlenen başlangıç noktasında bir değişim noktası testi yapılır. Bu test, veri setini iki alt küme olarak böldüğünde, oluşan alt kümelerin toplam maliyetinin belirli bir kritere göre düşük olup olmadığını kontrol eder, yani bir $\tau$'nin aşağıdaki koşulu sağlayıp sağlamadığını test eder:
+İkili segmentasyon, herhangi bir tek değişim noktası yöntemini ardışık olarak farklı verilerde tekrarlayarak çoklu değişim noktalarına genişletmek için kullanılabilir. İlk olarak, tek bir değişim noktası test istatistiğini tüm veride uygular. $y_{1},y_{2},...,y_{n}$ şeklindeki veriler üzerinde bir başlangıç noktası belirlenir. Bu başlangıç noktası, verinin ortalaması, medyanı veya başka bir özelliği olabilir. Belirlenen başlangıç noktasında bir değişim noktası testi yapılır. Bu test, verilerin iki alt küme olarak böldüğünde, oluşan alt kümelerin toplam maliyetinin belirli bir kritere göre düşük olup olmadığını kontrol eder, yani bir $\tau$'nin aşağıdaki koşulu sağlayıp sağlamadığını test eder:
 
 $$C(y_{1:\tau}) + C(y_{(\tau+1):n}) + \beta < C(y_{1:n})$$
 
@@ -49,13 +49,13 @@ Burada:
 
 \begin{itemize}
 \item \textbf{C}: Bir segment için maliyet fonksiyonu
-\item \textbf{$y_{1:\tau}$}: Başlangıçtan değişim noktasına kadar olan veri seti
-\item \textbf{$y_{(\tau+1):n}$}: Değişim noktasından sona kadar olan veri seti
+\item \textbf{$y_{1:\tau}$}: Başlangıçtan değişim noktasına kadar olan veri 
+\item \textbf{$y_{(\tau+1):n}$}: Değişim noktasından sona kadar olan veri 
 \item \textbf{$\beta$}: Aşırı uyum karşısında koruma sağlayan ceza terimi
 \end{itemize}
 
 
-Eğer bu koşul sağlanmıyorsa, o zaman herhangi bir değişim noktası tespit edilememiştir ve algoritma durur. Aksi takdirde veri, belirlenen değişim noktasından önce ve sonra olmak üzere iki segmente bölünür. Tek değişim noktası tespit yöntemi, değişiklikten önce ve sonra iki yeni segmente de tekrarlanır. Her iki segmentte de değişim noktaları belirlenirse, bunları yeni belirlenen değişim noktasında daha fazla segmentlere böler ve her yeni segmente değişim noktası tespit yöntemini uygular. Bu süreç, verinin herhangi bir bölümünde değişim noktası bulunamayana kadar devam eder.
+Eğer bu koşul sağlanmıyorsa, o zaman herhangi bir değişim noktası tespit edilememiştir ve algoritma durur. Aksi takdirde veri, belirlenen değişim noktasından önce ve sonra olmak üzere iki segmente bölünür. Tek değişim noktası tespit yöntemi, değişiklikten önce ve sonra iki yeni segmente de tekrarlanır. Her iki segmentte de değişim noktaları belirlenirse, bunları yeni belirlenen değişim noktasında daha fazla segmentlere böler ve her yeni segmente değişim noktası tespit yöntemini uygular. Bu süreç, verinin herhangi bir bölümünde değişim noktası bulunamayana kadar devam eder(@killick2012optimal).
 
 Çoklu değişim noktalarını belirlemek için yaygın olarak kullanılan bir yaklaşım, aşağıdaki ifadeyi minimize etmektir:
 
@@ -83,7 +83,7 @@ Prophet algoritması kullanıldığında, potansiyel değişim noktaları otomat
 
 PELT (Pruned Exact Linear Time) algoritması [@killick2012optimal] tarafından geliştirilmiştir. Bu algoritma, zaman serisindeki değişim noktalarını tespit etmektedir ve bu değişim noktalarını tespit ederken belirli bir maliyet fonksiyonunu minimize etmeyi amaçlar.
 
-Değişim noktası analizi, genel anlamda, bir veri seti içerisinde istatistiksel özelliklerin değiştiği noktaların belirlenmesidir. Daha resmi olarak, $y_{1:n} = (y_1, \ldots, y_n)$ şeklinde sıralı bir veri dizisine sahiptir.
+Değişim noktası analizi, genel anlamda, bir veri içerisindeki istatistiksel özelliklerin değiştiği noktaların belirlenmesidir. Daha resmi olarak, $y_{1:n} = (y_1, \ldots, y_n)$ şeklinde sıralı bir veri dizisine sahiptir.
 
 Model, konumlarıyla birlikte bir dizi değişim noktasına (m) sahip olacaktır: $\tau_{1:m} = (t_1, \ldots, t_m)$. Her değişim noktası konumu 1 ile $n - 1$ dahil arasında bir tam sayıdır.
 
@@ -105,17 +105,17 @@ Aşağıdaki teorem bu tür budamanın yapılabileceği basit bir koşulu verir.
 
 Girdi: $y_i \in \mathbb{R}$ olmak üzere $(y_1, y_2, \ldots, y_n)$ formundaki bir veri kümesi. Uyumun ölçüsü olarak $C(\cdot)$ ve değişim noktalarının sayısına veya konumuna bağlı olmayan bir ceza sabiti $\beta$ kullanılır.
 
-Başlatma: $n$ = verinin uzunluğu olsun ve $F(0) = -\beta$, $cp(0) = NULL$ olarak ayarlayın.
+$n$ = verinin uzunluğu olsun ve $F(0) = -\beta$, $cp(0) = Null$ olarak ayarlanır.
 
 Yineleme için $T^* = 1, \ldots, n$
 
-1.  Hesapla $F(T^*) = \min_{0 \leq s < T^*} [F(s) + C(y_{s+1}:T^*) + \beta]$.
+1.  $F(T^*) = \min_{0 \leq s < T^*} [F(s) + C(y_{s+1}:T^*) + \beta]$.
 
 2.  $\tau' = \arg \min_{0 \leq s < T^*} [F(s) + C(y_{s+1}:T^*) + \beta]$ olsun.
 
-3.  $cp(T^*) = (cp(\tau'), T^*)$ olarak ayarlayın.
+3.  $cp(T^*) = (cp(\tau'), T^*)$ olarak ayarlanır.
 
-$cp(n)$'de kaydedilen değişim noktalarını çıktı olarak verin.
+$cp(n)$'de kaydedilen değişim noktalarını çıktı olarak verir.
 
 \textbf{Aşağıdaki teorem bu tür budamanın yapılabileceği basit bir koşulu verir.}
 
@@ -135,19 +135,19 @@ $$
 
 Girdi: $y_i \in \mathbb{R}$ olmak üzere $(y_1, y_2, \ldots, y_n)$ formundaki bir veri kümesi. Uyumun ölçüsü olarak $C(\cdot)$ ve değişim noktalarının sayısına veya konumuna bağlı olmayan bir ceza sabiti $\beta$ kullanılır.
 
-Başlatma: $n$ = verinin uzunluğu olsun ve $F(0) = -\beta$, $cp(0) = NULL$, $R_1 = \{0\}$ olarak ayarlayın.
+$n$ = verinin uzunluğu olsun ve $F(0) = -\beta$, $cp(0) = Null$, $R_1 = \{0\}$ olarak ayarlanır.
 
 Yineleme için $T^* = 1, \ldots, n$
 
-1.  Hesapla $F(T^*) = \min_{T \in R_{T^*-1}} [F(T) + C(y_{T+1}:T^*) + \beta]$.
+1.  $F(T^*) = \min_{T \in R_{T^*-1}} [F(T) + C(y_{T+1}:T^*) + \beta]$.
 
 2.  $\tau^+ = \arg \min_{T \in R_{T^*-1}} [F(T) + C(y_{T+1}:T^*) + \beta]$ olsun.
 
-3.  $cp(T^*) = [cp(\tau^+), T^+]$ olarak ayarlayın.
+3.  $cp(T^*) = [cp(\tau^+), T^+]$ olarak ayarlanır.
 
-4.  $R_{T^*+1} = \{T \in R_{T^*-1} - \{T^*\} : F(T) + C(y_{T+1}:T^*) + K \leq F(T^*)\}$ olarak ayarlayın.
+4.  $R_{T^*+1} = \{T \in R_{T^*-1} - \{T^*\} : F(T) + C(y_{T+1}:T^*) + K \leq F(T^*)\}$ olarak ayarlanır.
 
-$cp(n)$'de kaydedilen değişim noktalarını çıktı olarak verin.
+$cp(n)$'de kaydedilen değişim noktalarını çıktı olarak verir.
 
 PELT yönteminin teorik hesaplama maliyeti incelendiğinde, değişim noktası modelleri ve cezaların en önemli sınıfına odaklanılır ve yöntemin veri noktalarının sayısına göre doğrusal bir hesaplama maliyetine sahip olması için yeterli koşullar sağlanır.
 
@@ -191,9 +191,9 @@ $$ E\left(\log f(Y|A) - \log f(Y|O')\right) > \frac{\beta}{E(S')} $$
 
 Burada, $S$ beklenen segment uzunluğudur, $n$ veri noktasını analiz etmek için PELT'in beklenen CPU maliyeti $L_n$ için bazı sabit $L < \infty$ ile yukarıdan sınırlıdır.
 
-$\Theta_i$, $y_i^{'}$yi içeren segmentle ilişkilendirilmiş gerçek parametre olsun ve $\hat{\Theta}_n$, veri $y_{1:n}$ ve tek bir segment varsayımıyla verilen $\Theta$ için maksimum olabilirlik tahminidir: (let $q_i$)
+$\Theta_i$, $y_i^{'}$yi içeren segmentle ilişkilendirilmiş gerçek parametre olsun ve $\hat{\Theta}_n$, veri $y_{1:n}$ ve tek bir segment varsayımıyla verilen $\Theta$ için maksimum olabilirlik tahminidir: ($q_i$)
 
-$S$'nin beklenen segment uzunluğu olduğu durumda, $n$ veri noktasını analiz etmek için PELT'in beklenen CPU maliyeti, $L$ sabiti için yukarıda $L_n$ ile sınırlanır. (where $S$ is the)
+$S$'nin beklenen segment uzunluğu olduğu durumda, $n$ veri noktasını analiz etmek için PELT'in beklenen CPU maliyeti, $L$ sabiti için yukarıda $L_n$ ile sınırlanır.
 
 Teorem 3.2'nin Şartları (A1) ve (A2), zayıf teknik şartlardır. Örneğin, maksimum olabilirlik tahminleri içi $n$ genel asimptotik sonuçlar, $B_n = Op(1)$ verecektir, ve (A1), $B_n$'nin $O(n^{1/2})$ veya daha büyük değerleri alma olasılığını kontrol eden biraz daha güçlü bir koşuldur.
 
@@ -280,6 +280,8 @@ knitr::include_graphics("figure/cover.png")
 ```
 
 Değişim noktası tespiti için metrikler, kümeleme metrikleri veya sınıflandırma metrikleri uyarlanarak kullanılabilir. Bu bölümde kümeleme analizinden uyarlanarak hesaplanan kapsama ölçütü (cover metric) tanıtılmıştır.
+
+Kapsama ölçütü, gerçekteki değişim noktası ile bulunan değişim noktasının ne kadar iyi örtüştüğünü ölçer. Jaccard benzerliğini kullanarak örtüşmeyi hesaplar(@van2020evaluation).
 
 K işaretleyici sayısı $(k=1,...,K)$ olmak üzere, $k.$ işaretleyici tarafından belirlenen değişim noktalarının konumları $T_k = \{\tau_1,...,\tau_{n_k}\}$ ile gösterilir. $\tau_i < \tau_j$ koşulunu sağlamak için $i < j$ olmalıdır. $T_k$, $[1, T]$ aralığını $A_j$ adı verilen ayrık kümeler halinde bölen bir bölüm $G_k$'yi belirtir. Burada $A_j$, $j = 1,...,n_k +1$ için $\tau_{j} -1$'den $\tau_{j} -1$'e olan parçadır. Notasyon kolaylığı için $\tau_0 = 1$ ve $\tau_{n_k+1} = T +1$ kullanılır.
 

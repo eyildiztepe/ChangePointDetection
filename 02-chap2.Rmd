@@ -209,7 +209,7 @@ result_sim
 ```
 $p$-değeri 0.05 ($\alpha$)'den küçüktür. Bu nedenle $H_0$ hipotezi reddedilmiştir, en az bir algoritmanın performansının diğerlerinden farklı olduğu söylenebilir.
 
-İkili karşılaştırmalar için Nemenyi testi (@nemenyi1963distribution) kullanılmıştır.
+İkili karşılaştırmalar için Nemenyi testi (@nemenyi1963distribution;@demvsar2006statistical) kullanılmıştır.
 
 ```{r,echo=FALSE, warning=FALSE }
 frdAllPairsNemenyiTest(sim, result_sim)
