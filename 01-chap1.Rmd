@@ -2,7 +2,7 @@
 
 ## Tek Değişim Noktası Tespiti
 
-AMOC (At Most One Change), bir veride yalnızca bir değişim noktasının varlığını tespit etmeye odaklanan istatistiksel bir analiz yöntemidir(@hinkley1970). Bu tür analizler genellikle zaman serileri, süreç kontrolü, finansal veriler gibi çeşitli alanlarda kullanılır. Temel hedef, verilerdeki değişim noktasını tanımlamak ve bu noktada meydana gelen ani değişikliği belirlemektir.
+AMOC (At Most One Change), bir veride yalnızca bir değişim noktasının varlığını tespit etmeye odaklanan istatistiksel bir analiz yöntemidir @hinkley1970. Bu tür analizler genellikle zaman serileri, süreç kontrolü, finansal veriler gibi çeşitli alanlarda kullanılır. Temel hedef, verilerdeki değişim noktasını tanımlamak ve bu noktada meydana gelen ani değişikliği belirlemektir.
 
 Tek değişim noktası tespiti, bir zaman serisinde veya veri setinde belirli bir anın, örneğin bir trendin başlangıcı veya bir olayın etkisi gibi bir değişiklik noktasını belirlemek için kullanılır[@lykou2020change]. Bu analiz genellikle istatistiksel yöntemler, matematiksel modeller veya makine öğrenimi algoritmaları kullanılarak gerçekleştirilir. Bu yöntemler, verilerdeki değişim noktasının istatistiksel olarak anlamlı olup olmadığını değerlendirir ve belirli bir ölçüye dayanarak değişim noktasını tanımlar. Bu tür analizler, anormal durumları tespit etmek, süreçlerdeki değişiklikleri anlamak veya zaman içindeki önemli olayları belirlemek gibi bir dizi uygulama alanında kullanılır. Örneğin, endüstriyel süreçlerde bir makinenin arızasının başlangıcını belirlemek veya finansal piyasalardaki bir trend değişikliğini saptamak gibi durumlar, tek değişim noktası tespiti analizine örnek olabilir. Bu yöntemler, veri analizi ve karar verme süreçlerinde bilinçli ve stratejik adımlar atılmasına yardımcı olabilir, çünkü belirli bir değişim noktasının tanımlanması, olayların anlaşılmasını ve gelecekteki trendlerin tahmin edilmesini destekleyebilir.
 
@@ -48,20 +48,20 @@ Burada:
 
 
 \begin{itemize}
-\item \textbf{C}: Bir parça için maliyet fonksiyonu
+\item \textbf{C}: Bir bölüm için maliyet fonksiyonu
 \item \textbf{$y_{1:\tau}$}: Başlangıçtan değişim noktasına kadar olan veri 
 \item \textbf{$y_{(\tau+1):n}$}: Değişim noktasından sona kadar olan veri 
 \item \textbf{$\beta$}: Aşırı uyum karşısında koruma sağlayan ceza terimi
 \end{itemize}
 
 
-Eğer bu koşul sağlanmıyorsa, o zaman herhangi bir değişim noktası tespit edilememiştir ve algoritma durur. Aksi takdirde veri, belirlenen değişim noktasından önce ve sonra olmak üzere iki parçaya bölünür. Tek değişim noktası tespit yöntemi, değişiklikten önce ve sonra iki yeni parçaya da tekrarlanır. Her iki parçada da  değişim noktaları belirlenirse, bunları yeni belirlenen değişim noktasında daha fazla parçalara böler ve her yeni parçaya değişim noktası tespit yöntemini uygular. Bu süreç, verinin herhangi bir bölümünde değişim noktası bulunamayana kadar devam eder(@killick2012optimal).
+Eğer bu koşul sağlanmıyorsa, o zaman herhangi bir değişim noktası tespit edilememiştir ve algoritma durur. Aksi takdirde veri, belirlenen değişim noktasından önce ve sonra olmak üzere iki bölüme bölünür. Tek değişim noktası tespit yöntemi, değişiklikten önce ve sonra iki yeni bölüme de tekrarlanır. Her iki parçada da  değişim noktaları belirlenirse, bunları yeni belirlenen değişim noktasında daha fazla bölümlere böler ve her yeni bölüme değişim noktası tespit yöntemini uygular. Bu süreç, verinin herhangi bir bölümünde değişim noktası bulunamayana kadar devam eder(@killick2012optimal).
 
 Çoklu değişim noktalarını belirlemek için yaygın olarak kullanılan bir yaklaşım, aşağıdaki ifadeyi minimize etmektir:
 
 $$\sum_{i=1}^{m+1} C(y(\tau_{i-1}+1):\tau_i) + \beta f(m)$$
 
-Burada, $C$ bir parça için bir maliyet fonksiyonu ve $\beta f(m)$ aşırı uyum karşısında koruma sağlayan bir ceza terimidir.
+Burada, $C$ bir bölüm için bir maliyet fonksiyonu ve $\beta f(m)$ aşırı uyum karşısında koruma sağlayan bir ceza terimidir.
 
 İkili bölümleme, herhangi bir değişim noktasının konumu önceden belirlenmiş değişim noktalarına bağlı olduğu için ($f(m) = m$ olarak) yukarıdaki denklemin yaklaşık bir minimize edilmesidir. Algoritmanın her adımı, bu denklemi azaltıyorsa ek bir değişim noktası eklemeye çalışır. İkili bölümleme algoritmasının avantajı, $n$'nin veri uzunluğu olduğu durumda $O(n)$ hesaplama maliyeti ile uygulanabilen hızlı bir algoritma olmasıdır. Ancak, $C$'yi uygun bir şekilde seçmek zor olabilir ve farklı $C$ seçimleri, değişim noktalarının sayısının tahmininde önemli farklara neden olabilir.
 
@@ -105,7 +105,7 @@ Aşağıdaki teorem bu tür budamanın yapılabileceği basit bir koşulu verir.
 
 Girdi: $y_i \in \mathbb{R}$ olmak üzere $(y_1, y_2, \ldots, y_n)$ formundaki bir veri kümesi. Uyumun ölçüsü olarak $C(\cdot)$ ve değişim noktalarının sayısına veya konumuna bağlı olmayan bir ceza sabiti $\beta$ kullanılır.
 
-$n$ = verinin uzunluğu olsun ve $F(0) = -\beta$, $cp(0) = Null$ olarak ayarlanır.
+$n$ = verinin uzunluğu olsun ve $F(0) = -\beta$, $cp(0) = Boş$ olarak ayarlanır.
 
 Yineleme için $T^* = 1, \ldots, n$
 
@@ -135,7 +135,7 @@ $$
 
 $y_i \in \mathbb{R}$ olmak üzere $(y_1, y_2, \ldots, y_n)$ formundaki bir veri kümesi. Uyumun ölçüsü olarak $C(\cdot)$ ve değişim noktalarının sayısına veya konumuna bağlı olmayan bir ceza sabiti $\beta$ kullanılır.
 
-$n$ = verinin uzunluğu olsun ve $F(0) = -\beta$, $cp(0) = Null$, $R_1 = \{0\}$ olarak ayarlanır.
+$n$ = verinin uzunluğu olsun ve $F(0) = -\beta$, $cp(0) = Boş$, $R_1 = \{0\}$ olarak ayarlanır.
 
 Yineleme için $T^* = 1, \ldots, n$
 
