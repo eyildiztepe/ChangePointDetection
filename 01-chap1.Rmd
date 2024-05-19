@@ -117,7 +117,7 @@ Yineleme için $T^* = 1, \ldots, n$
 
 $cp(n)$'de kaydedilen değişim noktalarını çıktı olarak verir.
 
-\textbf{Aşağıdaki teorem bu tür budamanın yapılabileceği basit bir koşulu verir.}
+Aşağıdaki teorem bu tür budamanın yapılabileceği basit bir koşulu verir.
 
 \textbf{Teorem 1:} Bir gözlem dizisine bir değişim noktası tanıtıldığında, dizinin maliyeti $\mathcal{C}$ azalmaktadır. Daha formal bir ifadeyle, $t < s < T$ için tüm $t$ değerleri için bir $K$ sabiti var kabul edilmektedir.
 
@@ -133,7 +133,7 @@ $$
 
 #### PELT Yöntemi
 
-Girdi: $y_i \in \mathbb{R}$ olmak üzere $(y_1, y_2, \ldots, y_n)$ formundaki bir veri kümesi. Uyumun ölçüsü olarak $C(\cdot)$ ve değişim noktalarının sayısına veya konumuna bağlı olmayan bir ceza sabiti $\beta$ kullanılır.
+$y_i \in \mathbb{R}$ olmak üzere $(y_1, y_2, \ldots, y_n)$ formundaki bir veri kümesi. Uyumun ölçüsü olarak $C(\cdot)$ ve değişim noktalarının sayısına veya konumuna bağlı olmayan bir ceza sabiti $\beta$ kullanılır.
 
 $n$ = verinin uzunluğu olsun ve $F(0) = -\beta$, $cp(0) = Null$, $R_1 = \{0\}$ olarak ayarlanır.
 
@@ -191,7 +191,7 @@ $$ E\left(\log f(Y|A) - \log f(Y|O')\right) > \frac{\beta}{E(S')} $$
 
 Burada, $S$ beklenen segment uzunluğudur, $n$ veri noktasını analiz etmek için PELT'in beklenen CPU maliyeti $L_n$ için bazı sabit $L < \infty$ ile yukarıdan sınırlıdır.
 
-$\Theta_i$, $y_i^{'}$yi içeren segmentle ilişkilendirilmiş gerçek parametre olsun ve $\hat{\Theta}_n$, veri $y_{1:n}$ ve tek bir segment varsayımıyla verilen $\Theta$ için maksimum olabilirlik tahminidir: ($q_i$)
+$\Theta_i$, $y_i^{'}$yi içeren segmentle ilişkilendirilmiş gerçek parametre olsun ve $\hat{\Theta}_n$, veri $y_{1:n}$ ve tek bir segment varsayımıyla verilen $\Theta$ için maksimum olabilirlik tahminidir ($q_i$).
 
 $S$'nin beklenen segment uzunluğu olduğu durumda, $n$ veri noktasını analiz etmek için PELT'in beklenen CPU maliyeti, $L$ sabiti için yukarıda $L_n$ ile sınırlanır.
 
@@ -201,9 +201,9 @@ Diğer iki koşul daha önemlidir. Koşul (A3), büyük segmentlerin olasılığ
 
 ### Parçalı Regresyon
 
-Parçalı veya kesik çizgili modeller, yanıt ile bir veya daha fazla açıklayıcı değişken arasındaki ilişkilerin parçalı doğrusal olduğu, yani iki veya daha fazla değişkenle temsil edildiği regresyon modelleridir.Bu ilişkiler, genellikle bilinmeyen değerlerde birleştirilen iki veya daha fazla düz çizgi tarafından temsil edilir, bu değerlere genellikle kırılma noktaları, değişim noktaları veya birleşim noktaları denir. Bu yöntemde bağımsız değişken, aralıklara bölünür ve her bir aralığa ayrı bir çizgi segmenti uyarlanır.Parçalı regresyon analizi ayrıca çeşitli bağımsız değişkenlerle yapılan çok değişkenli veriler üzerinde de gerçekleştirilebilir. Parçalı regresyon analizi, bağımsız değişkenlerin belirli gruplara ayrıldığı durumlarda, bu gruplardaki değişkenler arasındaki ilişkilerin farklı olduğuna inanıldığında kullanışlıdır. Bu parçalar arasındaki sınırlar, değişim noktaları olarak adlandırılır.
+Parçalı veya kesik çizgili modeller, yanıt ile bir veya daha fazla açıklayıcı değişken arasındaki ilişkilerin parçalı doğrusal olduğu, yani iki veya daha fazla değişkenle temsil edildiği regresyon modelleridir. Bu ilişkiler, genellikle bilinmeyen değerlerde birleştirilen iki veya daha fazla düz çizgi tarafından temsil edilir, bu değerlere genellikle kırılma noktaları, değişim noktaları veya birleşim noktaları denir. Bu yöntemde bağımsız değişken, aralıklara bölünür ve her bir aralığa ayrı bir çizgi segmenti uyarlanır.Parçalı regresyon analizi ayrıca çeşitli bağımsız değişkenlerle yapılan çok değişkenli veriler üzerinde de gerçekleştirilebilir. Parçalı regresyon analizi, bağımsız değişkenlerin belirli gruplara ayrıldığı durumlarda, bu gruplardaki değişkenler arasındaki ilişkilerin farklı olduğuna inanıldığında kullanışlıdır. Bu parçalar arasındaki sınırlar, değişim noktaları olarak adlandırılır.
 
-Matematiksel olarak, model şu şekilde ifade edilebilir:
+Matematiksel olarak, model şu şekilde ifade edilir:
 
 $y = \beta_{0i} + \beta_{1i} x + \epsilon$
 
@@ -258,7 +258,6 @@ Eğer anlamlı bir değişim noktası tespit edilemezse, değişim noktası olma
 \item \textbf{Değişim Noktasının Varlığını Test Etme:} Sözde skor testi, parçalı çizginin tahminini gerektirmez ve kırılma noktasının varlığını test etmek için daha formal bir istatistiksel yaklaşımdır.
 \end{enumerate}
 
-
 Ayrıca, tüm verilerin korelasyon katsayısı ($R_{a}$), belirleme katsayısı veya açıklama katsayısı, regresyon fonksiyonlarının güven aralıkları ve ANOVA analizi kullanılmaktadır.
 
 $C_{d}$ katsayısı, tüm veri seti için belirlenen şartlar altında maksimize edilmesi gereken bir belirleme katsayısıdır ve şu formülle hesaplanır:
@@ -295,7 +294,7 @@ $$C(G,G') = \frac{1}{T} \sum_{A \in G} |A| \cdot \max_{A' \in G'} J(A,A')$$.
 
 ## F1 Puanı
 
-Değişim noktası tespiti algoritmalarını değerlendirmeye ilişkin alternatif bir görüş, değişim noktası tespitini bir sınıflandırma problemi olarak kabul eder. Burada her bir gözlem “değişim noktası ” veya “tipik gözlem” sınıflarına ait olarak değerlendirilir [@killick2012optimal; @aminikhanghahi2017survey]. $X$, bir tespit algoritması ile bulunan değişim noktası konumları olsun. $T^* = \cup T_k$, tüm işaretleyicilerin birleşik kümesidir. Değişim noktalarının gerçek konumları $T$ için, algoritmalar ile elde edilen gerçek pozitifler $TP(T, X)$ olarak tanımlanır ($\tau \in T$).Bu küme içindeki her bir $\tau$, $|\tau - x| \leq M$ koşulunu sağlayan en az bir $x \in X$ için bulunur. Ancak bir $\tau \in T$ için yalnızca bir $x \in X$ kullanılır. Bu çalışmada $ M = 5$ alınmıştır.
+Değişim noktası tespiti algoritmalarını değerlendirmeye ilişkin alternatif bir görüş, değişim noktası tespitini bir sınıflandırma problemi olarak kabul eder. Burada her bir gözlem “değişim noktası ” veya “tipik gözlem” sınıflarına ait olarak değerlendirilir [@killick2012optimal; @aminikhanghahi2017survey]. $X$, bir tespit algoritması ile bulunan değişim noktası konumları olsun. $T^* = \cup T_k$, tüm işaretleyicilerin birleşik kümesidir. Değişim noktalarının gerçek konumları $T$ için, algoritmalar ile elde edilen gerçek pozitifler $TP(T, X)$ olarak tanımlanır ($\tau \in T$).Bu küme içindeki her bir $\tau$, $|\tau - x| \leq M$ koşulunu sağlayan en az bir $x \in X$ için bulunur. Ancak bir $\tau \in T$ için yalnızca bir $x \in X$ kullanılır. Bu çalışmada $M = 5$ alınmıştır.
 
 Doğruluk değeri, 0 ile 1 arasındadır. Doğru tahmin edilen değerlerin, tüm değerlere bölünmesi ile elde edilmektedir.  Doğruluk değeri 1’e yaklaştıkça başarı artmaktadır[@kelle2022mqtt].
 

@@ -35,7 +35,7 @@ abstract: |
 # needed on the line after the |.
  
 preface: |  # rapor değerlendirme
-  "`r rmarkdown::metadata$title`" başlıklı bitirme projesi raporu tarafıgitmdan okunmuş, kapsamı ve niteliği açısından bir Bitirme Projesi raporu olarak kabul edilmiştir.\
+  "`r rmarkdown::metadata$title`" başlıklı bitirme projesi raporu tarafımdan okunmuş, kapsamı ve niteliği açısından bir Bitirme Projesi raporu olarak kabul edilmiştir.\
   \
   \
   `r rmarkdown::metadata$advisor`

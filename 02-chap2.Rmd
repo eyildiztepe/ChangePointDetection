@@ -167,7 +167,7 @@ Table: (\#tab:nvar11) Kapsama Ölçütü (Ayarlanmış)
 | 19   | 0,6932 | 0,9983 | 0,9983    | 0,4816  | 0,6680 |
 | 20   | 0,5905 | 0,9854 | 0,9854    | 0,5511  | 0,7184 |
 
-Ayarlanan parametreler ile hesaplanan kapsama ölçütü değerinin BinSeg ve parçalı regresyon algoritmalarının tamamında 0,8'in üzerinde olduğu görülmektedir. Pelt için on dört, AMOC için dokuz ve Prophet algortiması için üç verinin 0,7'nin üzerindekapsama ölçütü değerine sahip olduğu görülmektedir. Ayarlanan parametrelerle çalıştırılan beş farklı algoritmanın kullanıldığı yirmi verinin hiçbirinde 0,3'ün altından kapsama ölçütü değeri bulunmamaktadır.
+Ayarlanan parametreler ile hesaplanan kapsama ölçütü değerinin BinSeg ve parçalı regresyon algoritmalarının tamamında 0,8'in üzerinde olduğu görülmektedir. Pelt için on dört, AMOC için dokuz ve Prophet algortiması için üç verinin 0,7'nin üzerinde kapsama ölçütü değerine sahip olduğu görülmektedir. Ayarlanan parametrelerle çalıştırılan beş farklı algoritmanın kullanıldığı yirmi verinin hiçbirinde 0,3'ün altından kapsama ölçütü değeri bulunmamaktadır.
 
 Elde edilen sonuçlara göre yapay veriler için algoritmaların performansları arasında anlamlı bir fark olup olmadığı Friedman testi ile araştırılmıştır. Takip eden bölümlerde PMCMRplus paketindeki friedman.test() ve frdAllPairsNemenyiTest() fonksiyonları ile elde edilen sonuçlara yer verilmiştir. Hipotez testlerinde ($\alpha=0.05$) alınmıştır.
 
@@ -215,7 +215,7 @@ $p$-değeri 0.05 ($\alpha$)'den küçüktür. Bu nedenle $H_0$ hipotezi reddedil
 frdAllPairsNemenyiTest(sim, result_sim)
 ```
 
-Buna göre; AMOC ve BinSeg algoritmaları arasında; Parçalı Regresyon ve AMOC algoritmaları arasında, Prophet ile BinSeg ve Parçalı Regresyon algoritmaları arasında, PELT ile BinSeg ve Parçalı Regresyon algoritmaları arasında istatistiksel olarak anlamlı fark olduğu, sonucuna varılmıştır.
+Buna göre; AMOC ve BinSeg algoritmaları arasında; parçalı regresyon ve AMOC algoritmaları arasında, Prophet ile BinSeg ve parçalı regresyon algoritmaları arasında, PELT ile BinSeg ve parçalı regresyon algoritmaları arasında istatistiksel olarak anlamlı fark olduğu, sonucuna varılmıştır.
 
 ### Gerçek Veriler için Sonuçlar
 
@@ -365,7 +365,7 @@ Nemenyi testi sonuçlarına göre Prophet ile AMOC, BinSeg ve parçalı regresyo
 
 ## Kademeli Egzersiz Test Verileri
 
-Bu bölümde bir başka gerçek veri için uygulama yapılmıştır. Onbeş sporcunun kademeli bir rampa testi sonucunda elde edilen verileri kullanılarak eşik egzersiz şiddetlerini değişim noktası belirleme yöntemleri ile tespit etmek denenmiştir.
+Bu bölümde bir başka gerçek veri için uygulama yapılmıştır. On beş sporcunun kademeli bir rampa testi sonucunda elde edilen verileri kullanılarak eşik egzersiz şiddetlerini değişim noktası belirleme yöntemleri ile tespit etmek denenmiştir.
 
 (ref:ozkaya2021) $V_E/P_{ET}CO_2$ - Power (W) [@ozkaya2021new]
 
@@ -495,6 +495,7 @@ knitr::include_graphics("figure/veriyükleme.png")
 ```
 
 Bu kısımda kullanıcılar tek değişkenli verilerini txt veya csv formatında yükleyerek herhangi bir kod bilgisine gerek kalmadan ‘changepoint’ paketini kullanarak analiz edebilirler. Sunduğu imkanlar şu şekildedir:
+
 - Değişiklik Türü (Type of change to detect): Kullanıcılar ortalama, varyans, ortalama ve varyans seçeneklerinden uygun olanı seçebilirler.
 
 - Değişim Noktası Yöntemi (Changepoint Method):Kullanıcılar, değişim noktalarını belirlemek için AMOC, BinSeg ve Pelt algoritmaları arasından seçim yapabilirler.
