@@ -1213,14 +1213,15 @@ Bu kısımda kullanıcılar tek değişkenli verilerini txt veya csv formatında
   Grafik seçenekleri:Tahmin edilen değişim noktaları ve segment ortalamaları grafik üzerinde opsiyonel olarak gösterilebilir.
 \end{itemize}
 
-\chapter*{Sonuç}\label{sonuuxe7}
-\addcontentsline{toc}{chapter}{Sonuç}
+\chapter{Sonuç}\label{sonuuxe7}
 
-If we don't want Conclusion to have a chapter number next to it, we can add the \texttt{\{-\}} attribute.
+Bu çalışmada, değişim noktalarını tespit etmek için AMOC, BinSeg, Parçalı Regresyon, PELT ve Prophet algoritmalarının performansları karşılaştırılmıştır. Yapay veri, gerçek veri ve kademeli egzersiz test verileri kullanılarak gerçekleştirilen analizlerde, algoritmaların performansları F1 puanı ve kapsama ölçütü ile değerlendirilmiştir.
 
-\textbf{More info}
+Sonuçlar, yapay verilerde BinSeg algoritmasının F1 puanı açısından en başarılı sonuçları verdiğini, gerçek verilerde ve kademeli egzersiz test verilerinde ise Parçalı Regresyon algoritmasının en iyi performansı sergilediğini göstermiştir. Kapsama ölçütüne göre, yapay verilerde BinSeg ve Parçalı Regresyon algoritmalarının, gerçek verilerde ve kademeli egzersiz test verilerinde Parçalı Regresyon algoritmasının en iyi sonuçları elde ettiği tespit edilmiştir.
 
-And here's some other random info: the first paragraph after a chapter title or section head \emph{shouldn't be} indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
+Friedman testi sonuçlarına göre, yapay verilerde AMOC ve BinSeg, Parçalı Regresyon ve AMOC, Prophet ile BinSeg ve Parçalı Regresyon, PELT ile BinSeg ve Parçalı Regresyon algoritmaları arasında istatistiksel olarak anlamlı farklar bulunmuştur. Gerçek verilerde ise Prophet algoritması ile AMOC, BinSeg ve Parçalı Regresyon algoritmaları arasında istatistiksel olarak anlamlı farklar mevcuttur. Ancak, kademeli egzersiz test verilerinde algoritmaların performansları arasında istatistiksel olarak anlamlı bir fark bulunmamıştır.
+
+Bu bulgular, farklı veri türlerinde değişim noktası tespit yöntemlerinin performanslarının değişebileceğini göstermektedir. Bu nedenle, belirli bir veri seti ve analiz amacı için en uygun algoritmanın seçilmesi önem arz etmektedir. Çalışmada elde edilen bulgular, gelecekteki araştırmalara ve pratik uygulamalara rehberlik edecek niteliktedir. Ayrıca, değişim noktası tespiti için geliştirilen Shiny web uygulaması ve ilgili R ve Python kodları, araştırmacıların bu yöntemleri kendi verilerine uygulayabilmeleri için önemli bir kaynak sunmaktadır.
 
 \chapter*{Kaynaklar}\label{kaynaklar}
 \addcontentsline{toc}{chapter}{Kaynaklar}

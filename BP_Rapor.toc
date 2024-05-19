@@ -25,5 +25,5 @@
 \contentsline {subsection}{\numberline {2.4.3}Anasayfa}{29}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Yapay Veri Üretme}{29}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}Veri Yükleme}{30}{subsection.2.4.5}%
-\contentsline {chapter}{Sonuç}{33}{chapter*.18}%
-\contentsline {chapter}{Kaynaklar}{35}{chapter*.19}%
+\contentsline {chapter}{B\"ol\"um 3: Sonuç}{33}{chapter.3}%
+\contentsline {chapter}{Kaynaklar}{35}{chapter*.18}%
