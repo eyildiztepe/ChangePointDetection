@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.20)  20 MAY 2024 09:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.20)  20 MAY 2024 11:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -783,52 +783,48 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 59
 (c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [17]
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 641.
-(c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 648.
+(Font)              <5> on input line 645.
 [18] [19] [20] [21]
-Overfull \hbox (14.11967pt too wide) detected at line 830
+Overfull \hbox (14.11967pt too wide) detected at line 827
 []
  []
 
 [22] [23] [24]
-Overfull \hbox (14.11967pt too wide) detected at line 979
+Overfull \hbox (14.11967pt too wide) detected at line 976
 []
  []
 
-<figure/vepetco2.png, id=383, 606.265pt x 449.68pt>
+<figure/vepetco2.png, id=382, 606.265pt x 449.68pt>
 File: figure/vepetco2.png Graphic file (type png)
 <use figure/vepetco2.png>
-Package pdftex.def Info: figure/vepetco2.png  used on input line 1007.
+Package pdftex.def Info: figure/vepetco2.png  used on input line 1004.
 (pdftex.def)             Requested size: 303.13176pt x 228.85345pt.
 [25] [26 <./figure/vepetco2.png>]
-Overfull \hbox (14.11967pt too wide) detected at line 1086
+Overfull \hbox (14.11967pt too wide) detected at line 1083
 []
  []
 
 [27]
-<figure/anasayfa.png, id=398, 2366.8425pt x 1296.845pt>
+<figure/anasayfa.png, id=397, 2366.8425pt x 1296.845pt>
 File: figure/anasayfa.png Graphic file (type png)
 <use figure/anasayfa.png>
-Package pdftex.def Info: figure/anasayfa.png  used on input line 1103.
+Package pdftex.def Info: figure/anasayfa.png  used on input line 1100.
 (pdftex.def)             Requested size: 401.49115pt x 200.75165pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [28]
-<figure/sim.png, id=403, 2029.5825pt x 1238.6275pt>
+<figure/sim.png, id=402, 2029.5825pt x 1238.6275pt>
 File: figure/sim.png Graphic file (type png)
 <use figure/sim.png>
-Package pdftex.def Info: figure/sim.png  used on input line 1109.
+Package pdftex.def Info: figure/sim.png  used on input line 1106.
 (pdftex.def)             Requested size: 401.48076pt x 200.73593pt.
 [29 <./figure/anasayfa.png> <./figure/sim.png>]
-<figure/veriyükleme.png, id=410, 2575.6225pt x 1268.74pt>
+<figure/veriyükleme.png, id=409, 2575.6225pt x 1268.74pt>
 File: figure/veriyükleme.png Graphic file (type png)
 <use figure/veriyükleme.png>
-Package pdftex.def Info: figure/veriyükleme.png  used on input line 1130.
+Package pdftex.def Info: figure/veriyükleme.png  used on input line 1127.
 (pdftex.def)             Requested size: 401.49681pt x 200.73749pt.
 [30 <./figure/veriyükleme.png>] [31] [32
 
@@ -848,18 +844,18 @@ Package rerunfilecheck Info: File `BP_Rapor.out' has not changed.
 (rerunfilecheck)             Checksum: 26A26894A71897616B26A2DABEADB8BC;3871.
  ) 
 Here is how much of TeX's memory you used:
- 18071 strings out of 475940
- 297611 string characters out of 5787186
- 1949754 words of memory out of 5000000
- 39605 multiletter control sequences out of 15000+600000
- 622491 words of font info for 168 fonts, out of 8000000 for 9000
+ 18031 strings out of 475940
+ 296883 string characters out of 5787186
+ 1951754 words of memory out of 5000000
+ 39569 multiletter control sequences out of 15000+600000
+ 622185 words of font info for 167 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  75i,12n,79p,1305b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro12.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/Users/ahmet/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on BP_Rapor.pdf (52 pages, 1884212 bytes).
+Output written on BP_Rapor.pdf (52 pages, 1883182 bytes).
 PDF statistics:
- 571 PDF objects out of 1000 (max. 8388607)
- 467 compressed objects within 5 object streams
+ 568 PDF objects out of 1000 (max. 8388607)
+ 465 compressed objects within 5 object streams
  130 named destinations out of 1000 (max. 500000)
  35055 words of extra memory for PDF output out of 35830 (max. 10000000)
 

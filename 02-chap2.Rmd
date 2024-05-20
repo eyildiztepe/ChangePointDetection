@@ -1,6 +1,6 @@
 # Uygulama {#Bolum3}
 
-Uygulamadaa yirmi yapay veri, on bir gerçek veri ve on beş kademeli eşik egzersiz test verisi kullanılmıştır. Yapay verilerin her biri farklı sayıda değişim noktasına sahip olacak şekilde üretilmiştir. Gerçek veriler ise farklı alanlardan alınmıştır. Verilerin performanslarını belirlemek amacıyla F1 puanı ve kapsama ölçütü kullanılmıştır. Çalışmada R ve Python programlama dilleri kullanılmıştır. Uygulamada kullanılan veriler ve kodlar github sayfasında (<https://github.com/eyildiztepe/ChangePointDetection>) paylaşılmıştır.
+Uygulamada yirmi yapay veri, on bir gerçek veri ve on beş kademeli eşik egzersiz test verisi kullanılmıştır. Yapay verilerin her biri farklı sayıda değişim noktasına sahip olacak şekilde üretilmiştir. Gerçek veriler ise farklı alanlardan alınmıştır. Verilerin performanslarını belirlemek amacıyla F1 puanı ve kapsama ölçütü kullanılmıştır. Çalışmada R ve Python programlama dilleri kullanılmıştır. Uygulamada kullanılan veriler ve kodlar github sayfasında (<https://github.com/eyildiztepe/ChangePointDetection>) paylaşılmıştır.
 
 ## Veri
 
@@ -41,7 +41,7 @@ Table:(\#tab:nvar1) Yapay Veriler
 Çalışmada kullanılan gerçek veriler 5 ayrı işaretleyici tarafından işaretlenmiştir [@van2020evaluation].Bu nedenle değişim noktası konumları değişiklik gösterebilmektedir.
 
 
-````{r ngercek, results='asis', echo = FALSE}
+````{r ngercek, results='asis', echo = FALSE,warning=FALSE}
 library(readxl)
 library(kableExtra)
 table1 <- read_excel("./data/VeriTablolari.xlsx", sheet ="GercekVeri")
