@@ -1,6 +1,6 @@
 # Uygulama {#Bolum3}
 
-Uygulamada yirmi yapay veri, on bir gerçek veri ve on beş kademeli eşik egzersiz test verisi kullanılmıştır. Yapay verilerin her biri farklı sayıda değişim noktasına sahip olacak şekilde üretilmiştir. Gerçek veriler ise farklı alanlardan alınmıştır. Verilerin performanslarını belirlemek amacıyla F1 puanı ve kapsama ölçütü kullanılmıştır. Çalışmada R ve Python programlama dilleri kullanılmıştır. Uygulamada kullanılan veriler ve kodlar github sayfasında (<https://github.com/eyildiztepe/ChangePointDetection>) paylaşılmıştır.
+Uygulamadaa yirmi yapay veri, on bir gerçek veri ve on beş kademeli eşik egzersiz test verisi kullanılmıştır. Yapay verilerin her biri farklı sayıda değişim noktasına sahip olacak şekilde üretilmiştir. Gerçek veriler ise farklı alanlardan alınmıştır. Verilerin performanslarını belirlemek amacıyla F1 puanı ve kapsama ölçütü kullanılmıştır. Çalışmada R ve Python programlama dilleri kullanılmıştır. Uygulamada kullanılan veriler ve kodlar github sayfasında (<https://github.com/eyildiztepe/ChangePointDetection>) paylaşılmıştır.
 
 ## Veri
 

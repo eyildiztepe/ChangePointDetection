@@ -271,6 +271,9 @@ $C_{d}$ katsayısı, 0 ile 1 arasında değer alır. Saf, parçalanmamış doğr
 
 Değişim noktasının en uygun değeri, $C_{d}$ katsayısının maksimum olduğu noktada bulunabilir.
 
+\newpage
+
+
 ## Kapsama Ölçütü
 
 ```{r, echo=FALSE,fig.cap="Kapsama Ölçütü" ,out.width="400px", out.height="400px"}
@@ -297,7 +300,7 @@ Değişim noktası tespiti algoritmalarını değerlendirmeye ilişkin alternati
 
 Doğruluk değeri, 0 ile 1 arasındadır. Doğru tahmin edilen değerlerin, tüm değerlere bölünmesi ile elde edilmektedir.  Doğruluk değeri 1’e yaklaştıkça başarı artmaktadır[@kelle2022mqtt].
 
-$$Dogruluk = \frac{(GP + GN)}{(GP + GN + FP + FN)}$$
+$$Doğruluk = \frac{(GP + GN)}{(GP + GN + FP + FN)}$$
 
 Değişim noktalarının sayısı genellikle serideki gözlem sayısından çok küçüktür. Bu nedenle doğruluk oranı gibi ölçütler oldukça çarpık olacaktır. Bu durumda F puanı kullanılabilir. F puanında, bir algoritmanın performansı kesinlik ($P$) (doğru tespit edilen değişim noktalarının tespit edilen değişim noktalarının sayısına oranı) ve duyarlılık (doğru tespit edilen değişim noktalarının gerçek değişim noktalarının sayısına oranı) kullanılarak ölçülür ($\beta = 1$ olarak varsayılır).
 
